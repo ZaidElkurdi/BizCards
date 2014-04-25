@@ -8,7 +8,7 @@
 
 #import "CreateAccountViewController.h"
 #import <Parse/Parse.h>
-#define kOFFSET_FOR_KEYBOARD 120.0
+#define kOFFSET_FOR_KEYBOARD 100.0
 
 @interface CreateAccountViewController ()
 

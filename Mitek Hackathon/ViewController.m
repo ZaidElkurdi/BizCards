@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
-#define kOFFSET_FOR_KEYBOARD 120.0
+#define kOFFSET_FOR_KEYBOARD 140.0
 @interface ViewController ()
 
 @end
@@ -69,6 +69,16 @@
 
 -(IBAction)signIn
 {
+    [PFUser logInWithUsernameInBackground:txtUsername.text password:txtPassword.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) {
+                                            // Do stuff after successful login.
+                                            
+                                            //Call to segue
+                                        } else {
+                                            // The login failed. Check error to see why.
+                                        }
+                                    }];
 }
 - (void)didReceiveMemoryWarning
 {
