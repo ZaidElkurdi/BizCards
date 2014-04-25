@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UITextFieldDelegate>
+{
+    IBOutlet UITextField *txtUsername;
+    IBOutlet UITextField *txtPassword;
+    
+    IBOutlet UIButton *signIn;
+}
+-(IBAction)signIn;
 @end

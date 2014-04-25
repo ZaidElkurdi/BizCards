@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-
+#import <Parse/Parse.h>
+#define kOFFSET_FOR_KEYBOARD 120.0
 @interface ViewController ()
 
 @end
@@ -18,8 +19,57 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    if([prefs stringForKey:@"userPassword"].length != 0)
+    {
+        [txtPassword setText:[prefs stringForKey:@"userPassword"]];
+    }
+    
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if(self.view.frame.origin.y >= 0)
+        [self setViewMoveUp:YES];
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    [self setViewMoveUp:NO];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+
+    [txtUsername resignFirstResponder];
+    [txtPassword resignFirstResponder];
+    
+}
+
+-(void)setViewMoveUp:(BOOL)moveUp{
+    
+    CGRect rect = self.view.frame;
+    if(moveUp)
+    {
+        rect.origin.y -= kOFFSET_FOR_KEYBOARD;
+        rect.size.height += kOFFSET_FOR_KEYBOARD;
+    }
+    else
+    {
+        rect.origin.y += kOFFSET_FOR_KEYBOARD;
+        rect.size.height -= kOFFSET_FOR_KEYBOARD;
+        
+    }
+    self.view.frame = rect;
+}
+
+
+-(IBAction)signIn
+{
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

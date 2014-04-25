@@ -21,6 +21,18 @@
 		939119F3190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
 		939119FB190A05FC00EB5DDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939119F9190A05FC00EB5DDB /* InfoPlist.strings */; };
 		939119FD190A05FC00EB5DDB /* Mitek_HackathonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */; };
+		93911A08190A079000EB5DDB /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 93911A07190A079000EB5DDB /* SignIn.png */; };
+		93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */; };
+		93911A0D190A152800EB5DDB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A0C190A152800EB5DDB /* Parse.framework */; };
+		93911A0F190A156700EB5DDB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A0E190A156700EB5DDB /* AudioToolbox.framework */; };
+		93911A11190A156C00EB5DDB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A10190A156C00EB5DDB /* CFNetwork.framework */; };
+		93911A13190A157800EB5DDB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A12190A157800EB5DDB /* CoreLocation.framework */; };
+		93911A15190A157F00EB5DDB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A14190A157F00EB5DDB /* libz.dylib */; };
+		93911A17190A158600EB5DDB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A16190A158600EB5DDB /* MobileCoreServices.framework */; };
+		93911A19190A158C00EB5DDB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A18190A158C00EB5DDB /* QuartzCore.framework */; };
+		93911A1B190A159200EB5DDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1A190A159200EB5DDB /* Security.framework */; };
+		93911A1D190A159700EB5DDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1C190A159700EB5DDB /* StoreKit.framework */; };
+		93911A1F190A159D00EB5DDB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,19 @@
 		939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek HackathonTests-Info.plist"; sourceTree = "<group>"; };
 		939119FA190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mitek_HackathonTests.m; sourceTree = "<group>"; };
+		93911A07190A079000EB5DDB /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn.png; sourceTree = "<group>"; };
+		93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		93911A0C190A152800EB5DDB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		93911A0E190A156700EB5DDB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		93911A10190A156C00EB5DDB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		93911A12190A157800EB5DDB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		93911A14190A157F00EB5DDB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		93911A16190A158600EB5DDB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		93911A18190A158C00EB5DDB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		93911A1A190A159200EB5DDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		93911A1C190A159700EB5DDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +85,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93911A1F190A159D00EB5DDB /* SystemConfiguration.framework in Frameworks */,
+				93911A1D190A159700EB5DDB /* StoreKit.framework in Frameworks */,
+				93911A1B190A159200EB5DDB /* Security.framework in Frameworks */,
+				93911A19190A158C00EB5DDB /* QuartzCore.framework in Frameworks */,
+				93911A17190A158600EB5DDB /* MobileCoreServices.framework in Frameworks */,
+				93911A15190A157F00EB5DDB /* libz.dylib in Frameworks */,
+				93911A13190A157800EB5DDB /* CoreLocation.framework in Frameworks */,
 				939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */,
+				93911A11190A156C00EB5DDB /* CFNetwork.framework in Frameworks */,
+				93911A0F190A156700EB5DDB /* AudioToolbox.framework in Frameworks */,
 				939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */,
+				93911A0D190A152800EB5DDB /* Parse.framework in Frameworks */,
 				939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +136,16 @@
 		939119D0190A05FC00EB5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */,
+				93911A1C190A159700EB5DDB /* StoreKit.framework */,
+				93911A1A190A159200EB5DDB /* Security.framework */,
+				93911A18190A158C00EB5DDB /* QuartzCore.framework */,
+				93911A16190A158600EB5DDB /* MobileCoreServices.framework */,
+				93911A14190A157F00EB5DDB /* libz.dylib */,
+				93911A12190A157800EB5DDB /* CoreLocation.framework */,
+				93911A10190A156C00EB5DDB /* CFNetwork.framework */,
+				93911A0E190A156700EB5DDB /* AudioToolbox.framework */,
+				93911A0C190A152800EB5DDB /* Parse.framework */,
 				939119D1190A05FC00EB5DDB /* Foundation.framework */,
 				939119D3190A05FC00EB5DDB /* CoreGraphics.framework */,
 				939119D5190A05FC00EB5DDB /* UIKit.framework */,
@@ -117,6 +162,8 @@
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
 				939119E7190A05FC00EB5DDB /* ViewController.m */,
+				93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */,
+				93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */,
 				939119E9190A05FC00EB5DDB /* Images.xcassets */,
 				939119D8190A05FC00EB5DDB /* Supporting Files */,
 			);
@@ -126,6 +173,7 @@
 		939119D8190A05FC00EB5DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93911A06190A078900EB5DDB /* Images */,
 				939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */,
 				939119DA190A05FC00EB5DDB /* InfoPlist.strings */,
 				939119DD190A05FC00EB5DDB /* main.m */,
@@ -150,6 +198,14 @@
 				939119F9190A05FC00EB5DDB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93911A06190A078900EB5DDB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				93911A07190A079000EB5DDB /* SignIn.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
+				93911A08190A079000EB5DDB /* SignIn.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
 				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
 			);
@@ -249,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
@@ -376,6 +434,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
 				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
@@ -389,6 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
 				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
