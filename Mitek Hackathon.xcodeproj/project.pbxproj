@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D1190A05FC00EB5DDB /* Foundation.framework */; };
+		939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D3190A05FC00EB5DDB /* CoreGraphics.framework */; };
+		939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
+		939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939119DA190A05FC00EB5DDB /* InfoPlist.strings */; };
+		939119DE190A05FC00EB5DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119DD190A05FC00EB5DDB /* main.m */; };
+		939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119E1190A05FC00EB5DDB /* AppDelegate.m */; };
+		939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
+		939119E8190A05FC00EB5DDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119E7190A05FC00EB5DDB /* ViewController.m */; };
+		939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939119E9190A05FC00EB5DDB /* Images.xcassets */; };
+		939119F1190A05FC00EB5DDB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119F0190A05FC00EB5DDB /* XCTest.framework */; };
+		939119F2190A05FC00EB5DDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D1190A05FC00EB5DDB /* Foundation.framework */; };
+		939119F3190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
+		939119FB190A05FC00EB5DDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939119F9190A05FC00EB5DDB /* InfoPlist.strings */; };
+		939119FD190A05FC00EB5DDB /* Mitek_HackathonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		939119F4190A05FC00EB5DDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 939119C6190A05FC00EB5DDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 939119CD190A05FC00EB5DDB;
+			remoteInfo = "Mitek Hackathon";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mitek Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939119D1190A05FC00EB5DDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		939119D3190A05FC00EB5DDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		939119D5190A05FC00EB5DDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek Hackathon-Info.plist"; sourceTree = "<group>"; };
+		939119DB190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		939119DD190A05FC00EB5DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		939119DF190A05FC00EB5DDB /* Mitek Hackathon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mitek Hackathon-Prefix.pch"; sourceTree = "<group>"; };
+		939119E0190A05FC00EB5DDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		939119E1190A05FC00EB5DDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		939119E4190A05FC00EB5DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		939119E6190A05FC00EB5DDB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		939119E7190A05FC00EB5DDB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		939119E9190A05FC00EB5DDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mitek HackathonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939119F0190A05FC00EB5DDB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek HackathonTests-Info.plist"; sourceTree = "<group>"; };
+		939119FA190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mitek_HackathonTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		939119CB190A05FC00EB5DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */,
+				939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */,
+				939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939119EC190A05FC00EB5DDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119F1190A05FC00EB5DDB /* XCTest.framework in Frameworks */,
+				939119F3190A05FC00EB5DDB /* UIKit.framework in Frameworks */,
+				939119F2190A05FC00EB5DDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		939119C5190A05FC00EB5DDB = {
+			isa = PBXGroup;
+			children = (
+				939119D7190A05FC00EB5DDB /* Mitek Hackathon */,
+				939119F6190A05FC00EB5DDB /* Mitek HackathonTests */,
+				939119D0190A05FC00EB5DDB /* Frameworks */,
+				939119CF190A05FC00EB5DDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		939119CF190A05FC00EB5DDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */,
+				939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		939119D0190A05FC00EB5DDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				939119D1190A05FC00EB5DDB /* Foundation.framework */,
+				939119D3190A05FC00EB5DDB /* CoreGraphics.framework */,
+				939119D5190A05FC00EB5DDB /* UIKit.framework */,
+				939119F0190A05FC00EB5DDB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
+			isa = PBXGroup;
+			children = (
+				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
+				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
+				939119E3190A05FC00EB5DDB /* Main.storyboard */,
+				939119E6190A05FC00EB5DDB /* ViewController.h */,
+				939119E7190A05FC00EB5DDB /* ViewController.m */,
+				939119E9190A05FC00EB5DDB /* Images.xcassets */,
+				939119D8190A05FC00EB5DDB /* Supporting Files */,
+			);
+			path = "Mitek Hackathon";
+			sourceTree = "<group>";
+		};
+		939119D8190A05FC00EB5DDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */,
+				939119DA190A05FC00EB5DDB /* InfoPlist.strings */,
+				939119DD190A05FC00EB5DDB /* main.m */,
+				939119DF190A05FC00EB5DDB /* Mitek Hackathon-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		939119F6190A05FC00EB5DDB /* Mitek HackathonTests */ = {
+			isa = PBXGroup;
+			children = (
+				939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */,
+				939119F7190A05FC00EB5DDB /* Supporting Files */,
+			);
+			path = "Mitek HackathonTests";
+			sourceTree = "<group>";
+		};
+		939119F7190A05FC00EB5DDB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */,
+				939119F9190A05FC00EB5DDB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		939119CD190A05FC00EB5DDB /* Mitek Hackathon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek Hackathon" */;
+			buildPhases = (
+				939119CA190A05FC00EB5DDB /* Sources */,
+				939119CB190A05FC00EB5DDB /* Frameworks */,
+				939119CC190A05FC00EB5DDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mitek Hackathon";
+			productName = "Mitek Hackathon";
+			productReference = 939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		939119EE190A05FC00EB5DDB /* Mitek HackathonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */;
+			buildPhases = (
+				939119EB190A05FC00EB5DDB /* Sources */,
+				939119EC190A05FC00EB5DDB /* Frameworks */,
+				939119ED190A05FC00EB5DDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				939119F5190A05FC00EB5DDB /* PBXTargetDependency */,
+			);
+			name = "Mitek HackathonTests";
+			productName = "Mitek HackathonTests";
+			productReference = 939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		939119C6190A05FC00EB5DDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Tempest Vision";
+				TargetAttributes = {
+					939119EE190A05FC00EB5DDB = {
+						TestTargetID = 939119CD190A05FC00EB5DDB;
+					};
+				};
+			};
+			buildConfigurationList = 939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "Mitek Hackathon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 939119C5190A05FC00EB5DDB;
+			productRefGroup = 939119CF190A05FC00EB5DDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				939119CD190A05FC00EB5DDB /* Mitek Hackathon */,
+				939119EE190A05FC00EB5DDB /* Mitek HackathonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		939119CC190A05FC00EB5DDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
+				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
+				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939119ED190A05FC00EB5DDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119FB190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		939119CA190A05FC00EB5DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
+				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
+				939119DE190A05FC00EB5DDB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		939119EB190A05FC00EB5DDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				939119FD190A05FC00EB5DDB /* Mitek_HackathonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		939119F5190A05FC00EB5DDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 939119CD190A05FC00EB5DDB /* Mitek Hackathon */;
+			targetProxy = 939119F4190A05FC00EB5DDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		939119DA190A05FC00EB5DDB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				939119DB190A05FC00EB5DDB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		939119E3190A05FC00EB5DDB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				939119E4190A05FC00EB5DDB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		939119F9190A05FC00EB5DDB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				939119FA190A05FC00EB5DDB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		939119FE190A05FC00EB5DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		939119FF190A05FC00EB5DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93911A01190A05FC00EB5DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
+				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93911A02190A05FC00EB5DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
+				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		93911A04190A05FC00EB5DDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mitek Hackathon.app/Mitek Hackathon";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Mitek HackathonTests/Mitek HackathonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		93911A05190A05FC00EB5DDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mitek Hackathon.app/Mitek Hackathon";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
+				INFOPLIST_FILE = "Mitek HackathonTests/Mitek HackathonTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "Mitek Hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939119FE190A05FC00EB5DDB /* Debug */,
+				939119FF190A05FC00EB5DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek Hackathon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93911A01190A05FC00EB5DDB /* Debug */,
+				93911A02190A05FC00EB5DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93911A04190A05FC00EB5DDB /* Debug */,
+				93911A05190A05FC00EB5DDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 939119C6190A05FC00EB5DDB /* Project object */;
+}
