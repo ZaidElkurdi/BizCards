@@ -25,22 +25,50 @@
 
 @synthesize requestToken, accessToken, profile, consumer;
 
-//
-// OAuth step 1a:
-//
-// The first step in the the OAuth process to make a request for a "request token".
-// Yes it's confusing that the work request is mentioned twice like that, but it is whats happening.
-//
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self initLinkedInApi];
+    [addressBar setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self requestTokenFromProvider];
+}
+
+-(IBAction)signInWithLinkedIn
+{
+    
+}
+
 - (void)requestTokenFromProvider
 {
-    OAMutableURLRequest *request = 
-            [[OAMutableURLRequest alloc] initWithURL:requestTokenURL
-                                             consumer:self.consumer
-                                                token:nil   
-                                             callback:linkedInCallbackURL
-                                    signatureProvider:nil];
+    OAMutableURLRequest *request =
+    [[OAMutableURLRequest alloc] initWithURL:requestTokenURL
+                                    consumer:self.consumer
+                                       token:nil
+                                    callback:linkedInCallbackURL
+                           signatureProvider:nil];
     
-    [request setHTTPMethod:@"POST"];   
+    [request setHTTPMethod:@"POST"];
     
     OARequestParameter *nameParam = [[OARequestParameter alloc] initWithName:@"scope"
                                                                        value:@"r_basicprofile+rw_nus+first-name+headline+picture-url"];
@@ -54,7 +82,7 @@
     [fetcher fetchDataWithRequest:request
                          delegate:self
                 didFinishSelector:@selector(requestTokenResult:didFinish:)
-                  didFailSelector:@selector(requestTokenResult:didFail:)];    
+                  didFailSelector:@selector(requestTokenResult:didFail:)];
 }
 
 //
@@ -65,18 +93,18 @@
 // The request token is added as a parameter to the url of the login page.
 // LinkedIn reads the token on their end to know which app the user is granting access to.
 //
-- (void)requestTokenResult:(OAServiceTicket *)ticket didFinish:(NSData *)data 
+- (void)requestTokenResult:(OAServiceTicket *)ticket didFinish:(NSData *)data
 {
-    if (ticket.didSucceed == NO) 
+    if (ticket.didSucceed == NO)
         return;
-        
+    
     NSString *responseBody = [[NSString alloc] initWithData:data
                                                    encoding:NSUTF8StringEncoding];
     self.requestToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
     [self allowUserToLogin];
 }
 
-- (void)requestTokenResult:(OAServiceTicket *)ticket didFail:(NSData *)error 
+- (void)requestTokenResult:(OAServiceTicket *)ticket didFail:(NSData *)error
 {
     NSLog(@"%@",[error description]);
 }
@@ -94,12 +122,12 @@
 //
 - (void)allowUserToLogin
 {
-    NSString *userLoginURLWithToken = [NSString stringWithFormat:@"%@?oauth_token=%@", 
-        userLoginURLString, self.requestToken.key];
+    NSString *userLoginURLWithToken = [NSString stringWithFormat:@"%@?oauth_token=%@",
+                                       userLoginURLString, self.requestToken.key];
     
     userLoginURL = [NSURL URLWithString:userLoginURLWithToken];
     NSURLRequest *request = [NSMutableURLRequest requestWithURL: userLoginURL];
-    [webView loadRequest:request];     
+    [webView loadRequest:request];
 }
 
 
@@ -125,11 +153,11 @@
 //
 //          c) hdlinked://linkedin/oauth?oauth_token=<token value>&oauth_verifier=63600     OR
 //             hdlinked://linkedin/oauth?user_refused
-//             
+//
 //
 //  We only need to handle case (c) to extract the oauth_verifier value
 //
-- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType 
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
 {
 	NSURL *url = request.URL;
 	NSString *urlString = url.absoluteString;
@@ -142,7 +170,7 @@
     {
         BOOL userAllowedAccess = ([urlString rangeOfString:@"user_refused"].location == NSNotFound);
         if ( userAllowedAccess )
-        {            
+        {
             [self.requestToken setVerifierWithUrl:url];
             [self accessTokenFromProvider];
         }
@@ -150,11 +178,11 @@
         {
             // User refused to allow our app access
             // Notify parent and close this view
-            [[NSNotificationCenter defaultCenter] 
-                    postNotificationName:@"loginViewDidFinish"        
-                                  object:self 
-                                userInfo:nil];
-
+            [[NSNotificationCenter defaultCenter]
+             postNotificationName:@"loginViewDidFinish"
+             object:self
+             userInfo:nil];
+            
             [self dismissModalViewControllerAnimated:YES];
         }
     }
@@ -174,23 +202,23 @@
 // OAuth step 4:
 //
 - (void)accessTokenFromProvider
-{ 
-    OAMutableURLRequest *request = 
-            [[OAMutableURLRequest alloc] initWithURL:accessTokenURL
-                                             consumer:self.consumer
-                                                token:self.requestToken   
-                                             callback:nil
-                                    signatureProvider:nil];
+{
+    OAMutableURLRequest *request =
+    [[OAMutableURLRequest alloc] initWithURL:accessTokenURL
+                                    consumer:self.consumer
+                                       token:self.requestToken
+                                    callback:nil
+                           signatureProvider:nil];
     
     [request setHTTPMethod:@"POST"];
     OADataFetcher *fetcher = [[OADataFetcher alloc] init];
     [fetcher fetchDataWithRequest:request
                          delegate:self
                 didFinishSelector:@selector(accessTokenResult:didFinish:)
-                  didFailSelector:@selector(accessTokenResult:didFail:)];    
+                  didFailSelector:@selector(accessTokenResult:didFail:)];
 }
 
-- (void)accessTokenResult:(OAServiceTicket *)ticket didFinish:(NSData *)data 
+- (void)accessTokenResult:(OAServiceTicket *)ticket didFinish:(NSData *)data
 {
     NSString *responseBody = [[NSString alloc] initWithData:data
                                                    encoding:NSUTF8StringEncoding];
@@ -206,8 +234,8 @@
         self.accessToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
     }
     // Notify parent and close this view
-    [[NSNotificationCenter defaultCenter] 
-     postNotificationName:@"loginViewDidFinish"        
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"loginViewDidFinish"
      object:self];
     
     [self dismissModalViewControllerAnimated:YES];
@@ -221,14 +249,14 @@
 {
     apikey = @"c8dwtidmv6t2";
     secretkey = @"87qsAJkUY8bBYWAl";
-
+    
     self.consumer = [[OAConsumer alloc] initWithKey:apikey
-                                        secret:secretkey
-                                         realm:@"http://api.linkedin.com/"];
-
+                                             secret:secretkey
+                                              realm:@"http://api.linkedin.com/"];
+    
     requestTokenURLString = @"https://api.linkedin.com/uas/oauth/requestToken";
     accessTokenURLString = @"https://api.linkedin.com/uas/oauth/accessToken";
-    userLoginURLString = @"https://www.linkedin.com/uas/oauth/authorize";    
+    userLoginURLString = @"https://www.linkedin.com/uas/oauth/authorize";
     linkedInCallbackURL = @"hdlinked://linkedin/oauth";
     
     requestTokenURL = [NSURL URLWithString:requestTokenURLString];
@@ -236,70 +264,16 @@
     userLoginURL = [NSURL URLWithString:userLoginURLString];
 }
 
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self initLinkedInApi];
-    [addressBar setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
-    
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if ([apikey length] < API_KEY_LENGTH || [secretkey length] < SECRET_KEY_LENGTH)
-    {
-        UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"OAuth Starter Kit"
-                          message: @"You must add your apikey and secretkey.  See the project file readme.txt"
-                          delegate: nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil];
-        [alert show];
-        
-        // Notify parent and close this view
-        [[NSNotificationCenter defaultCenter] 
-         postNotificationName:@"loginViewDidFinish"        
-         object:self];
-        
-        [self dismissModalViewControllerAnimated:YES];
-    }
-
-    [self requestTokenFromProvider];
-}
-    
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
-
-#pragma mark - View lifecycle
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
 
 @end

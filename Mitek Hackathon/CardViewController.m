@@ -93,6 +93,10 @@
     // Do any additional setup after loading the view.
     _isRunningMiSnap = NO;
     
+    UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
+    self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
+    self.navigationController.navigationBar.barTintColor=barColor;
+    
     NSArray *arr = [[NSArray alloc] initWithObjects:@"zaid.elkurdi@gmail.com",@"HI7WWP8VypoE",@"UCSD-Hack",nil];
     
     NSArray *arr2 = [[NSArray alloc] initWithObjects:@"userName",@"password",@"orgName",nil];
