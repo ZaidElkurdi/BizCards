@@ -68,7 +68,6 @@
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
-		B8711DC4190BC5D500926B41 /* rawTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = B8711DC3190BC5D500926B41 /* rawTest.txt */; };
 		B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DC6190BE68400926B41 /* UploadToParseViewController.m */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
@@ -541,7 +540,6 @@
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
 				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
-				B8711DC4190BC5D500926B41 /* rawTest.txt in Resources */,
 				93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
