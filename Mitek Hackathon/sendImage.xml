@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mit="http://www.miteksystems.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <mit:CROP_IQA_OCR>
+         <mit:userName>"zaid.elkurdi@gmail.com"</mit:userName>
+         <mit:password>"HI7WWP8VypoE"</mit:password>
+         <mit:phoneKey>MitekTest</mit:phoneKey>
+         <mit:orgName>"UCSD-Hack"</mit:orgName>
+      </mit:AuthenticateUser>
+   </soapenv:Body>
+</soapenv:Envelope>
