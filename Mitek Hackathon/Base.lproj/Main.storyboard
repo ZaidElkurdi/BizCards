@@ -1210,7 +1210,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lZ-lH-pBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="-1597"/>
+            <point key="canvasLocation" x="1920" y="-1653"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KmX-fd-aKw">
@@ -1475,6 +1475,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3B-Sw-Gsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pI0-U0-ncr">
+                    <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <segue destination="Jmi-td-GxJ" kind="modal" identifier="redo" id="g00-js-ktz"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MJO-hS-akr">
                     <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1570,7 +1581,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-e7-WOx">
-                                <rect key="frame" x="0.0" y="484" width="320" height="32"/>
+                                <rect key="frame" x="-107" y="91" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Update Card">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1612,6 +1623,9 @@
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <segue destination="jXi-Wx-EwK" kind="modal" identifier="finishedDone" id="vwK-E9-xyu"/>
+                    </connections>
                 </button>
             </objects>
             <point key="canvasLocation" x="3956" y="-1607"/>
@@ -1639,10 +1653,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="UUZ-Tc-BFt"/>
         <segue reference="LOd-6F-11c"/>
         <segue reference="rjn-Kd-8KF"/>
-        <segue reference="4i5-aw-Ivb"/>
         <segue reference="TH3-AR-kIg"/>
         <segue reference="ndR-AK-Jfj"/>
+        <segue reference="g00-js-ktz"/>
     </inferredMetricsTieBreakers>
 </document>

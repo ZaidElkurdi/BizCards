@@ -79,11 +79,7 @@
     {
         
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Let's try again.." message:@"The photo was too blurry. Try to improve lighting or hold the phone as still as possible." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-        // optional - add more buttons:
-        [alert addButtonWithTitle:@"Ok"];
-        [alert show];
-        
+               
         [self performSegueWithIdentifier:@"retryPhoto" sender:nil];
         
         

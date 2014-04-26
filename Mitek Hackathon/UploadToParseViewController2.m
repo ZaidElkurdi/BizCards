@@ -77,7 +77,16 @@
     [txtPhone setText:[myArray objectAtIndex:4]];
     [txtAddress setText:[myArray objectAtIndex:5]];
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [txtName resignFirstResponder];
+    [txtCompany resignFirstResponder];
+    [txtTitle resignFirstResponder];
+    [txtEmail resignFirstResponder];
+    [txtPhone resignFirstResponder];
+    [txtAddress resignFirstResponder];
+    
+}
 -(IBAction)takeToParse
 {
     NSLog(@"Made it here");
@@ -104,28 +113,22 @@
     NSData *parseData = UIImagePNGRepresentation(final);
     imageFile = [PFFile fileWithName:@"image.png" data:parseData];
     
-    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = txtName.text;
-    userPhoto[@"imageFile"] = imageFile;
-    userPhoto[@"Owner"] = curr.objectId;
-    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
-     {
-         if(!error)
-         {
-             NSLog(@"Finished uploading");
-         }
-     }];
     
+    PFQuery *query = [PFQuery queryWithClassName:@"Card"];
+    [query whereKey:@"name" equalTo:txtName.text];
     
+    NSArray *arr = [query findObjects];
     
+    for(PFObject *obj in arr)
+    {
+        obj[@"Name"] = txtName.text;
+        obj[@"Email"] = txtEmail.text;
+        obj[@"Title"] = txtTitle.text;
+        obj[@"Phone"] = txtPhone.text;
+        obj[@"Address"] = txtAddress.text;
+    }
     
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
-                                                      message:@"Your card was succesfully added to your rolodex."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-    
-    [self performSegueWithIdentifier:@"goToConfirm" sender:nil];
+    [self performSegueWithIdentifier:@"finishedDone" sender:nil];
 }
 -(UIImage*)reduced:(UIImage*)fullImage
 {
