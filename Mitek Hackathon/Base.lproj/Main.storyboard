@@ -21,8 +21,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBg-fe-N7E">
+                                <rect key="frame" x="65" y="196" width="19" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3f-pb-CLI">
+                                <rect key="frame" x="65" y="254" width="19" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cp5-lE-Euq">
-                                <rect key="frame" x="65" y="196" width="244" height="40"/>
+                                <rect key="frame" x="82" y="196" width="227" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -32,7 +42,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-X2-Snp">
-                                <rect key="frame" x="65" y="254" width="244" height="40"/>
+                                <rect key="frame" x="82" y="254" width="227" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -128,7 +138,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <segue destination="rSv-vN-uOt" kind="modal" identifier="succesfulLogin" id="Z2I-mu-2jo"/>
+                        <segue destination="Jmi-td-GxJ" kind="modal" identifier="succesfulLogin" id="KZ9-cN-7UY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oTR-FQ-JB7">
@@ -158,9 +168,15 @@
                     <navigationItem key="navigationItem" id="YoG-a2-OBJ">
                         <barButtonItem key="leftBarButtonItem" image="settingsIcon.png" id="1i7-DF-HBJ">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="jXi-Wx-EwK" kind="modal" id="b1B-MW-JjX"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addCard.png" id="OK1-kR-dX7">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Mxb-cD-WgT" kind="modal" id="hyA-4k-Okx"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -169,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPI-zh-ajC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="-10"/>
+            <point key="canvasLocation" x="108" y="-78"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Fa4-0N-lXk">
@@ -312,7 +328,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdQ-xD-Rce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="-30"/>
+            <point key="canvasLocation" x="1529" y="-84"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="vRg-Bw-sFQ">
@@ -426,6 +442,24 @@
             </objects>
             <point key="canvasLocation" x="-267" y="856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sZz-L6-vc4">
+            <objects>
+                <viewController id="jXi-Wx-EwK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8Z-af-eXq"/>
+                        <viewControllerLayoutGuide type="bottom" id="cZi-vP-78M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7vX-6W-xie">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgA-Uq-or5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256" y="-785"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gvY-sZ-7b3">
             <objects>
@@ -442,7 +476,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epf-fr-QIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="-10"/>
+            <point key="canvasLocation" x="-256" y="-78"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mBq-YP-wM5">
@@ -469,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRB-ch-DTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="-10"/>
+            <point key="canvasLocation" x="502" y="-78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I3M-hJ-gJs">
@@ -488,7 +522,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cq-5J-hFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="571" y="-18"/>
+            <point key="canvasLocation" x="1003" y="-72"/>
         </scene>
     </scenes>
     <resources>

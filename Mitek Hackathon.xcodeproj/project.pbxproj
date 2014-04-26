@@ -58,6 +58,7 @@
 		93ABC6B4190B94B3008FE209 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A5190B94B3008FE209 /* shareIcon.png */; };
 		93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A6190B94B3008FE209 /* signUpButton.png */; };
 		93ABC6B6190B94B3008FE209 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A7190B94B3008FE209 /* testCard.png */; };
+		93ABC6B9190B99BA008FE209 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
@@ -132,6 +133,8 @@
 		93ABC6A5190B94B3008FE209 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareIcon.png; sourceTree = "<group>"; };
 		93ABC6A6190B94B3008FE209 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
 		93ABC6A7190B94B3008FE209 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
+		93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cardCollectionViewController.h; path = ../cardCollectionViewController.h; sourceTree = "<group>"; };
+		93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardCollectionViewController.m; path = ../cardCollectionViewController.m; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8BD13DE190B8AAE00AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
 		B8BD13E0190B8AB500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
@@ -233,17 +236,19 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				93ABC694190B9446008FE209 /* cardCell.m */,
-				93ABC695190B9446008FE209 /* detailViewController.m */,
 				B8BD13DE190B8AAE00AEF286 /* authenticate.xml */,
 				B8BD13E0190B8AB500AEF286 /* sendImage.xml */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
+				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,
+				93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */,
+				93ABC695190B9446008FE209 /* detailViewController.m */,
 				B8BD13E5190B8AF200AEF286 /* detailViewController.h */,
 				B8BD13E2190B8ADB00AEF286 /* cardCell.h */,
-				93911A25190B35F500EB5DDB /* CardViewController.h */,
+				93ABC694190B9446008FE209 /* cardCell.m */,
 				93911A26190B35F500EB5DDB /* CardViewController.m */,
+				93911A25190B35F500EB5DDB /* CardViewController.h */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
 				939119E7190A05FC00EB5DDB /* ViewController.m */,
 				93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */,
@@ -427,6 +432,7 @@
 				93ABC697190B9446008FE209 /* detailViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
+				93ABC6B9190B99BA008FE209 /* cardCollectionViewController.m in Sources */,
 				93ABC696190B9446008FE209 /* cardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

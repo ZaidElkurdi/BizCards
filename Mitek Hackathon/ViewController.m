@@ -19,10 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[prefs stringForKey:@"username"]);
+    
     if([prefs stringForKey:@"username"].length != 0)
     {
-        [txtUsername setText:[prefs stringForKey:@"userPassword"]];
+        [txtUsername setText:[prefs stringForKey:@"username"]];
     }
     
 }
@@ -100,6 +103,10 @@
                                             // Do stuff after successful login.
                                             [self performSegueWithIdentifier:@"succesfulLogin" sender:nil];
                                             NSLog(@"Succesfully logged in!");
+                                            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+                                            [prefs setObject:txtUsername.text forKey:@"username"];
+                                            [prefs synchronize];
+                                            
                                             //Call to segue
                                         } else {
                                             // The login failed. Check error to see why.

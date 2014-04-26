@@ -46,7 +46,7 @@
                 // Hooray! Let them use the app now.
                 NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
                 [prefs setObject:txtEmail.text forKey:@"username"];
-                
+                [prefs synchronize];
 
             } else {
                 NSString *errorString = [error userInfo][@"error"];
