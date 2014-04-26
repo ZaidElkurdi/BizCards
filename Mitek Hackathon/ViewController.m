@@ -77,7 +77,8 @@
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             // Do stuff after successful login.
-                                            
+                                            [self performSegueWithIdentifier:@"succesfulLogin" sender:nil];
+                                            NSLog(@"Succesfully logged in!");
                                             //Call to segue
                                         } else {
                                             // The login failed. Check error to see why.

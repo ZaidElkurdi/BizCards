@@ -8,7 +8,7 @@
 
 #import "CreateAccountViewController.h"
 #import <Parse/Parse.h>
-#define kOFFSET_FOR_KEYBOARD 100.0
+
 
 @interface CreateAccountViewController ()
 
@@ -36,10 +36,10 @@
     if(txtPassword.text.length > 5 && txtFirstName.text.length > 0 && txtLastName.text.length > 0 && [txtEmail.text rangeOfString:@"@"].location != NSNotFound)
     {
         PFUser *user = [PFUser user];
-        user.username = [NSString stringWithFormat:@"%@ %@",[txtFirstName text], [txtLastName text]];
+        user.username = [txtEmail text];
         user.password = [txtPassword text];
         user.email =  [txtEmail text];
-        
+        user[@"FullName"] = [NSString stringWithFormat:@"%@ %@",[txtFirstName text], [txtLastName text]];
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 // Hooray! Let them use the app now.
@@ -69,14 +69,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    if(self.view.frame.origin.y >= 0)
-        [self setViewMoveUp:YES];
-}
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    [self setViewMoveUp:NO];
-}
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
@@ -93,22 +86,6 @@
 
 }
 
--(void)setViewMoveUp:(BOOL)moveUp{
-    
-    CGRect rect = self.view.frame;
-    if(moveUp)
-    {
-        rect.origin.y -= kOFFSET_FOR_KEYBOARD;
-        rect.size.height += kOFFSET_FOR_KEYBOARD;
-    }
-    else
-    {
-        rect.origin.y += kOFFSET_FOR_KEYBOARD;
-        rect.size.height -= kOFFSET_FOR_KEYBOARD;
-        
-    }
-    self.view.frame = rect;
-}
 
 
 /*

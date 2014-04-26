@@ -10,6 +10,21 @@
 		93411E97190B7807005E1977 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93411E94190B7807005E1977 /* libMiSnap.a */; };
 		93411E98190B7807005E1977 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93411E96190B7807005E1977 /* MiSnapResources.bundle */; };
 		93411E99190B782A005E1977 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93411E96190B7807005E1977 /* MiSnapResources.bundle */; };
+		93411EA9190B7A63005E1977 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9A190B7A62005E1977 /* addCard.png */; };
+		93411EAA190B7A63005E1977 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9B190B7A62005E1977 /* aryaman.png */; };
+		93411EAB190B7A63005E1977 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9C190B7A62005E1977 /* backButton.png */; };
+		93411EAC190B7A63005E1977 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9D190B7A62005E1977 /* callIIcon.png */; };
+		93411EAD190B7A63005E1977 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9E190B7A62005E1977 /* emailIcon.png */; };
+		93411EAE190B7A63005E1977 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9F190B7A62005E1977 /* forgotButton.png */; };
+		93411EAF190B7A63005E1977 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA0190B7A62005E1977 /* linkedInIcon.png */; };
+		93411EB0190B7A63005E1977 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA1190B7A62005E1977 /* loginBack.png */; };
+		93411EB1190B7A63005E1977 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA2190B7A62005E1977 /* loginButton.png */; };
+		93411EB2190B7A63005E1977 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA3190B7A62005E1977 /* passIcon.png */; };
+		93411EB3190B7A63005E1977 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA4190B7A63005E1977 /* profileBorder.png */; };
+		93411EB4190B7A63005E1977 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA5190B7A63005E1977 /* settingsIcon.png */; };
+		93411EB5190B7A63005E1977 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA6190B7A63005E1977 /* shareIcon.png */; };
+		93411EB6190B7A63005E1977 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA7190B7A63005E1977 /* signUpButton.png */; };
+		93411EB7190B7A63005E1977 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA8190B7A63005E1977 /* testCard.png */; };
 		939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D1190A05FC00EB5DDB /* Foundation.framework */; };
 		939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D3190A05FC00EB5DDB /* CoreGraphics.framework */; };
 		939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
@@ -24,7 +39,6 @@
 		939119F3190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
 		939119FB190A05FC00EB5DDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939119F9190A05FC00EB5DDB /* InfoPlist.strings */; };
 		939119FD190A05FC00EB5DDB /* Mitek_HackathonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */; };
-		93911A08190A079000EB5DDB /* SignIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 93911A07190A079000EB5DDB /* SignIn.png */; };
 		93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */; };
 		93911A0D190A152800EB5DDB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A0C190A152800EB5DDB /* Parse.framework */; };
 		93911A0F190A156700EB5DDB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A0E190A156700EB5DDB /* AudioToolbox.framework */; };
@@ -59,6 +73,21 @@
 		93411E94190B7807005E1977 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = misnapsdk/libMiSnap.a; sourceTree = "<group>"; };
 		93411E95190B7807005E1977 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = misnapsdk/MiSnap.h; sourceTree = "<group>"; };
 		93411E96190B7807005E1977 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = misnapsdk/MiSnapResources.bundle; sourceTree = "<group>"; };
+		93411E9A190B7A62005E1977 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
+		93411E9B190B7A62005E1977 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
+		93411E9C190B7A62005E1977 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		93411E9D190B7A62005E1977 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callIIcon.png; sourceTree = "<group>"; };
+		93411E9E190B7A62005E1977 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
+		93411E9F190B7A62005E1977 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
+		93411EA0190B7A62005E1977 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInIcon.png; sourceTree = "<group>"; };
+		93411EA1190B7A62005E1977 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
+		93411EA2190B7A62005E1977 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
+		93411EA3190B7A62005E1977 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
+		93411EA4190B7A63005E1977 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBorder.png; sourceTree = "<group>"; };
+		93411EA5190B7A63005E1977 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
+		93411EA6190B7A63005E1977 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareIcon.png; sourceTree = "<group>"; };
+		93411EA7190B7A63005E1977 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
+		93411EA8190B7A63005E1977 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
 		939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mitek Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939119D1190A05FC00EB5DDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		939119D3190A05FC00EB5DDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,7 +107,6 @@
 		939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek HackathonTests-Info.plist"; sourceTree = "<group>"; };
 		939119FA190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mitek_HackathonTests.m; sourceTree = "<group>"; };
-		93911A07190A079000EB5DDB /* SignIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignIn.png; sourceTree = "<group>"; };
 		93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		93911A0C190A152800EB5DDB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -243,7 +271,21 @@
 		93911A06190A078900EB5DDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				93911A07190A079000EB5DDB /* SignIn.png */,
+				93411E9A190B7A62005E1977 /* addCard.png */,
+				93411E9B190B7A62005E1977 /* aryaman.png */,
+				93411E9C190B7A62005E1977 /* backButton.png */,
+				93411E9D190B7A62005E1977 /* callIIcon.png */,
+				93411E9E190B7A62005E1977 /* emailIcon.png */,
+				93411E9F190B7A62005E1977 /* forgotButton.png */,
+				93411EA0190B7A62005E1977 /* linkedInIcon.png */,
+				93411EA1190B7A62005E1977 /* loginBack.png */,
+				93411EA2190B7A62005E1977 /* loginButton.png */,
+				93411EA3190B7A62005E1977 /* passIcon.png */,
+				93411EA4190B7A63005E1977 /* profileBorder.png */,
+				93411EA5190B7A63005E1977 /* settingsIcon.png */,
+				93411EA6190B7A63005E1977 /* shareIcon.png */,
+				93411EA7190B7A63005E1977 /* signUpButton.png */,
+				93411EA8190B7A63005E1977 /* testCard.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -325,10 +367,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
+				93411EA9190B7A63005E1977 /* addCard.png in Resources */,
 				93411E98190B7807005E1977 /* MiSnapResources.bundle in Resources */,
-				93911A08190A079000EB5DDB /* SignIn.png in Resources */,
+				93411EB3190B7A63005E1977 /* profileBorder.png in Resources */,
+				93411EB4190B7A63005E1977 /* settingsIcon.png in Resources */,
+				93411EAA190B7A63005E1977 /* aryaman.png in Resources */,
+				93411EB0190B7A63005E1977 /* loginBack.png in Resources */,
+				93411EAD190B7A63005E1977 /* emailIcon.png in Resources */,
+				93411EB7190B7A63005E1977 /* testCard.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
+				93411EAB190B7A63005E1977 /* backButton.png in Resources */,
+				93411EB6190B7A63005E1977 /* signUpButton.png in Resources */,
+				93411EB2190B7A63005E1977 /* passIcon.png in Resources */,
+				93411EB1190B7A63005E1977 /* loginButton.png in Resources */,
 				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
+				93411EAC190B7A63005E1977 /* callIIcon.png in Resources */,
+				93411EAF190B7A63005E1977 /* linkedInIcon.png in Resources */,
+				93411EB5190B7A63005E1977 /* shareIcon.png in Resources */,
+				93411EAE190B7A63005E1977 /* forgotButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +493,7 @@
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -472,7 +528,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -506,7 +562,7 @@
 				OTHER_LDFLAGS = "-lstdc++";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -540,7 +596,7 @@
 				OTHER_LDFLAGS = "-lstdc++";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
