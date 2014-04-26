@@ -27,6 +27,25 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:[prefs objectForKey:@"imagePlain"]];
+
+    NSLog(@"Data: %@",data);
+    UIImage *img = [UIImage imageWithData:data];
+    [imgView setImage:img];
+    
+    //NSData *imageData = UIImagePNGRepresentation(img);
+
+    /*
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+ 
+    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = @"My trip to Hawaii!";
+    userPhoto[@"imageFile"] = imageFile;
+    [userPhoto save];
+    */
+
+
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -40,6 +59,33 @@
     [txtEmail setText:[myArray objectAtIndex:3]];
     [txtPhone setText:[myArray objectAtIndex:4]];
     [txtAddress setText:[myArray objectAtIndex:5]];
+}
+-(IBAction)takeToParse
+{
+    PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
+    uploadCard[@"Name"] = txtName.text;
+    uploadCard[@"Email"] = txtEmail.text;
+    uploadCard[@"Company"] = txtCompany.text;
+    uploadCard[@"Title"] = txtTitle.text;
+    uploadCard[@"Phone"] = txtPhone.text;
+    uploadCard[@"Address"] = txtAddress.text;
+    
+    
+    
+    
+    
+    
+    
+   
+    [uploadCard saveInBackground];
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
+                                                      message:@"Your card was succesfully added to your rolodex."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+     
+    [message show];
 }
 - (void)didReceiveMemoryWarning
 {

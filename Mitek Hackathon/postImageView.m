@@ -44,7 +44,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    strName = @"";
+    strCompany = @"";
+    strTitle = @"";
+    strEmail  = @"";
+    strPhone = @"";
+    strAddress = @"";
     
     arrayToPass = [[NSMutableArray alloc] init];
     rawLines = [[NSMutableArray alloc] init];
@@ -126,7 +131,8 @@
         }
         if([sender tag] == 4)
         {
-            strTitle    = [NSString stringWithFormat:@"%@ %@",strTitle,txtData.text];
+            strTitle  = [NSString stringWithFormat:@"%@ %@",strTitle,txtData.text];
+            NSLog(@"Str Title: %@", strTitle);
         }
         if([sender tag] == 5)
         {
