@@ -10,20 +10,19 @@
 #import <Parse/Parse.h>
 #define kOFFSET_FOR_KEYBOARD 140.0
 @interface ViewController ()
-
+@property (strong, nonatomic) NSString* serverVersion;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setNeedsStatusBarAppearanceUpdate];
 	// Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    if([prefs stringForKey:@"userPassword"].length != 0)
+    if([prefs stringForKey:@"username"].length != 0)
     {
-        [txtPassword setText:[prefs stringForKey:@"userPassword"]];
+        [txtUsername setText:[prefs stringForKey:@"userPassword"]];
     }
     
 }
@@ -70,18 +69,43 @@
     }
     self.view.frame = rect;
 }
+-(IBAction)forgotPassword
+{
+    /*
+    UIImage *imagetoshare = [UIImage imageNamed:@"aryaman.png"];
+    NSArray *activityItems = @[@"hi", imagetoshare];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    //activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToWeibo];
+    [self presentViewController:activityVC animated:TRUE completion:nil];
+     */
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Reset Password" message:@"To reset your password, enter your email address below." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Submit",nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
+    
+}
 
-
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [PFUser requestPasswordResetForEmailInBackground:[[alertView textFieldAtIndex:0] text]];
+    }
+}
 -(IBAction)signIn
 {
     [PFUser logInWithUsernameInBackground:txtUsername.text password:txtPassword.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) {
                                             // Do stuff after successful login.
-                                            
+                                            [self performSegueWithIdentifier:@"succesfulLogin" sender:nil];
+                                            NSLog(@"Succesfully logged in!");
                                             //Call to segue
                                         } else {
                                             // The login failed. Check error to see why.
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid login credentials" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+                                            // optional - add more buttons:
+                                            [alert show];
                                         }
                                     }];
 }

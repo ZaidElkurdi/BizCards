@@ -14,6 +14,8 @@
     IBOutlet UITextField *txtPassword;
     
     IBOutlet UIButton *signIn;
+    IBOutlet UIButton *forgotPassword;
 }
 -(IBAction)signIn;
+-(IBAction)forgotPassword;
 @end
