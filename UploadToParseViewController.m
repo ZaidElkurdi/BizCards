@@ -33,9 +33,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
     
+   
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSDictionary *oAuthConsumerInfo = [prefs objectForKey:@"oAuthConsumerInfo"];
     NSDictionary *oAuthTokenInfo = [prefs objectForKey:@"oAuthTokenInfo"];
     
@@ -53,14 +53,19 @@
     if(self.consumer && self.accessToken)
         canSearch=TRUE;
     
+
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+    
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
     imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
+    
 
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 
     NSArray *myArray = [prefs objectForKey:@"formattedArray"];
@@ -76,6 +81,34 @@
 -(IBAction)takeToParse
 {
     NSLog(@"Made it here");
+    
+    PFUser *curr  = [PFUser currentUser];
+    PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
+    uploadCard[@"Name"] = txtName.text;
+    uploadCard[@"Email"] = txtEmail.text;
+    uploadCard[@"Title"] = txtTitle.text;
+    uploadCard[@"Phone"] = txtPhone.text;
+    uploadCard[@"Address"] = txtAddress.text;
+    
+    NSLog(@"UPload Card: %@", uploadCard);
+    [uploadCard saveInBackground];
+    
+    
+    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = txtName.text;
+    userPhoto[@"imageFile"] = imageFile;
+    userPhoto[@"Owner"] = curr.objectId;
+    [userPhoto saveInBackground];
+    
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
+                                                      message:@"Your card was succesfully added to your rolodex."
+                                                     delegate:nil
+                                            cancelButtonTitle:@"OK"
+                                            otherButtonTitles:nil];
+    
+    [message show];
+    
+    
     [self profileApiCall];
     //[self performSegueWithIdentifier:@"backToHome" sender:nil];
 }

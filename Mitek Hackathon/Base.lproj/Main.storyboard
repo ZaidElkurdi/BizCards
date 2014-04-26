@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jmi-td-GxJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HtQ-2W-lUR">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -528,11 +528,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="fMm-EL-tgJ">
-                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-cZ-04c">
-                                <rect key="frame" x="127" y="354" width="66" height="48"/>
+                                <rect key="frame" x="127" y="266" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="addCard.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -542,7 +542,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="8Es-xb-0d3">
-                                <rect key="frame" x="30" y="256" width="260" height="56"/>
+                                <rect key="frame" x="30" y="168" width="260" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="On the next screen, you can add a business card. Make sure you hold the phone still and have good lighting!">
@@ -556,7 +556,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tD-zd-LvH">
-                                <rect key="frame" x="-32" y="182" width="384" height="66"/>
+                                <rect key="frame" x="-32" y="94" width="384" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Let's Add A Card">
@@ -569,10 +569,21 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-3k-rCG">
+                                <rect key="frame" x="14" y="20" width="37" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jmi-td-GxJ" kind="push" id="4i5-aw-Ivb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="T3v-I6-1IB"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRB-ch-DTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fmq-Xf-Gdw">
@@ -587,7 +598,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2249" y="440"/>
+            <point key="canvasLocation" x="1938" y="192"/>
         </scene>
         <!--Post Image View-->
         <scene sceneID="lYM-sz-CC9">
@@ -1062,7 +1073,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddu-va-9nr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-741" y="832"/>
+            <point key="canvasLocation" x="-645" y="416"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kQy-mc-bDa">
@@ -1080,7 +1091,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APU-mU-81n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="866"/>
+            <point key="canvasLocation" x="1578" y="648"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ND6-qO-Nln">
@@ -1161,6 +1172,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="hK5-5t-v7F"/>
         <segue reference="Ipc-wm-JYa"/>
-        <segue reference="hyA-4k-Okx"/>
+        <segue reference="rjn-Kd-8KF"/>
     </inferredMetricsTieBreakers>
 </document>
