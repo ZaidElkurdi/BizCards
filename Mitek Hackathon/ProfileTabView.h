@@ -9,7 +9,6 @@
 
 #import <UIKit/UIKit.h>
 #import "OAuthLoginView.h"
-#import "JSONKit.h"
 #import "OAConsumer.h"
 #import "OAMutableURLRequest.h"
 #import "OADataFetcher.h"

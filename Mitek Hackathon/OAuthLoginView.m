@@ -34,11 +34,11 @@
 - (void)requestTokenFromProvider
 {
     OAMutableURLRequest *request = 
-            [[[OAMutableURLRequest alloc] initWithURL:requestTokenURL
+            [[OAMutableURLRequest alloc] initWithURL:requestTokenURL
                                              consumer:self.consumer
                                                 token:nil   
                                              callback:linkedInCallbackURL
-                                    signatureProvider:nil] autorelease];
+                                    signatureProvider:nil];
     
     [request setHTTPMethod:@"POST"];   
     
@@ -50,7 +50,7 @@
     
     [request setParameters:[NSArray arrayWithObject:scopeParameter]];
     
-    OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
     [fetcher fetchDataWithRequest:request
                          delegate:self
                 didFinishSelector:@selector(requestTokenResult:didFinish:)
@@ -73,7 +73,6 @@
     NSString *responseBody = [[NSString alloc] initWithData:data
                                                    encoding:NSUTF8StringEncoding];
     self.requestToken = [[OAToken alloc] initWithHTTPResponseBody:responseBody];
-    [responseBody release];
     [self allowUserToLogin];
 }
 
@@ -177,14 +176,14 @@
 - (void)accessTokenFromProvider
 { 
     OAMutableURLRequest *request = 
-            [[[OAMutableURLRequest alloc] initWithURL:accessTokenURL
+            [[OAMutableURLRequest alloc] initWithURL:accessTokenURL
                                              consumer:self.consumer
                                                 token:self.requestToken   
                                              callback:nil
-                                    signatureProvider:nil] autorelease];
+                                    signatureProvider:nil];
     
     [request setHTTPMethod:@"POST"];
-    OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
     [fetcher fetchDataWithRequest:request
                          delegate:self
                 didFinishSelector:@selector(accessTokenResult:didFinish:)
@@ -212,7 +211,6 @@
      object:self];
     
     [self dismissModalViewControllerAnimated:YES];
-    [responseBody release];
 }
 
 //
@@ -233,9 +231,9 @@
     userLoginURLString = @"https://www.linkedin.com/uas/oauth/authorize";    
     linkedInCallbackURL = @"hdlinked://linkedin/oauth";
     
-    requestTokenURL = [[NSURL URLWithString:requestTokenURLString] retain];
-    accessTokenURL = [[NSURL URLWithString:accessTokenURLString] retain];
-    userLoginURL = [[NSURL URLWithString:userLoginURLString] retain];
+    requestTokenURL = [NSURL URLWithString:requestTokenURLString];
+    accessTokenURL = [NSURL URLWithString:accessTokenURLString];
+    userLoginURL = [NSURL URLWithString:userLoginURLString];
 }
 
 
@@ -259,7 +257,6 @@
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil];
         [alert show];
-        [alert release];
         
         // Notify parent and close this view
         [[NSNotificationCenter defaultCenter] 
@@ -281,10 +278,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {

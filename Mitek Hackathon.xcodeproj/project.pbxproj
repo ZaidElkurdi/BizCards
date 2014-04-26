@@ -68,6 +68,8 @@
 		93ABC81B190BF85B008FE209 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7DE190BEF4F008FE209 /* Base64Transcoder.c */; };
 		93ABC81E190BFAD0008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC81C190BFAD0008FE209 /* OAuthLoginView.m */; };
 		93ABC821190BFAD9008FE209 /* ProfileTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC81F190BFAD9008FE209 /* ProfileTabView.m */; };
+		93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */; };
+		93ABC823190BFD77008FE209 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DB7190B976400926B41 /* cardCell.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
@@ -582,9 +584,11 @@
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				93ABC7F0190BEFC0008FE209 /* NSURL+Base.m in Sources */,
 				93ABC81E190BFAD0008FE209 /* OAuthLoginView.m in Sources */,
+				93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
 				B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */,
 				B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */,
+				93ABC823190BFD77008FE209 /* cardCell.m in Sources */,
 				93ABC814190BF1B5008FE209 /* OADataFetcher.m in Sources */,
 				B8BD13E7190B8AF200AEF286 /* (null) in Sources */,
 				93ABC811190BF1B5008FE209 /* OAPlaintextSignatureProvider.m in Sources */,

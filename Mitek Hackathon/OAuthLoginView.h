@@ -7,7 +7,6 @@
 //  http://whitneyland.com
 //
 #import <UIKit/UIKit.h>
-#import "JSONKit.h"
 #import "OAConsumer.h"
 #import "OAMutableURLRequest.h"
 #import "OADataFetcher.h"
