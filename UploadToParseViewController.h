@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Parse/Parse.h>
 @interface UploadToParseViewController : UIViewController
 {
     IBOutlet UITextField *txtName;
@@ -16,5 +16,9 @@
     IBOutlet UITextField *txtPhone;
     IBOutlet UITextField *txtAddress;
     IBOutlet UITextField *txtTitle;
+    NSString *rawText;
+    IBOutlet UIButton *takeToParse;
+    IBOutlet UIImageView *imgView;
 }
+-(IBAction)takeToParse;
 @end
