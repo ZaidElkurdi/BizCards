@@ -26,4 +26,5 @@
 @property (nonatomic,strong) UIImage *profilePic;
 @property (nonatomic,strong) NSString *uniqueID;
 @property (nonatomic,strong) NSString *linkedInID;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
 @end

@@ -14,7 +14,7 @@
 #import "OADataFetcher.h"
 #import "OATokenManager.h"
 
-@interface UploadToParseViewController : UIViewController
+@interface UploadToParseViewController : UIViewController <UITextFieldDelegate>
 {
     IBOutlet UITextField *txtName;
     IBOutlet UITextField *txtEmail;

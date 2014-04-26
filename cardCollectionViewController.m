@@ -190,7 +190,7 @@
     [prefs setObject:dictionary forKey:@"cardData"];
     [prefs synchronize];
 
-    [self performSelector:@selector(moveToNext) withObject:nil afterDelay:5.0];
+    [self performSelector:@selector(moveToNext) withObject:nil afterDelay:1.0];
 }
 
 -(void)moveToNext

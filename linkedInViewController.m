@@ -33,7 +33,6 @@
     NSString *firstName = [person objectForKey:@"firstName"];
     NSString *lastName =[person  objectForKey:@"lastName"];
     NSString *headlineText =[person objectForKey:@"headline"];
-    NSString *id =[person objectForKey:@"id"];
     
     name.text = [NSString stringWithFormat:@"Is this %@ %@?", firstName, lastName];
     headline.text = headlineText;

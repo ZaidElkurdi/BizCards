@@ -83,6 +83,8 @@
 		93ABC83B190C4A75008FE209 /* Good.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC839190C4A75008FE209 /* Good.png */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
+		B861B6A2190C5415003DA083 /* bigPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = B861B6A1190C5415003DA083 /* bigPhoto.png */; };
+		B861B6A4190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
 		B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DC6190BE68400926B41 /* UploadToParseViewController.m */; };
@@ -212,6 +214,8 @@
 		93ABC838190C4A75008FE209 /* Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad.png; sourceTree = "<group>"; };
 		93ABC839190C4A75008FE209 /* Good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Good.png; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B861B6A1190C5415003DA083 /* bigPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigPhoto.png; sourceTree = "<group>"; };
+		B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3016588c-9e21-45f1-baaf-b935990c76cf-image.png"; sourceTree = "<group>"; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
 		B8711DBB190BA60A00926B41 /* xmlreader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmlreader.m; sourceTree = "<group>"; };
@@ -394,6 +398,8 @@
 		93ABC698190B94AA008FE209 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */,
+				B861B6A1190C5415003DA083 /* bigPhoto.png */,
 				93ABC838190C4A75008FE209 /* Bad.png */,
 				93ABC839190C4A75008FE209 /* Good.png */,
 				93ABC699190B94B3008FE209 /* addCard.png */,
@@ -567,9 +573,11 @@
 				93ABC83A190C4A75008FE209 /* Bad.png in Resources */,
 				93ABC833190C3119008FE209 /* shareIcon.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
+				B861B6A4190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */,
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
 				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
+				B861B6A2190C5415003DA083 /* bigPhoto.png in Resources */,
 				93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */,
 				93ABC83B190C4A75008FE209 /* Good.png in Resources */,
 				93ABC835190C3140008FE209 /* loginBack.png in Resources */,

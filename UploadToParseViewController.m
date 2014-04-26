@@ -8,7 +8,7 @@
 
 #import "UploadToParseViewController.h"
 #import "OAConsumer.h"
-
+#import "linkedInViewController.h"
 @interface UploadToParseViewController ()
 {
     bool canSearch;
@@ -125,7 +125,7 @@
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
 
-    [self performSegueWithIdentifier:@"goToConfirm" sender:nil];
+      [self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)reduced:(UIImage*)fullImage
 {
@@ -187,6 +187,17 @@
             [prefs setObject:person forKey:@"rawLinkedIn"];
         }
     }
+}
+
+- (BOOL)textField:(UITextField *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+
+    if([text isEqualToString:@"\n"])
+    {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
 
 
