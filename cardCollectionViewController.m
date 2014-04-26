@@ -13,6 +13,8 @@
 {
     NSIndexPath *currEditingIndex;
     NSMutableData *webdata;
+    int x;
+    NSArray *foundResults;
 }
 @end
 
@@ -30,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    x = 0;
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
     self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
@@ -66,7 +68,7 @@
     self.cardData = [[NSMutableArray alloc] init];
 
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
-    NSArray *foundResults = [query findObjects];
+    foundResults = [query findObjects];
    
   
         for(PFObject *image in foundResults)
@@ -110,7 +112,8 @@
         cell = [[cardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell.cardImageView setImage:[UIImage imageWithData:[self.cardData objectAtIndex:indexPath.row]]];
+    [cell.cardImageView setImage:[UIImage imageWithData:[self.cardData objectAtIndex:x]]];
+    x++;
     
     return cell;
 }
@@ -122,7 +125,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.cardData count];
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -132,12 +135,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
+    if(section == 0)
+        return 35;
     return 10;
 }
 
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+            PFObject *object = [foundResults objectAtIndex:indexPath.row];
+    
+            NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
+    
+            NSArray *objects = [NSArray arrayWithObjects:[object objectForKey:@"Name"],[object objectForKey:@"Email"],[object objectForKey:@"Company"],[object objectForKey:@"Phone"],[object objectForKey:@"Address"],[object objectForKey:@"Title"],nil];
+            
+            
+            NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:dataToPass];
+    
+            [self performSegueWithIdentifier:@"toDetail" sender:nil];
+    
+
 }
 
 

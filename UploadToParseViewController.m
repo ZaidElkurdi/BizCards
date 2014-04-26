@@ -77,6 +77,7 @@
                                             otherButtonTitles:nil];
      
     [message show];
+    [self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)thumbnail:(UIImage*)fullImage
 {

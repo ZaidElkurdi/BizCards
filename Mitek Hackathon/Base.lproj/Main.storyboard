@@ -159,10 +159,10 @@
             <objects>
                 <viewController id="Aeh-F5-SFU" customClass="cardCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vZE-y5-ULy"/>
-                        <viewControllerLayoutGuide type="bottom" id="W50-2y-upc"/>
+                        <viewControllerLayoutGuide type="top" id="N6o-6T-UgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="kXd-D8-lHZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="N4i-VF-lnF">
+                    <view key="view" contentMode="scaleToFill" id="ppy-OR-aSi">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
@@ -186,8 +186,19 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPI-zh-ajC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1GC-yj-2LF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <segue destination="rSv-vN-uOt" kind="modal" identifier="toDetail" id="gm1-Gg-hKq"/>
+                    </connections>
+                </button>
             </objects>
-            <point key="canvasLocation" x="164" y="-199"/>
+            <point key="canvasLocation" x="208" y="-203"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Fa4-0N-lXk">
@@ -554,7 +565,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="1973" y="-160"/>
+            <point key="canvasLocation" x="2217" y="-192"/>
         </scene>
         <!--Post Image View-->
         <scene sceneID="lYM-sz-CC9">
@@ -812,6 +823,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6z-0e-KVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WcM-Co-5xo">
+                    <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <segue destination="Jmi-td-GxJ" kind="modal" identifier="backToHome" id="Ipc-wm-JYa"/>
+                    </connections>
+                </button>
             </objects>
             <point key="canvasLocation" x="3344" y="9"/>
         </scene>
@@ -930,5 +952,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="hyA-4k-Okx"/>
+        <segue reference="Ipc-wm-JYa"/>
     </inferredMetricsTieBreakers>
 </document>
