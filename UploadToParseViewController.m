@@ -126,12 +126,8 @@
                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
-    
-    [message show];
-    
-    
-    [self profileApiCall];
-    [self performSegueWithIdentifier:@"backToHome" sender:nil];
+
+    [self performSegueWithIdentifier:@"goToConfirm" sender:nil];
 }
 -(UIImage*)reduced:(UIImage*)fullImage
 {
@@ -188,10 +184,9 @@
             NSDictionary *people = [profile objectForKey:@"people"];
             NSArray *values = [people objectForKey:@"values"];
             NSDictionary *person = [values objectAtIndex:0];
-            NSLog(@"%@", [person objectForKey:@"firstName"]);
-            NSLog(@"%@", [person objectForKey:@"lastName"]);
-            NSLog(@"%@", [person objectForKey:@"headline"]);
-            NSLog(@"%@", [person objectForKey:@"id"]);
+            
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            [prefs setObject:person forKey:@"rawLinkedIn"];
         }
     }
 }

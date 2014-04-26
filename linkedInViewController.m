@@ -28,6 +28,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSDictionary *person = [prefs objectForKey:@"rawLinkedIn"];
+    NSString *firstName = [person objectForKey:@"firstName"];
+    NSString *lastName =[person  objectForKey:@"lastName"];
+    NSString *headlineText =[person objectForKey:@"headline"];
+    NSString *id =[person objectForKey:@"id"];
+    
+    name.text = [NSString stringWithFormat:@"Is this %@ %@?", firstName, lastName];
+    headline.text = headlineText;
     // Do any additional setup after loading the view.
 }
 
@@ -37,6 +46,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)pressedNo
+{
+    [self performSegueWithIdentifier:@"goHomePlease" sender:nil];
+}
+
+-(IBAction)pressedYes
+{
+    [self performSegueWithIdentifier:@"goHomePlease" sender:nil];
+}
+
+-(IBAction)pressedConnect
+{
+    [self performSegueWithIdentifier:@"goHomePlease" sender:nil];
+}
 /*
 #pragma mark - Navigation
 

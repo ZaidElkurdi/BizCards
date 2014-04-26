@@ -31,6 +31,18 @@ statusTextView, updateStatusLabel;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
+    
+    self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
+    self.navigationController.navigationBar.barTintColor=barColor;
+    
+//    UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+//    navTitle.text = @"Settings";
+//    navTitle.textColor = [UIColor whiteColor];
+//    UIFont *navFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:28.0];
+//    navTitle.font = navFont;
+//    navTitle.textAlignment = NSTextAlignmentCenter;
+//     [self.navigationController.navigationBar addSubview:navTitle];
 }
 
 -(void) loginViewDidFinish:(NSNotification*)notification
@@ -48,10 +60,6 @@ statusTextView, updateStatusLabel;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
 }
 
 -(IBAction)signInWithLinkedIn
