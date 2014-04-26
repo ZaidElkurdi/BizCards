@@ -8,13 +8,14 @@
 
 #import "cardCollectionViewController.h"
 #import <Parse/Parse.h>
-
+#import "detailViewController.h"
 @interface cardCollectionViewController ()
 {
     NSIndexPath *currEditingIndex;
     NSMutableData *webdata;
     int x;
     NSArray *foundResults;
+    NSDictionary *dictionary;
 }
 @end
 
@@ -182,7 +183,7 @@
     
             
     
-            NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
+            dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
     
             [self performSegueWithIdentifier:@"toDetail" sender:nil];
     
@@ -190,6 +191,13 @@
 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toDetail"]) {
+
+        detailViewController *destViewController = segue.destinationViewController;
+        destViewController.cardData = dictionary;
+    }
+}
 
 #pragma mark - Other methods
 -(void)confirmDelete:(UIGestureRecognizer*)recognizer
