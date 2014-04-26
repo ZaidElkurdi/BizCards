@@ -7,6 +7,7 @@
 //
 
 #import "cardCollectionViewController.h"
+#import <Parse/Parse.h>
 
 @interface cardCollectionViewController ()
 {
@@ -56,8 +57,13 @@
     [self.view addSubview:self.cardCollectionTable];
     [self setNeedsStatusBarAppearanceUpdate];
     
+    PFUser *currentUser = [PFUser currentUser];
+    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    //[query whereKey:@"Owner" equalTo:currentUser.objectId];
+
+
     /* Init Table Data */
-    self.cardData = [[NSMutableArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
+    self.cardData = [[NSMutableArray alloc] initWithArray:[query findObjects]];
     
     /* Init Table Swipe */
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
@@ -93,7 +99,9 @@
         cell = [[cardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell.cardImageView setImage:[UIImage imageNamed:@"testCard.png"]];
+    [cell.cardImageView setImage:[UIImage imageNamed:[cardData objectAtIndex:indexPath.row]];
+    
+    NSLog(@"Output: %@",[cardData objectAtIndex:indexPath.row]);
     return cell;
 }
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "cardCell.h"
+#import <Parse/Parse.h>
 
 @interface cardCollectionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic,strong) UITableView *cardCollectionTable;
