@@ -116,7 +116,9 @@ statusTextView, updateStatusLabel;
     [self networkApiCall];
     
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)profileApiCallResult:(OAServiceTicket *)ticket didFail:(NSData *)error
 {

@@ -138,7 +138,9 @@
         [noIDAlert show];
     }
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 -(void)didTapShare
 {
     NSArray *activityItems = @[@"hi", @"bro"];

@@ -279,6 +279,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 /*
 #pragma mark - Navigation

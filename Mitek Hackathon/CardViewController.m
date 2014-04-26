@@ -35,7 +35,9 @@
     }
     return self;
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 - (IBAction)takeButtonPressed:(UIButton*)button {
     
     NSMutableDictionary* videoParameters
