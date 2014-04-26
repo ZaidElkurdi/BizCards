@@ -152,7 +152,7 @@
                     </state>
                 </button>
             </objects>
-            <point key="canvasLocation" x="-215" y="832"/>
+            <point key="canvasLocation" x="1" y="1648"/>
         </scene>
         <!--Card Collection View Controller-->
         <scene sceneID="ib7-wB-M81">
@@ -198,7 +198,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="396" y="-679"/>
+            <point key="canvasLocation" x="1108" y="-1507"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Fa4-0N-lXk">
@@ -328,6 +328,9 @@
                     <navigationItem key="navigationItem" id="hPw-J1-2Eu">
                         <barButtonItem key="leftBarButtonItem" image="backButton.png" id="pCL-gz-B7C">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.21840784671532848" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Jmi-td-GxJ" kind="modal" id="ybR-gq-Uyi"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -455,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuI-EN-AiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="856"/>
+            <point key="canvasLocation" x="966" y="1672"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="sZz-L6-vc4">
@@ -479,6 +482,13 @@
                                     <action selector="signInWithLinkedIn" destination="jXi-Wx-EwK" eventType="touchUpInside" id="fMv-3W-mnJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR1-Mf-ute">
+                                <rect key="frame" x="125" y="201" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -495,13 +505,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgA-Uq-or5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-769"/>
+            <point key="canvasLocation" x="2246" y="-1597"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gvY-sZ-7b3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jmi-td-GxJ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bDt-u7-qgE"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="18j-WL-O3g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -513,7 +525,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epf-fr-QIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-260" y="-234"/>
+            <point key="canvasLocation" x="340" y="-1040"/>
         </scene>
         <!--Card View Controller-->
         <scene sceneID="mBq-YP-wM5">
@@ -528,11 +540,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="loginBack.png" translatesAutoresizingMaskIntoConstraints="NO" id="fMm-EL-tgJ">
-                                <rect key="frame" x="0.0" y="58" width="320" height="510"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-cZ-04c">
-                                <rect key="frame" x="127" y="354" width="66" height="48"/>
+                                <rect key="frame" x="127" y="266" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="addCard.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -542,7 +554,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="260" translatesAutoresizingMaskIntoConstraints="NO" id="8Es-xb-0d3">
-                                <rect key="frame" x="30" y="256" width="260" height="56"/>
+                                <rect key="frame" x="30" y="168" width="260" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="On the next screen, you can add a business card. Make sure you hold the phone still and have good lighting!">
@@ -556,7 +568,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tD-zd-LvH">
-                                <rect key="frame" x="-32" y="182" width="384" height="66"/>
+                                <rect key="frame" x="-32" y="94" width="384" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Let's Add A Card">
@@ -569,10 +581,21 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-3k-rCG">
+                                <rect key="frame" x="14" y="20" width="37" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Jmi-td-GxJ" kind="modal" id="4i5-aw-Ivb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="T3v-I6-1IB"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRB-ch-DTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fmq-Xf-Gdw">
@@ -587,7 +610,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2249" y="440"/>
+            <point key="canvasLocation" x="1938" y="192"/>
         </scene>
         <!--Post Image View-->
         <scene sceneID="lYM-sz-CC9">
@@ -744,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nab-2i-Jog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2564" y="435"/>
+            <point key="canvasLocation" x="2682" y="49"/>
         </scene>
         <!--Upload To Parse View Controller-->
         <scene sceneID="FA8-Uf-zAo">
@@ -783,13 +806,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMY-8Y-5uX">
-                                <rect key="frame" x="-31" y="15" width="384" height="82"/>
+                                <rect key="frame" x="12" y="15" width="296" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Let's Double Check...">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="HelveticaNeue-Bold"/>
+                                            <font key="NSFont" size="28" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -840,6 +863,16 @@
                                 <rect key="frame" x="40" y="318" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq2-gK-rew">
+                                <rect key="frame" x="12" y="5" width="33" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="backButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Aeh-F5-SFU" kind="modal" id="LOd-6F-11c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1044,7 +1077,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFw-qr-BiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="224" y="856"/>
+            <point key="canvasLocation" x="440" y="1672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NyK-02-cHo">
@@ -1063,7 +1096,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddu-va-9nr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-741" y="832"/>
+            <point key="canvasLocation" x="-693" y="464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kQy-mc-bDa">
@@ -1117,7 +1150,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lZ-lH-pBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008" y="-769"/>
+            <point key="canvasLocation" x="1720" y="-1597"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KmX-fd-aKw">

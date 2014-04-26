@@ -33,9 +33,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
     
+   
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSDictionary *oAuthConsumerInfo = [prefs objectForKey:@"oAuthConsumerInfo"];
     NSDictionary *oAuthTokenInfo = [prefs objectForKey:@"oAuthTokenInfo"];
     
@@ -53,6 +53,9 @@
     if(self.consumer && self.accessToken)
         canSearch=TRUE;
     
+
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+    
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
 
@@ -60,6 +63,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
 
     NSArray *myArray = [prefs objectForKey:@"formattedArray"];
@@ -71,7 +75,9 @@
     [txtPhone setText:[myArray objectAtIndex:4]];
     [txtAddress setText:[myArray objectAtIndex:5]];
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 -(IBAction)takeToParse
 {
     NSLog(@"Made it here");
@@ -83,10 +89,11 @@
     PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
     uploadCard[@"Name"] = txtName.text;
     uploadCard[@"Email"] = txtEmail.text;
-    uploadCard[@"Company"] = txtCompany.text;
     uploadCard[@"Title"] = txtTitle.text;
     uploadCard[@"Phone"] = txtPhone.text;
     uploadCard[@"Address"] = txtAddress.text;
+    
+    NSLog(@"UPload Card: %@", uploadCard);
     [uploadCard saveInBackground];
     
     NSLog(@"Made it to the photo");
@@ -111,15 +118,17 @@
 
     
     
-    
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
                                                       message:@"Your card was succesfully added to your rolodex."
-                                                      delegate:nil
+                                                     delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
-     
+    
     [message show];
-    //[self performSegueWithIdentifier:@"backToHome" sender:nil];
+    
+    
+    [self profileApiCall];
+    [self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)reduced:(UIImage*)fullImage
 {
@@ -171,11 +180,16 @@
     
     if (profile)
     {
-        NSString *name = [[NSString alloc] initWithFormat:@"%@ %@",
-                     [profile objectForKey:@"firstName"], [profile objectForKey:@"lastName"]];
-        NSString *headline = [profile objectForKey:@"headline"];
-        
-        NSLog(@"Name: %@ Headline: %@",name,headline);
+        if([profile objectForKey:@"numResults"]>0)
+        {
+            NSDictionary *people = [profile objectForKey:@"people"];
+            NSArray *values = [people objectForKey:@"values"];
+            NSDictionary *person = [values objectAtIndex:0];
+            NSLog(@"%@", [person objectForKey:@"firstName"]);
+            NSLog(@"%@", [person objectForKey:@"lastName"]);
+            NSLog(@"%@", [person objectForKey:@"headline"]);
+            NSLog(@"%@", [person objectForKey:@"id"]);
+        }
     }
 }
 
