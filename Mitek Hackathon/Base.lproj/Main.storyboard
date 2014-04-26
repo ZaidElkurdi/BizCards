@@ -138,7 +138,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <segue destination="Jmi-td-GxJ" kind="modal" identifier="succesfulLogin" id="KZ9-cN-7UY"/>
+                        <segue destination="Jmi-td-GxJ" kind="modal" identifier="succesfulLogin" modalTransitionStyle="crossDissolve" id="KZ9-cN-7UY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oTR-FQ-JB7">
