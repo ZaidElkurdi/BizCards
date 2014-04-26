@@ -51,24 +51,36 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
-#pragma mark -
-#pragma mark MiSnap Delegate methods
+- (void)miSnapFinishedReturningEncodedImage:(NSString*)encodedImage originalImage:(UIImage*)originalImage andResults:(NSDictionary*)results
+{
+    NSString* resultCode = [results objectForKey:kMiSnapResultCode];
+    
+        if ([resultCode isEqualToString:kMiSnapResultSuccessVideo]
+            || [resultCode isEqualToString:kMiSnapResultSuccessStillCamera])
+        {
 
-- (void)miSnapFinishedReturningEncodedImage:(NSString *)encodedImage
-							  originalImage:(UIImage *)image
-								 andResults:(NSDictionary *)results {
-    
-	self.isRunningMiSnap = NO;
-    self.miSnapImage = image;
-    
-	[self dismissViewControllerAnimated:YES completion:^{
-		// Show the image to the user
-			}];
+        [self dismissViewControllerAnimated:NO completion:^{
+            [[AppProxyServer sharedInstance] sendEncodedImage:encodedImage delegate:self];
+            }];
+        }
 }
 
-- (void)miSnapCancelledWithResults:(NSDictionary *)results {
-	self.isRunningMiSnap = NO;
-	[self dismissViewControllerAnimated:YES completion:nil];
+- (void)authenticateUserReturn:(NSDictionary *)dict {
+    if ([[dict objectForKey:@"SecurityResult"] integerValue]) {
+        // process failure
+    } else {
+        self.serverVersion = [dict objectForKey:@"MIPVersion"];
+        if (!self.serverVersion)
+            self.serverVersion = @"UNKNOWN";
+    }
+}
+- (void)miSnapCancelledWithResults:(NSDictionary*)results {
+    // code to handle Cancel event goes here.
+    // Mitek best practices suggest retrieving the MIBI Data from the results // parameter and sending them to the imaging server (most likely via app // proxy-server) in order to capture abandonment data together with MIBI // data embedded in images captured successfully and sent to the server.
+    
+    NSString* mibiData = [results objectForKey:kMiSnapMIBIData];
+    if(mibiData)
+        [[AppProxyServer sharedInstance] sendMIBIData:mibiData];
 }
 
 - (void)viewDidLoad
@@ -76,6 +88,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _isRunningMiSnap = NO;
+    
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"zaid.elkurdi@gmail.com",@"HI7WWP8VypoE",@"UCSD-Hack",nil];
+    
+    NSArray *arr2 = [[NSArray alloc] initWithObjects:@"userName",@"password",@"orgName",nil];
+    
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjects:arr forKeys:arr2];
+    [self authenticateUserReturn:dict];
+    //Make a call w/ dictionary
+
 
 }
 - (void)viewWillAppear:(BOOL)animated {
@@ -84,6 +105,32 @@
     [self setTitle:@"Take Photo"];
 }
 
+#pragma mark - Rotation methods
+#pragma mark -
+
+// iOS 6 methods
+- (NSUInteger)supportedInterfaceOrientations
+{
+	// if we're actively presenting the MiSnap View Controller then we want to support
+	// landscape modes. Otherwise, just portrait
+	if (self.isRunningMiSnap)
+	{
+		return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskLandscape;
+	}
+	else
+	{
+		return UIInterfaceOrientationMaskPortrait;
+	}
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+	return UIInterfaceOrientationPortrait;
+}
+
+- (BOOL)shouldAutorotate {
+	return YES;
+}
 
 - (void)didReceiveMemoryWarning
 {

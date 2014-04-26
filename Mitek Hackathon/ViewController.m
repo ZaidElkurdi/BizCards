@@ -10,12 +10,12 @@
 #import <Parse/Parse.h>
 #define kOFFSET_FOR_KEYBOARD 140.0
 @interface ViewController ()
-
+@property (strong, nonatomic) NSString* serverVersion;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +26,6 @@
     }
     
 }
-
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
     if(self.view.frame.origin.y >= 0)
