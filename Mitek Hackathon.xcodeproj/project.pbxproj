@@ -81,6 +81,9 @@
 		93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC836190C3608008FE209 /* MiSnapResources.bundle */; };
 		93ABC83A190C4A75008FE209 /* Bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC838190C4A75008FE209 /* Bad.png */; };
 		93ABC83B190C4A75008FE209 /* Good.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC839190C4A75008FE209 /* Good.png */; };
+		93ABC83E190C5420008FE209 /* CardViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC83D190C5420008FE209 /* CardViewController2.m */; };
+		93ABC844190C5511008FE209 /* postImageView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC843190C5511008FE209 /* postImageView2.m */; };
+		93ABC847190C55B8008FE209 /* UploadToParseViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC846190C55B8008FE209 /* UploadToParseViewController2.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
@@ -211,6 +214,12 @@
 		93ABC836190C3608008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MiSnapResources.bundle; sourceTree = "<group>"; };
 		93ABC838190C4A75008FE209 /* Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad.png; sourceTree = "<group>"; };
 		93ABC839190C4A75008FE209 /* Good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Good.png; sourceTree = "<group>"; };
+		93ABC83C190C5420008FE209 /* CardViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController2.h; sourceTree = "<group>"; };
+		93ABC83D190C5420008FE209 /* CardViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController2.m; sourceTree = "<group>"; };
+		93ABC842190C5511008FE209 /* postImageView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = postImageView2.h; path = ../postImageView2.h; sourceTree = "<group>"; };
+		93ABC843190C5511008FE209 /* postImageView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = postImageView2.m; path = ../postImageView2.m; sourceTree = "<group>"; };
+		93ABC845190C55B8008FE209 /* UploadToParseViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadToParseViewController2.h; sourceTree = "<group>"; };
+		93ABC846190C55B8008FE209 /* UploadToParseViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadToParseViewController2.m; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
@@ -338,6 +347,8 @@
 				93ABC82A190C1F2C008FE209 /* OAuthLoginView.h */,
 				93ABC824190C1B8D008FE209 /* settingsViewController.h */,
 				93ABC825190C1B8D008FE209 /* settingsViewController.m */,
+				93ABC845190C55B8008FE209 /* UploadToParseViewController2.h */,
+				93ABC846190C55B8008FE209 /* UploadToParseViewController2.m */,
 				B8711DC5190BE68400926B41 /* UploadToParseViewController.h */,
 				B8711DC6190BE68400926B41 /* UploadToParseViewController.m */,
 				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,
@@ -348,8 +359,12 @@
 				B8BD13E2190B8ADB00AEF286 /* cardCell.h */,
 				93911A25190B35F500EB5DDB /* CardViewController.h */,
 				93911A26190B35F500EB5DDB /* CardViewController.m */,
+				93ABC83C190C5420008FE209 /* CardViewController2.h */,
+				93ABC83D190C5420008FE209 /* CardViewController2.m */,
 				B8711DBD190BAB5C00926B41 /* postImageView.h */,
 				B8711DBE190BAB5C00926B41 /* postImageView.m */,
+				93ABC842190C5511008FE209 /* postImageView2.h */,
+				93ABC843190C5511008FE209 /* postImageView2.m */,
 				B8711DC3190BC5D500926B41 /* rawTest.txt */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
 				939119E7190A05FC00EB5DDB /* ViewController.m */,
@@ -592,16 +607,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93ABC847190C55B8008FE209 /* UploadToParseViewController2.m in Sources */,
 				B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */,
 				93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */,
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */,
 				93ABC816190BF1B5008FE209 /* OACall.m in Sources */,
+				93ABC844190C5511008FE209 /* postImageView2.m in Sources */,
 				93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */,
 				93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				93ABC7EE190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
+				93ABC83E190C5420008FE209 /* CardViewController2.m in Sources */,
 				93ABC821190BFAD9008FE209 /* ProfileTabView.m in Sources */,
 				93ABC812190BF1B5008FE209 /* OAMutableURLRequest.m in Sources */,
 				93ABC813190BF1B5008FE209 /* OAHMAC_SHA1SignatureProvider.m in Sources */,

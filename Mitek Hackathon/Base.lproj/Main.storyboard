@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HtQ-2W-lUR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HtQ-2W-lUR">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -498,6 +498,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signInWithLinkedIn" destination="jXi-Wx-EwK" eventType="touchUpInside" id="5Z4-M7-C9F"/>
+                                    <segue destination="3hK-G1-9cf" kind="modal" id="mKA-fn-RmK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pR1-Mf-ute">
@@ -540,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgA-Uq-or5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="-1625"/>
+            <point key="canvasLocation" x="2580" y="-1630"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gvY-sZ-7b3">
@@ -645,7 +646,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="2028" y="-246"/>
+            <point key="canvasLocation" x="1828" y="-90"/>
         </scene>
         <!--Post Image View-->
         <scene sceneID="lYM-sz-CC9">
@@ -968,7 +969,7 @@
                     </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="3070" y="155"/>
+            <point key="canvasLocation" x="3422" y="459"/>
         </scene>
         <!--Linked In View Controller-->
         <scene sceneID="tON-UA-Khj">
@@ -1230,10 +1231,10 @@
             </objects>
             <point key="canvasLocation" x="2798" y="-704"/>
         </scene>
-        <!--Card View Controller-->
+        <!--Card View Controller2-->
         <scene sceneID="y8F-Xy-hrA">
             <objects>
-                <viewController id="3hK-G1-9cf" customClass="CardViewController" sceneMemberID="viewController">
+                <viewController id="3hK-G1-9cf" customClass="CardViewController2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pHJ-Qy-7Kl"/>
                         <viewControllerLayoutGuide type="bottom" id="YMd-gw-JEl"/>
@@ -1247,7 +1248,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-wn-wed">
-                                <rect key="frame" x="127" y="266" width="66" height="48"/>
+                                <rect key="frame" x="127" y="297" width="66" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="addCard.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1260,7 +1261,7 @@
                                 <rect key="frame" x="30" y="168" width="260" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="On the next screen, you can add a business card. Make sure you hold the phone still and have good lighting!">
+                                    <fragment content="On the next screen, you can update your  business card. Make sure you hold the phone still and have good lighting!">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="12" name="HelveticaNeue-Light"/>
@@ -1270,14 +1271,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3c-hQ-Mvn">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="384" translatesAutoresizingMaskIntoConstraints="NO" id="Y3c-hQ-Mvn">
                                 <rect key="frame" x="-32" y="94" width="384" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Let's Add A Card">
+                                    <fragment content="Let's Update YourCard">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="36" name="HelveticaNeue-Bold"/>
+                                            <font key="NSFont" size="28" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -1296,6 +1297,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="uaZ-YD-Z84"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="takeButton" destination="Shc-wn-wed" id="pzB-DH-ZK5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKd-Wv-BoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9rU-Oj-e3c">
@@ -1305,14 +1309,17 @@
                     <state key="normal" title="Button">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <segue destination="LfK-6M-ska" kind="modal" identifier="viewImage2" id="6if-3C-es8"/>
+                    </connections>
                 </button>
             </objects>
-            <point key="canvasLocation" x="3152" y="-1607"/>
+            <point key="canvasLocation" x="3158" y="-1607"/>
         </scene>
-        <!--Post Image View-->
+        <!--Post Image View2-->
         <scene sceneID="pFB-Uw-A5j">
             <objects>
-                <viewController storyboardIdentifier="postImageView" id="LfK-6M-ska" customClass="postImageView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postImageView2" id="LfK-6M-ska" customClass="postImageView2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vyq-I4-9aB"/>
                         <viewControllerLayoutGuide type="bottom" id="5Ix-Y5-66T"/>
@@ -1461,19 +1468,31 @@
                         <outlet property="btnEmail" destination="sPV-G0-kl1" id="gvK-Rb-xPB"/>
                         <outlet property="btnIgnore" destination="mgg-zI-ZKC" id="byI-Zf-sD9"/>
                         <outlet property="btnName" destination="70i-OV-GHs" id="swQ-48-pTJ"/>
+                        <outlet property="btnPhone" destination="tLz-Kb-OuC" id="GAH-Mb-vt1"/>
                         <outlet property="btnTitle" destination="q7b-3F-c9c" id="55n-w2-QZk"/>
                         <outlet property="passedImage" destination="q4z-lP-8ZC" id="kGb-eJ-6Cm"/>
                         <outlet property="txtData" destination="uFT-hv-9H1" id="o0i-nb-OYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3B-Sw-Gsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MJO-hS-akr">
+                    <rect key="frame" x="0.0" y="0.0" width="73" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <segue destination="PHu-ky-7Uh" kind="modal" identifier="transitionToUpload" id="Z8q-qb-2E7"/>
+                    </connections>
+                </button>
             </objects>
-            <point key="canvasLocation" x="3562" y="-1607"/>
+            <point key="canvasLocation" x="3562" y="-1621"/>
         </scene>
-        <!--Upload To Parse View Controller-->
+        <!--Upload To Parse View Controller2-->
         <scene sceneID="HrU-QG-Wav">
             <objects>
-                <viewController id="PHu-ky-7Uh" customClass="UploadToParseViewController" sceneMemberID="viewController">
+                <viewController id="PHu-ky-7Uh" customClass="UploadToParseViewController2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eDv-iP-t27"/>
                         <viewControllerLayoutGuide type="bottom" id="GZH-Dy-3Q7"/>
@@ -1553,7 +1572,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-e7-WOx">
                                 <rect key="frame" x="0.0" y="484" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Card">
+                                <state key="normal" title="Update Card">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1620,9 +1639,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9kw-y7-ceF"/>
-        <segue reference="7jl-4K-Leb"/>
-        <segue reference="5pC-rW-AGa"/>
-        <segue reference="Ipc-wm-JYa"/>
+        <segue reference="LOd-6F-11c"/>
+        <segue reference="rjn-Kd-8KF"/>
+        <segue reference="4i5-aw-Ivb"/>
+        <segue reference="TH3-AR-kIg"/>
+        <segue reference="ndR-AK-Jfj"/>
     </inferredMetricsTieBreakers>
 </document>
