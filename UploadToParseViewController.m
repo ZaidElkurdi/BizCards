@@ -82,6 +82,9 @@
 {
     NSLog(@"Made it here");
     
+    if(canSearch)
+        [self profileApiCall];
+    
     PFUser *curr  = [PFUser currentUser];
     PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
     uploadCard[@"Name"] = txtName.text;
@@ -93,29 +96,41 @@
     NSLog(@"UPload Card: %@", uploadCard);
     [uploadCard saveInBackground];
     
-    
+    NSLog(@"Made it to the photo");
+
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+    UIImage *final = [self reduced:[UIImage imageWithData:decodedData]];
+    NSData *parseData = UIImagePNGRepresentation(final);
+    imageFile = [PFFile fileWithName:@"image.png" data:parseData];
+
     PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
     userPhoto[@"imageName"] = txtName.text;
     userPhoto[@"imageFile"] = imageFile;
     userPhoto[@"Owner"] = curr.objectId;
-    [userPhoto saveInBackground];
+    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+    {
+        if(!error)
+        {
+            NSLog(@"Finished uploading");
+        }
+    }];
+
+    
+    
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
                                                       message:@"Your card was succesfully added to your rolodex."
                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
-    
-    [message show];
-    
-    
-    [self profileApiCall];
-    [self performSegueWithIdentifier:@"backToHome" sender:nil];
+
+    [self performSegueWithIdentifier:@"goToConfirm" sender:nil];
 }
--(UIImage*)thumbnail:(UIImage*)fullImage
+-(UIImage*)reduced:(UIImage*)fullImage
 {
     UIImage *originalImage = fullImage;
-    CGSize destinationSize = CGSizeMake(80, 80);
+    CGSize destinationSize = CGSizeMake(fullImage.size.width/2, fullImage.size.height/2);
     UIGraphicsBeginImageContext(destinationSize);
     [originalImage drawInRect:CGRectMake(0,0,destinationSize.width,destinationSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -167,10 +182,9 @@
             NSDictionary *people = [profile objectForKey:@"people"];
             NSArray *values = [people objectForKey:@"values"];
             NSDictionary *person = [values objectAtIndex:0];
-            NSLog(@"%@", [person objectForKey:@"firstName"]);
-            NSLog(@"%@", [person objectForKey:@"lastName"]);
-            NSLog(@"%@", [person objectForKey:@"headline"]);
-            NSLog(@"%@", [person objectForKey:@"id"]);
+            
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+            [prefs setObject:person forKey:@"rawLinkedIn"];
         }
     }
 }

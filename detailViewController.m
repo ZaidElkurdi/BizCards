@@ -11,11 +11,12 @@
 @interface detailViewController ()
 {
     UIActionSheet *phonePicker;
+    NSString *fullName;
 }
 @end
 
 @implementation detailViewController
-
+@synthesize cardData;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,8 +28,13 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     NSLog(@"Creating detail view");
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    cardData = [[NSDictionary alloc] initWithDictionary:[prefs objectForKey:@"cardData"]];
+    
+    NSLog(@"Name Data: %@", [cardData objectForKey:@"Name"]);
     
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
@@ -37,27 +43,30 @@
     self.navigationController.navigationBar.barTintColor=barColor;
     NSLog(@"Nav bar: %@", self.navigationController.navigationBar);
     
-    [self setNeedsStatusBarAppearanceUpdate];
     
-    /* Init instance variables */
     self.phoneNumbers = [self.cardData objectForKey:@"phoneNumbers"];
     self.emailAddresses = [self.cardData objectForKey:@"emailAddresses"];
-    self.fullName = [self.cardData objectForKey:@"fullName"];
+    fullName = [self.cardData objectForKey:@"fullName"];
     self.position = [self.cardData objectForKey:@"position"];
     self.uniqueID = [self.cardData objectForKey:@"uniqueID"];
     self.linkedInID = [self.cardData objectForKey:@"linkedInID"];
     
-//    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-//    
-//    if([prefs objectForKey:self.uniqueID] != NULL)
-//    {
-//        hasNotes=TRUE;
-//    }
-//    else
-//    {
-//        hasNotes=FALSE;
-//    }
-//    
+    profileImageView.layer.borderWidth = 3.0f;
+    profileImageView.layer.borderColor =[UIColor whiteColor].CGColor;
+    profileImageView.layer.masksToBounds = NO;
+    profileImageView.clipsToBounds = YES;
+    profileImageView.layer.cornerRadius=70;
+    
+    UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    navTitle.text = fullName;
+    NSLog(@"name: %@",self.fullName);
+    navTitle.textColor = [UIColor whiteColor];
+    UIFont *navFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:28.0];
+    navTitle.font = navFont;
+    navTitle.textAlignment = NSTextAlignmentCenter;
+    [self.navigationController.navigationBar addSubview:navTitle];
+    
+    positionLabel.text = self.position;
     
 }
 
@@ -68,21 +77,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    profileImageView.layer.borderWidth = 3.0f;
-    profileImageView.layer.borderColor =[UIColor whiteColor].CGColor;
-    profileImageView.layer.masksToBounds = NO;
-    profileImageView.clipsToBounds = YES;
-    profileImageView.layer.cornerRadius=70;
+
+    /* Init instance variables */
+ 
     
-    UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    navTitle.text = self.fullName;
-    navTitle.textColor = [UIColor whiteColor];
-    UIFont *navFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:28.0];
-    navTitle.font = navFont;
-    navTitle.textAlignment = NSTextAlignmentCenter;
-    [self.navigationController.navigationBar addSubview:navTitle];
-    
-    positionLabel.text = self.position;
+
 
 }
 

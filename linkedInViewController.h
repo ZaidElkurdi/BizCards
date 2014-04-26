@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface linkedInViewController : UIViewController
-
+{
+IBOutlet UILabel *name;
+IBOutlet UILabel *headline;
+IBOutlet UIImageView *profile;
+}
+-(IBAction)pressedNo;
+-(IBAction)pressedYes;
+-(IBAction)pressedConnect;
 @end

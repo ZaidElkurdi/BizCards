@@ -15,6 +15,7 @@
     NSMutableData *webdata;
     int x;
     NSArray *foundResults;
+    NSArray *dataResults;
     NSDictionary *dictionary;
 }
 @end
@@ -29,11 +30,8 @@
     }
     return self;
 }
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    x = 0;
-    /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
     //self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
     self.navigationController.navigationBar.barTintColor=barColor;
@@ -45,6 +43,13 @@
     navTitle.font = navFont;
     navTitle.textAlignment = NSTextAlignmentCenter;
     [self.navigationController.navigationBar addSubview:navTitle];
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    x = 0;
     
     /* Init Table */
     CGRect tableFrame = CGRectMake(20, 40, 280, self.view.frame.size.height-40);
@@ -60,7 +65,7 @@
     self.cardCollectionTable.backgroundColor = tableBGColor;
     
     [self.view addSubview:self.cardCollectionTable];
-    [self setNeedsStatusBarAppearanceUpdate];
+    //[self setNeedsStatusBarAppearanceUpdate];
     
     
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
@@ -72,19 +77,33 @@
     self.overallData = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    [query orderByAscending:@"createdAt"];
+    
     foundResults = [query findObjects];
    
   
-        for(PFObject *image in foundResults)
-        {
-            PFObject *image2 = image;
-            [self.overallData addObject:[image objectForKey:@"Owner"]];
-            PFFile *theImage = [image2 objectForKey:@"imageFile"];
-            NSData *theImageData = [theImage getData];
-            
-            if(theImageData != NULL)
-                [self.cardData addObject:theImageData];
-        }
+    for(PFObject *image in foundResults)
+    {
+        PFObject *image2 = image;
+        
+        PFFile *theImage = [image2 objectForKey:@"imageFile"];
+        NSData *theImageData = [theImage getData];
+        
+        if(theImageData != NULL)
+            [self.cardData addObject:theImageData];
+    }
+    
+    PFQuery *dataQuery = [PFQuery queryWithClassName:@"Card"];
+    [dataQuery orderByAscending:@"createdAt"];
+    
+    dataResults = [dataQuery findObjects];
+    
+    for(PFObject *cardData in dataResults)
+    {
+        [self.overallData addObject:cardData];
+    }
+    
+    
 }
 
 
@@ -147,14 +166,9 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"Card"];
-    [query whereKey:@"objectId" equalTo:[self.overallData objectAtIndex:indexPath.section]];
-    NSArray* results = [query findObjects];
+    
 
-    PFObject *object = [results objectAtIndex:0];
-
-
-
+    PFObject *object = [self.overallData objectAtIndex:indexPath.section];
 
     NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
 
@@ -168,32 +182,19 @@
     NSLog(@"Array: %@", [object objectForKey:@"Name"]);
 
     
-    NSMutableArray *objectArray = [[NSMutableArray alloc] init];
-    [objectArray addObject:name];
-    [objectArray addObject:email];
-    [objectArray addObject:company];
-    [objectArray addObject:phone];
-    [objectArray addObject:address];
-    [objectArray addObject:title];
+    NSArray *objectArray = [[NSArray alloc] initWithObjects:name,email,company,phone,address,title, nil];
     
+    dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:dictionary forKey:@"cardData"];
+    [prefs synchronize];
 
-
-    
-
-    dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
-
-    [self performSegueWithIdentifier:@"toDetail" sender:nil];
-    
-    
-
+    [self performSelector:@selector(moveToNext) withObject:nil afterDelay:5.0];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"toDetail"]) {
-
-        detailViewController *destViewController = segue.destinationViewController;
-        destViewController.cardData = dictionary;
-    }
+-(void)moveToNext
+{
+    [self performSegueWithIdentifier:@"toDetail" sender:nil];
 }
 
 #pragma mark - Other methods
