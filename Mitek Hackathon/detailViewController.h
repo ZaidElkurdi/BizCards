@@ -17,7 +17,7 @@
     IBOutlet UIButton *shareButton;
     bool hasNotes;
 }
-@property (nonatomic,strong) NSDictionary *cardData;
+@property (strong,nonatomic) NSDictionary *cardData;
 @property (nonatomic,strong) NSString *fullName;
 @property (nonatomic,strong) NSString *position;
 @property (nonatomic,strong) NSArray *phoneNumbers;

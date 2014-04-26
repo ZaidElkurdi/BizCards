@@ -15,7 +15,7 @@
 @end
 
 @implementation detailViewController
-
+@synthesize cardData;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +29,10 @@
 {
     [super viewDidLoad];
     NSLog(@"Creating detail view");
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    cardData = [prefs objectForKey:@"dictionary"];
+    
+    NSLog(@"Card Data: %@", cardData);
     
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
@@ -39,7 +43,6 @@
     
     [self setNeedsStatusBarAppearanceUpdate];
     
-    /* Init instance variables */
     self.phoneNumbers = [self.cardData objectForKey:@"phoneNumbers"];
     self.emailAddresses = [self.cardData objectForKey:@"emailAddresses"];
     self.fullName = [self.cardData objectForKey:@"fullName"];
@@ -68,6 +71,10 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+
+    /* Init instance variables */
+ 
+    
     profileImageView.layer.borderWidth = 3.0f;
     profileImageView.layer.borderColor =[UIColor whiteColor].CGColor;
     profileImageView.layer.masksToBounds = NO;
