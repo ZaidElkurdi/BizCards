@@ -20,9 +20,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    if([prefs stringForKey:@"userPassword"].length != 0)
+    if([prefs stringForKey:@"username"].length != 0)
     {
-        [txtPassword setText:[prefs stringForKey:@"userPassword"]];
+        [txtUsername setText:[prefs stringForKey:@"userPassword"]];
     }
     
 }

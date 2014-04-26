@@ -33,6 +33,15 @@
 		93911A1B190A159200EB5DDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1A190A159200EB5DDB /* Security.framework */; };
 		93911A1D190A159700EB5DDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1C190A159700EB5DDB /* StoreKit.framework */; };
 		93911A1F190A159D00EB5DDB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */; };
+		93911A27190B35F500EB5DDB /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93911A26190B35F500EB5DDB /* CardViewController.m */; };
+		93911A29190B39B900EB5DDB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A28190B39B900EB5DDB /* AVFoundation.framework */; };
+		93911A2B190B39C700EB5DDB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2A190B39C700EB5DDB /* CoreImage.framework */; };
+		93911A2D190B39CE00EB5DDB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2C190B39CE00EB5DDB /* CoreMedia.framework */; };
+		93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2E190B39D600EB5DDB /* CoreMotion.framework */; };
+		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
+		93CCE7AE190B55EE00CDB1AB /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CCE7AB190B55EE00CDB1AB /* libMiSnap.a */; };
+		93CCE7AF190B55EE00CDB1AB /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93CCE7AD190B55EE00CDB1AB /* MiSnapResources.bundle */; };
+		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +87,17 @@
 		93911A1A190A159200EB5DDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		93911A1C190A159700EB5DDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		93911A25190B35F500EB5DDB /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		93911A26190B35F500EB5DDB /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		93911A28190B39B900EB5DDB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		93911A2A190B39C700EB5DDB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		93911A2C190B39CE00EB5DDB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		93911A2E190B39D600EB5DDB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		93911A30190B39DD00EB5DDB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		93CCE7AB190B55EE00CDB1AB /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = misnapsdk/libMiSnap.a; sourceTree = "<group>"; };
+		93CCE7AC190B55EE00CDB1AB /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = misnapsdk/MiSnap.h; sourceTree = "<group>"; };
+		93CCE7AD190B55EE00CDB1AB /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = misnapsdk/MiSnapResources.bundle; sourceTree = "<group>"; };
+		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +105,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */,
+				93911A19190A158C00EB5DDB /* QuartzCore.framework in Frameworks */,
+				93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */,
+				93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */,
+				93911A2D190B39CE00EB5DDB /* CoreMedia.framework in Frameworks */,
+				93911A2B190B39C700EB5DDB /* CoreImage.framework in Frameworks */,
+				939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */,
+				93911A29190B39B900EB5DDB /* AVFoundation.framework in Frameworks */,
+				93911A0F190A156700EB5DDB /* AudioToolbox.framework in Frameworks */,
 				93911A1F190A159D00EB5DDB /* SystemConfiguration.framework in Frameworks */,
 				93911A1D190A159700EB5DDB /* StoreKit.framework in Frameworks */,
 				93911A1B190A159200EB5DDB /* Security.framework in Frameworks */,
-				93911A19190A158C00EB5DDB /* QuartzCore.framework in Frameworks */,
 				93911A17190A158600EB5DDB /* MobileCoreServices.framework in Frameworks */,
 				93911A15190A157F00EB5DDB /* libz.dylib in Frameworks */,
 				93911A13190A157800EB5DDB /* CoreLocation.framework in Frameworks */,
-				939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */,
 				93911A11190A156C00EB5DDB /* CFNetwork.framework in Frameworks */,
-				93911A0F190A156700EB5DDB /* AudioToolbox.framework in Frameworks */,
 				939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */,
+				93CCE7AE190B55EE00CDB1AB /* libMiSnap.a in Frameworks */,
 				93911A0D190A152800EB5DDB /* Parse.framework in Frameworks */,
 				939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */,
 			);
@@ -136,6 +163,12 @@
 		939119D0190A05FC00EB5DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93F81716190B54AA004AB209 /* ImageIO.framework */,
+				93911A30190B39DD00EB5DDB /* CoreVideo.framework */,
+				93911A2E190B39D600EB5DDB /* CoreMotion.framework */,
+				93911A2C190B39CE00EB5DDB /* CoreMedia.framework */,
+				93911A2A190B39C700EB5DDB /* CoreImage.framework */,
+				93911A28190B39B900EB5DDB /* AVFoundation.framework */,
 				93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */,
 				93911A1C190A159700EB5DDB /* StoreKit.framework */,
 				93911A1A190A159200EB5DDB /* Security.framework */,
@@ -157,9 +190,14 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				93CCE7AB190B55EE00CDB1AB /* libMiSnap.a */,
+				93CCE7AC190B55EE00CDB1AB /* MiSnap.h */,
+				93CCE7AD190B55EE00CDB1AB /* MiSnapResources.bundle */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
+				93911A25190B35F500EB5DDB /* CardViewController.h */,
+				93911A26190B35F500EB5DDB /* CardViewController.m */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
 				939119E7190A05FC00EB5DDB /* ViewController.m */,
 				93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */,
@@ -216,8 +254,8 @@
 			buildConfigurationList = 93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek Hackathon" */;
 			buildPhases = (
 				939119CA190A05FC00EB5DDB /* Sources */,
-				939119CB190A05FC00EB5DDB /* Frameworks */,
 				939119CC190A05FC00EB5DDB /* Resources */,
+				939119CB190A05FC00EB5DDB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
+				93CCE7AF190B55EE00CDB1AB /* MiSnapResources.bundle in Resources */,
 				93911A08190A079000EB5DDB /* SignIn.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
 				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
@@ -306,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
@@ -391,9 +431,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
 		};
@@ -423,15 +465,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
 		};
 		93911A01190A05FC00EB5DDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -441,7 +487,21 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
 				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon/misnapsdk,
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -458,7 +518,21 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
 				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon/misnapsdk,
+				);
+				OTHER_LDFLAGS = "-lstdc++";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -522,6 +596,7 @@
 				93911A02190A05FC00EB5DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +605,7 @@
 				93911A05190A05FC00EB5DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

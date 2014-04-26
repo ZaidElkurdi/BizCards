@@ -44,7 +44,7 @@
             if (!error) {
                 // Hooray! Let them use the app now.
                 NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-                [prefs setObject:txtPassword.text forKey:@"userPassword"];
+                [prefs setObject:txtEmail.text forKey:@"username"];
                 
 
             } else {
