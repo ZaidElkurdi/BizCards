@@ -65,10 +65,12 @@
 		93ABC817190BF1B5008FE209 /* OAAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC809190BF1B5008FE209 /* OAAttachment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC81A190BF82B008FE209 /* xmlreader.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBB190BA60A00926B41 /* xmlreader.m */; };
 		93ABC81B190BF85B008FE209 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7DE190BEF4F008FE209 /* Base64Transcoder.c */; };
-		93ABC81E190BFAD0008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC81C190BFAD0008FE209 /* OAuthLoginView.m */; };
 		93ABC821190BFAD9008FE209 /* ProfileTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC81F190BFAD9008FE209 /* ProfileTabView.m */; };
 		93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */; };
 		93ABC823190BFD77008FE209 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DB7190B976400926B41 /* cardCell.m */; };
+		93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC825190C1B8D008FE209 /* settingsViewController.m */; };
+		93ABC828190C1D41008FE209 /* OAuthLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC827190C1D41008FE209 /* OAuthLoginView.xib */; };
+		93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC829190C1F2C008FE209 /* OAuthLoginView.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
@@ -187,10 +189,13 @@
 		93ABC809190BF1B5008FE209 /* OAAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAttachment.m; sourceTree = "<group>"; };
 		93ABC80A190BF1B5008FE209 /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAttachment.h; sourceTree = "<group>"; };
 		93ABC80B190BF1B5008FE209 /* OAAtachmentF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAtachmentF.h; sourceTree = "<group>"; };
-		93ABC81C190BFAD0008FE209 /* OAuthLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginView.m; sourceTree = "<group>"; };
-		93ABC81D190BFAD0008FE209 /* OAuthLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginView.h; sourceTree = "<group>"; };
 		93ABC81F190BFAD9008FE209 /* ProfileTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTabView.m; sourceTree = "<group>"; };
 		93ABC820190BFAD9008FE209 /* ProfileTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTabView.h; sourceTree = "<group>"; };
+		93ABC824190C1B8D008FE209 /* settingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingsViewController.h; sourceTree = "<group>"; };
+		93ABC825190C1B8D008FE209 /* settingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingsViewController.m; sourceTree = "<group>"; };
+		93ABC827190C1D41008FE209 /* OAuthLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthLoginView.xib; sourceTree = "<group>"; };
+		93ABC829190C1F2C008FE209 /* OAuthLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginView.m; sourceTree = "<group>"; };
+		93ABC82A190C1F2C008FE209 /* OAuthLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginView.h; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
@@ -303,8 +308,6 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				93ABC81C190BFAD0008FE209 /* OAuthLoginView.m */,
-				93ABC81D190BFAD0008FE209 /* OAuthLoginView.h */,
 				93ABC81F190BFAD9008FE209 /* ProfileTabView.m */,
 				93ABC820190BFAD9008FE209 /* ProfileTabView.h */,
 				B8711DBA190BA60A00926B41 /* xmlreader.h */,
@@ -314,6 +317,11 @@
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
+				93ABC827190C1D41008FE209 /* OAuthLoginView.xib */,
+				93ABC829190C1F2C008FE209 /* OAuthLoginView.m */,
+				93ABC82A190C1F2C008FE209 /* OAuthLoginView.h */,
+				93ABC824190C1B8D008FE209 /* settingsViewController.h */,
+				93ABC825190C1B8D008FE209 /* settingsViewController.m */,
 				B8711DC5190BE68400926B41 /* UploadToParseViewController.h */,
 				B8711DC6190BE68400926B41 /* UploadToParseViewController.m */,
 				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,
@@ -527,6 +535,7 @@
 			files = (
 				93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */,
 				93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */,
+				93ABC828190C1D41008FE209 /* OAuthLoginView.xib in Resources */,
 				93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */,
 				93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */,
 				B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */,
@@ -555,9 +564,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */,
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */,
 				93ABC816190BF1B5008FE209 /* OACall.m in Sources */,
+				93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				93ABC7EE190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
@@ -577,7 +588,6 @@
 				93ABC80D190BF1B5008FE209 /* OAToken.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				93ABC7F0190BEFC0008FE209 /* NSURL+Base.m in Sources */,
-				93ABC81E190BFAD0008FE209 /* OAuthLoginView.m in Sources */,
 				93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
 				B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */,
