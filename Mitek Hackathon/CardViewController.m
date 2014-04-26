@@ -51,19 +51,7 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
-- (void)miSnapFinishedReturningEncodedImage:(NSString*)encodedImage originalImage:(UIImage*)originalImage andResults:(NSDictionary*)results
-{
-    NSString* resultCode = [results objectForKey:kMiSnapResultCode];
-    
-        if ([resultCode isEqualToString:kMiSnapResultSuccessVideo]
-            || [resultCode isEqualToString:kMiSnapResultSuccessStillCamera])
-        {
 
-        [self dismissViewControllerAnimated:NO completion:^{
-            [[AppProxyServer sharedInstance] sendEncodedImage:encodedImage delegate:self];
-            }];
-        }
-}
 
 - (void)authenticateUserReturn:(NSDictionary *)dict {
     if ([[dict objectForKey:@"SecurityResult"] integerValue]) {
@@ -74,14 +62,7 @@
             self.serverVersion = @"UNKNOWN";
     }
 }
-- (void)miSnapCancelledWithResults:(NSDictionary*)results {
-    // code to handle Cancel event goes here.
-    // Mitek best practices suggest retrieving the MIBI Data from the results // parameter and sending them to the imaging server (most likely via app // proxy-server) in order to capture abandonment data together with MIBI // data embedded in images captured successfully and sent to the server.
-    
-    NSString* mibiData = [results objectForKey:kMiSnapMIBIData];
-    if(mibiData)
-        [[AppProxyServer sharedInstance] sendMIBIData:mibiData];
-}
+
 
 - (void)viewDidLoad
 {

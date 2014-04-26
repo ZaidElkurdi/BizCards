@@ -18,7 +18,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setNeedsStatusBarAppearanceUpdate];
 	// Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     if([prefs stringForKey:@"username"].length != 0)
@@ -27,6 +26,12 @@
     }
     
 }
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{ 
+    return UIStatusBarStyleLightContent; 
+}
+
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
 
