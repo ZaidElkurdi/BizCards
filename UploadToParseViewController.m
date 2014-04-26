@@ -58,6 +58,8 @@
     
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
+    imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
+    
 
 }
 
@@ -116,6 +118,7 @@
         }
     }];
 
+    
     
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"

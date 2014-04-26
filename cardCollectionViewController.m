@@ -30,12 +30,10 @@
     }
     return self;
 }
-- (void)viewDidLoad
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    x = 0;
-    /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
+    
     self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
     self.navigationController.navigationBar.barTintColor=barColor;
     
@@ -46,6 +44,13 @@
     navTitle.font = navFont;
     navTitle.textAlignment = NSTextAlignmentCenter;
     [self.navigationController.navigationBar addSubview:navTitle];
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    x = 0;
     
     /* Init Table */
     CGRect tableFrame = CGRectMake(20, 40, 280, self.view.frame.size.height-40);
@@ -61,7 +66,7 @@
     self.cardCollectionTable.backgroundColor = tableBGColor;
     
     [self.view addSubview:self.cardCollectionTable];
-    [self setNeedsStatusBarAppearanceUpdate];
+    //[self setNeedsStatusBarAppearanceUpdate];
     
     
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
@@ -178,13 +183,7 @@
     NSLog(@"Array: %@", [object objectForKey:@"Name"]);
 
     
-    NSMutableArray *objectArray = [[NSMutableArray alloc] init];
-    [objectArray addObject:name];
-    [objectArray addObject:email];
-    [objectArray addObject:company];
-    [objectArray addObject:phone];
-    [objectArray addObject:address];
-    [objectArray addObject:title];
+    NSArray *objectArray = [[NSArray alloc] initWithObjects:name,email,company,phone,address,title, nil];
     
     dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];

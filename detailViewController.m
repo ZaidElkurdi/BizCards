@@ -34,7 +34,7 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     cardData = [[NSDictionary alloc] initWithDictionary:[prefs objectForKey:@"cardData"]];
     
-    NSLog(@"Card Data: %@", cardData);
+    NSLog(@"Name Data: %@", [cardData objectForKey:@"Name"]);
     
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
