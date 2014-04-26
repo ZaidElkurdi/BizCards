@@ -69,8 +69,29 @@
     }
     self.view.frame = rect;
 }
+-(IBAction)forgotPassword
+{
+    /*
+    UIImage *imagetoshare = [UIImage imageNamed:@"aryaman.png"];
+    NSArray *activityItems = @[@"hi", imagetoshare];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    //activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToWeibo];
+    [self presentViewController:activityVC animated:TRUE completion:nil];
+     */
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Reset Password" message:@"To reset your password, enter your email address below." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Submit",nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
+    
+}
 
-
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [PFUser requestPasswordResetForEmailInBackground:[[alertView textFieldAtIndex:0] text]];
+    }
+}
 -(IBAction)signIn
 {
     [PFUser logInWithUsernameInBackground:txtUsername.text password:txtPassword.text
@@ -82,6 +103,9 @@
                                             //Call to segue
                                         } else {
                                             // The login failed. Check error to see why.
+                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid login credentials" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+                                            // optional - add more buttons:
+                                            [alert show];
                                         }
                                     }];
 }
