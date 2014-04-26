@@ -193,8 +193,6 @@
 		93ABC81F190BFAD9008FE209 /* ProfileTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTabView.m; sourceTree = "<group>"; };
 		93ABC820190BFAD9008FE209 /* ProfileTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTabView.h; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		B8711DB3190B961400926B41 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCollectionViewController.h; sourceTree = "<group>"; };
-		B8711DB4190B961400926B41 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCollectionViewController.m; sourceTree = "<group>"; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
 		B8711DBB190BA60A00926B41 /* xmlreader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmlreader.m; sourceTree = "<group>"; };
@@ -317,8 +315,6 @@
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
-				B8711DB3190B961400926B41 /* cardCollectionViewController.h */,
-				B8711DB4190B961400926B41 /* cardCollectionViewController.m */,
 				B8711DC5190BE68400926B41 /* UploadToParseViewController.h */,
 				B8711DC6190BE68400926B41 /* UploadToParseViewController.m */,
 				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,

@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     
      NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
     
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
@@ -63,9 +63,7 @@
     uploadCard[@"Owner"] = [PFUser currentUser].objectId;
     [uploadCard saveInBackground];
     
-    
-   
- 
+
     PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
     userPhoto[@"imageName"] = txtName.text;
     userPhoto[@"imageFile"] = imageFile;
@@ -74,11 +72,22 @@
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
                                                       message:@"Your card was succesfully added to your rolodex."
-                                                     delegate:nil
+                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
      
     [message show];
+}
+-(UIImage*)thumbnail:(UIImage*)fullImage
+{
+    UIImage *originalImage = fullImage;
+    CGSize destinationSize = CGSizeMake(80, 80);
+    UIGraphicsBeginImageContext(destinationSize);
+    [originalImage drawInRect:CGRectMake(0,0,destinationSize.width,destinationSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 - (void)didReceiveMemoryWarning
 {
