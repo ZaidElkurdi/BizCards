@@ -12,7 +12,6 @@
 #import <CoreMotion/CoreMotion.h>
 #import <ImageIO/ImageIO.h>
 #import "xmlreader.h"
-#import "xmlreader.h"
 #import "postImageView.h"
 
 @interface CardViewController ()
