@@ -7,9 +7,12 @@
 //
 
 #import "UploadToParseViewController.h"
+#import "OAConsumer.h"
 
 @interface UploadToParseViewController ()
-
+{
+    bool canSearch;
+}
 @end
 
 @implementation UploadToParseViewController
@@ -33,11 +36,29 @@
      NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
      NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
     
+    NSDictionary *oAuthConsumerInfo = [prefs objectForKey:@"oAuthConsumerInfo"];
+    NSDictionary *oAuthTokenInfo = [prefs objectForKey:@"oAuthTokenInfo"];
+    
+    NSString *consumerKey = [oAuthConsumerInfo objectForKey:@"key"];
+    NSString *secretKey = [oAuthConsumerInfo objectForKey:@"secret"];
+    NSString *realmKey = [oAuthConsumerInfo objectForKey:@"realm"];
+    
+    self.consumer = [[OAConsumer alloc] initWithKey:consumerKey secret:secretKey realm:realmKey];
+    
+    NSString *tokenKey = [oAuthTokenInfo objectForKey:@"key"];
+    NSString *tokenSecret = [oAuthTokenInfo objectForKey:@"secret"];
+    
+    self.accessToken = [[OAToken alloc] initWithKey:tokenKey secret:tokenSecret];
+    
+    if(self.consumer && self.accessToken)
+        canSearch=TRUE;
+    
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
     imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
 
 }
+
 -(void)viewDidAppear:(BOOL)animated
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -51,6 +72,7 @@
     [txtPhone setText:[myArray objectAtIndex:4]];
     [txtAddress setText:[myArray objectAtIndex:5]];
 }
+
 -(IBAction)takeToParse
 {
     /*
@@ -96,6 +118,53 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)profileApiCall
+{
+    NSLog(@"Making call!");
+    
+    NSURL *url = [NSURL URLWithString:@"http://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,picture-url,headline),num-results)?first-name=aryaman&last-name=sharda"];
+    
+    OAMutableURLRequest *request =
+    [[OAMutableURLRequest alloc] initWithURL:url
+                                    consumer:self.consumer
+                                       token:self.accessToken
+                                    callback:nil
+                           signatureProvider:nil];
+    
+    [request setValue:@"json" forHTTPHeaderField:@"x-li-format"];
+    
+    OADataFetcher *fetcher = [[OADataFetcher alloc] init];
+    [fetcher fetchDataWithRequest:request
+                         delegate:self
+                didFinishSelector:@selector(profileApiCallResult:didFinish:)
+                  didFailSelector:@selector(profileApiCallResult:didFail:)];
+    
+}
+
+
+- (void)profileApiCallResult:(OAServiceTicket *)ticket didFinish:(NSData *)data
+{
+    NSError *error = nil;
+    NSDictionary *profile = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    
+    NSLog(@"%@", profile);
+    
+    if (profile)
+    {
+        NSString *name = [[NSString alloc] initWithFormat:@"%@ %@",
+                     [profile objectForKey:@"firstName"], [profile objectForKey:@"lastName"]];
+        NSString *headline = [profile objectForKey:@"headline"];
+        
+        NSLog(@"Name: %@ Headline: %@",name,headline);
+    }
+}
+
+
+- (void)profileApiCallResult:(OAServiceTicket *)ticket didFail:(NSData *)error
+{
+    NSLog(@"%@",[error description]);
 }
 
 /*

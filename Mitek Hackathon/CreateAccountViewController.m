@@ -24,7 +24,8 @@
     }
     return self;
 }
-- (BOOL)prefersStatusBarHidden {
+- (BOOL)prefersStatusBarHidden
+{
     return YES;
 }
 

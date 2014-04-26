@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "OAuthLoginView.h"
+#import "OAConsumer.h"
+#import "OAMutableURLRequest.h"
+#import "OADataFetcher.h"
+#import "OATokenManager.h"
+
 @interface UploadToParseViewController : UIViewController
 {
     IBOutlet UITextField *txtName;
@@ -21,4 +27,6 @@
     IBOutlet UIImageView *imgView;
 }
 -(IBAction)takeToParse;
+@property(nonatomic, retain) OAToken *accessToken;
+@property(nonatomic, retain) OAConsumer *consumer;
 @end

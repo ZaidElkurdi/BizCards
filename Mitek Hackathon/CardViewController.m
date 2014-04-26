@@ -97,12 +97,6 @@
     self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
     self.navigationController.navigationBar.barTintColor=barColor;
     
-    NSArray *arr = [[NSArray alloc] initWithObjects:@"zaid.elkurdi@gmail.com",@"HI7WWP8VypoE",@"UCSD-Hack",nil];
-    
-    NSArray *arr2 = [[NSArray alloc] initWithObjects:@"userName",@"password",@"orgName",nil];
-    
-    NSDictionary *dict = [[NSDictionary alloc] initWithObjects:arr forKeys:arr2];
-    [self authenticateUserReturn:dict];
     //Make a call w/ dictionary
     
     self.rawText = nil;

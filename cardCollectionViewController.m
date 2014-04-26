@@ -150,39 +150,30 @@
 {
     
 
+    PFObject *object = [results objectAtIndex:0];
 
-            PFQuery *query = [PFQuery queryWithClassName:@"Card"];
-            [query whereKey:@"objectId" equalTo:[self.overallData objectAtIndex:indexPath.section]];
-            NSArray* results = [query findObjects];
-    
-            PFObject *object = [results objectAtIndex:0];
 
-    
-    
 
-            NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
-    
-            NSString *name = [object objectForKey:@"Name"];
-            NSString *email = [object objectForKey:@"Email"];
-            NSString *company = [object objectForKey:@"Company"];
-            NSString *phone = [object objectForKey:@"Phone"];
-            NSString *address = [object objectForKey:@"Address"];
-            NSString *title = [object objectForKey:@"Title"];
-    
-            NSLog(@"Array: %@", [object objectForKey:@"Name"]);
-    
-            
-            NSMutableArray *objectArray = [[NSMutableArray alloc] init];
-            [objectArray addObject:name];
-            [objectArray addObject:email];
-            [objectArray addObject:company];
-            [objectArray addObject:phone];
-            [objectArray addObject:address];
-            [objectArray addObject:title];
-            
+
+    NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
+
+    NSString *name = [object objectForKey:@"Name"];
+    NSString *email = [object objectForKey:@"Email"];
+    NSString *company = [object objectForKey:@"Company"];
+    NSString *phone = [object objectForKey:@"Phone"];
+    NSString *address = [object objectForKey:@"Address"];
+    NSString *title = [object objectForKey:@"Title"];
+
+    NSLog(@"Array: %@", [object objectForKey:@"Name"]);
 
     
-            
+    NSMutableArray *objectArray = [[NSMutableArray alloc] init];
+    [objectArray addObject:name];
+    [objectArray addObject:email];
+    [objectArray addObject:company];
+    [objectArray addObject:phone];
+    [objectArray addObject:address];
+    [objectArray addObject:title];
     
             dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
