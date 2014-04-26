@@ -75,7 +75,9 @@
 
 -(IBAction)takeToParse
 {
-    /*
+    NSLog(@"Made it here");
+    [self profileApiCall];
+    
     PFUser *curr  = [PFUser currentUser];
     PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
     uploadCard[@"Name"] = txtName.text;
@@ -101,7 +103,7 @@
                                             otherButtonTitles:nil];
      
     [message show];
-    [self performSegueWithIdentifier:@"backToHome" sender:nil]; */
+    //[self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)thumbnail:(UIImage*)fullImage
 {

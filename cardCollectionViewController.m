@@ -150,7 +150,7 @@
 {
     
 
-    PFObject *object = [results objectAtIndex:0];
+    PFObject *object = [self.overallData objectAtIndex:indexPath.section];
 
 
 
