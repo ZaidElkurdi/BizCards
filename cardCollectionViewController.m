@@ -7,11 +7,14 @@
 //
 
 #import "cardCollectionViewController.h"
+#import <Parse/Parse.h>
 
 @interface cardCollectionViewController ()
 {
     NSIndexPath *currEditingIndex;
     NSMutableData *webdata;
+    int x;
+    NSArray *foundResults;
 }
 @end
 
@@ -29,9 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self authenticate];
-    
+    x = 0;
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
     self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
@@ -58,94 +59,37 @@
     [self.view addSubview:self.cardCollectionTable];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    /* Init Table Data */
-    self.cardData = [[NSMutableArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
-    
-    /* Init Table Swipe */
+
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
     [swipeRecognizer setDelegate:self];
     [swipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.cardCollectionTable addGestureRecognizer:swipeRecognizer];
+    
+    self.cardData = [[NSMutableArray alloc] init];
+
+    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    foundResults = [query findObjects];
+   
+  
+        for(PFObject *image in foundResults)
+        {
+            PFObject *image2 = image;
+            PFFile *theImage = [image2 objectForKey:@"imageFile"];
+            NSData *theImageData = [theImage getData];
+            
+            if(theImageData != NULL)
+                [self.cardData addObject:theImageData];
+        }
 }
+
+
+
 
 -(UIStatusBarStyle)preferredStatusBarStyle
 { 
     return UIStatusBarStyleLightContent; 
 }
 
--(void)authenticate
-{
-    NSDictionary *headerFieldsDict = [NSDictionary
-                                      dictionaryWithObjectsAndKeys:@"Apple iPhone",@"User-Agent",
-                                      @"text/xml; charset=utf-8", @"Content-Type",
-                                      @"soapAction",@"SOAP_ACTION",nil];
-    
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"authenticate" ofType:@"xml"];
-    NSLog(@"%@", xmlPath);
-    
-    NSError *error;
-    NSString *xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        NSLog(@"Error with XML conversion: %@", [error description]);
-    }
-    else {
-        NSLog(@"XML Data: %@", xmlString);
-    }
-    
-    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
-    [theRequest setHTTPMethod:@"POST"];
-    [theRequest setAllHTTPHeaderFields:headerFieldsDict];
-    [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (connectionError) {
-            NSLog(@"Connection error: %@", [connectionError description]);
-        }
-        else {
-            
-            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"Success : %@", [response description]);
-            NSLog(@"Data: %@", theString);
-        }
-    }];
-}
-
--(void)sendImage
-{
-    NSDictionary *headerFieldsDict = [NSDictionary
-                                      dictionaryWithObjectsAndKeys:@"Apple iPhone",@"User-Agent",
-                                      @"text/xml; charset=utf-8", @"Content-Type",
-                                      @"soapAction",@"SOAP_ACTION",nil];
-    
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"sendImage" ofType:@"xml"];
-    NSLog(@"%@", xmlPath);
-    
-    NSError *error;
-    NSString *xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
-        NSLog(@"Error with XML conversion: %@", [error description]);
-    }
-    else {
-        NSLog(@"XML Data: %@", xmlString);
-    }
-    
-    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
-    [theRequest setHTTPMethod:@"POST"];
-    [theRequest setAllHTTPHeaderFields:headerFieldsDict];
-    [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (connectionError) {
-            NSLog(@"Connection error: %@", [connectionError description]);
-        }
-        else {
-            
-            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"Success : %@", [response description]);
-            NSLog(@"Data: %@", theString);
-        }
-    }];
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -168,7 +112,9 @@
         cell = [[cardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell.cardImageView setImage:[UIImage imageNamed:@"testCard.png"]];
+    [cell.cardImageView setImage:[UIImage imageWithData:[self.cardData objectAtIndex:x]]];
+    x++;
+    
     return cell;
 }
 
@@ -189,15 +135,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if(section != 0)
-        return 1;
-    
-    return 30;
+    if(section == 0)
+        return 35;
+    return 10;
 }
 
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+            PFObject *object = [foundResults objectAtIndex:indexPath.row];
+    
+            NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
+    
+            NSArray *objects = [NSArray arrayWithObjects:[object objectForKey:@"Name"],[object objectForKey:@"Email"],[object objectForKey:@"Company"],[object objectForKey:@"Phone"],[object objectForKey:@"Address"],[object objectForKey:@"Title"],nil];
+            
+            
+            NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:dataToPass];
+    
+            [self performSegueWithIdentifier:@"toDetail" sender:nil];
+    
+
 }
 
 

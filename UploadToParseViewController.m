@@ -13,7 +13,9 @@
 @end
 
 @implementation UploadToParseViewController
-
+{
+    PFFile *imageFile;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,24 +29,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:[prefs objectForKey:@"imagePlain"]];
-
-    NSLog(@"Data: %@",data);
-    UIImage *img = [UIImage imageWithData:data];
-    [imgView setImage:img];
     
-    //NSData *imageData = UIImagePNGRepresentation(img);
-
-    /*
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
- 
-    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = @"My trip to Hawaii!";
-    userPhoto[@"imageFile"] = imageFile;
-    [userPhoto save];
-    */
-
+     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+    
+    NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
+    [imgView setImage:[UIImage imageWithData:decodedData]];
+    imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
 
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -69,23 +60,35 @@
     uploadCard[@"Title"] = txtTitle.text;
     uploadCard[@"Phone"] = txtPhone.text;
     uploadCard[@"Address"] = txtAddress.text;
-    
-    
-    
-    
-    
-    
-    
-   
+    uploadCard[@"Owner"] = [PFUser currentUser].objectId;
     [uploadCard saveInBackground];
+    
+
+    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = txtName.text;
+    userPhoto[@"imageFile"] = imageFile;
+    [userPhoto saveInBackground];
+    
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
                                                       message:@"Your card was succesfully added to your rolodex."
-                                                     delegate:nil
+                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
      
     [message show];
+    [self performSegueWithIdentifier:@"backToHome" sender:nil];
+}
+-(UIImage*)thumbnail:(UIImage*)fullImage
+{
+    UIImage *originalImage = fullImage;
+    CGSize destinationSize = CGSizeMake(80, 80);
+    UIGraphicsBeginImageContext(destinationSize);
+    [originalImage drawInRect:CGRectMake(0,0,destinationSize.width,destinationSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 - (void)didReceiveMemoryWarning
 {

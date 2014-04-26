@@ -163,8 +163,11 @@
             self.rawText = [[finalTextDict objectForKey:@"text"] copy];
             
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            [prefs setObject:self.rawData forKey:@"imagePlain"];
+           
            [prefs setObject:[NSString stringWithFormat:@"%@",[finalImageDict objectForKey:@"text"]] forKey:@"rawImageText"];
+           
+           NSLog(@"Raw Image Text : %@", finalImageDict);
+           
            [prefs setObject:[NSString stringWithFormat:@"%@",[finalTextDict objectForKey:@"text"]] forKey:@"rawOCRText"];
            [prefs synchronize];
         }

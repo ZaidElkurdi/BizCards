@@ -14,8 +14,8 @@
          <mit:documentIdentifier>CROP_IQA_OCR</mit:documentIdentifier>
          <mit:documentHints></mit:documentHints>
          <!-- See Vendor Web Services Guide Section 3.4 for dataReturnLevel -->
-         <mit:dataReturnLevel>30</mit:dataReturnLevel>
-         <mit:returnImageType>0</mit:returnImageType>
+         <mit:dataReturnLevel>9</mit:dataReturnLevel>
+         <mit:returnImageType>1</mit:returnImageType>
          <mit:rotateImage>0</mit:rotateImage>
          <mit:note>Mitek Test</mit:note>
       </mit:InsertPhoneTransaction>
