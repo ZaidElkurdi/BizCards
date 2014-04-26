@@ -12,11 +12,12 @@
 #import "OADataFetcher.h"
 #import "OATokenManager.h"
 #import "OAuthLoginView.h"
-
+#import <Parse/Parse.h>
 @interface settingsViewController : UIViewController<UIWebViewDelegate>
 {
-
+    IBOutlet UIButton *btnLogout;
 }
+-(IBAction)logout;
 -(IBAction)signInWithLinkedIn;
 - (void)profileApiCall;
 - (void)networkApiCall;

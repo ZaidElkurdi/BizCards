@@ -116,10 +116,13 @@ statusTextView, updateStatusLabel;
     [self networkApiCall];
     
 }
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
 
+-(IBAction)logout
+{
+    
+    [PFUser logOut];
+    [self performSegueWithIdentifier:@"backToHome" sender:nil];
+}
 - (void)profileApiCallResult:(OAServiceTicket *)ticket didFail:(NSData *)error
 {
     NSLog(@"%@",[error description]);

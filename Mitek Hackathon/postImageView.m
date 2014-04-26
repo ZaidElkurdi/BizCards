@@ -74,6 +74,20 @@
     
     rawText = [prefs objectForKey:@"rawOCRText"];
      NSLog(@"Raw Text: %@",rawText);
+    
+    if(txtData.text.length == 0)
+    {
+        
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Let's try again.." message:@"The photo was too blurry. Try to improve lighting or hold the phone as still as possible." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+        // optional - add more buttons:
+        [alert addButtonWithTitle:@"Ok"];
+        [alert show];
+        
+        [self performSegueWithIdentifier:@"retryPhoto" sender:nil];
+        
+        
+    }
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"rawTest" ofType:@".txt"];
 //    NSError *error;
 //    NSString *rawText =[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -94,6 +108,7 @@
       if([rawLines count] > position)
       {
         [txtData setText:[rawLines objectAtIndex:position]];
+        
        }
        else
        {
@@ -158,121 +173,6 @@
     NSMutableArray *rawLines = [[rawText componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] mutableCopy];
     
     
-    
-    /*
-    for(NSString* currLine in rawLines)
-    {
-        NSString *cleanLine = [currLine stringByReplacingOccurrencesOfString:@"," withString:@" "];
-        NSLog(@"Testing: %@",cleanLine);
-        NSMutableArray *words = [[cleanLine componentsSeparatedByString:@" "] mutableCopy];
-        for(NSString* currWord in words)
-        {
-            if([self.addressFlags containsObject:[currWord lowercaseString]])
-            {
-                NSLog(@"Address Match: %@",cleanLine);
-                [self.possibleAddresses addObject:currLine];
-                break;
-            }
-            
-            if([self.titleFlags containsObject:[currWord lowercaseString]])
-            {
-                NSLog(@"Title Match: %@",cleanLine);
-                [self.possibleTitles addObject:currLine];
-                break;
-            }
-            
-            NSString *zipregex = @"[0-9]{5}";
-            NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", zipregex];
-
-            BOOL matches = [test evaluateWithObject:currWord];
-            if(matches)
-            {
-                NSLog(@"City Match: %@",cleanLine);
-                [self.possibleCities addObject:cleanLine];
-                break;
-            }
-
-            
-            //Email parsing...
-        }
-        
-        
-        NSString *phoneRegex = @"[235689][0-9]{6}([0-9]{3})?";
-        NSPredicate *test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", phoneRegex];
-        
-        NSString * strippedNumber = [cleanLine stringByReplacingOccurrencesOfString:@"[^0-9]" withString:@"" options:NSRegularExpressionSearch range:NSMakeRange(0, [cleanLine length])];
-        
-        BOOL matches = [test evaluateWithObject:strippedNumber];
-        if(matches)
-        {
-            NSLog(@"Phone Match: %@",cleanLine);
-            [self.possiblePhones addObject:cleanLine];
-            break;
-        }
-        
-        NSMutableArray *splitLine = [[cleanLine componentsSeparatedByString:@" "] mutableCopy];
-        NSLog(@"Split: %@ count: %d",splitLine, [splitLine count]);
-        if([splitLine count]==2)
-        {
-            NSLog(@"Name Match: %@",cleanLine);
-            [self.possibleNames addObject:cleanLine];
-        }
-    }
-    
-    if([self.possibleAddresses count] > 0 && [self.possibleCities count] > 0)
-    {
-        [txtAddress setText:[NSString stringWithFormat:@"%@ %@",[self.possibleAddresses objectAtIndex:0],[self.possibleCities objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtAddress setText: @""];
-    }
-    
-    if([self.possibleCompanies count] > 0 )
-    {
-        [txtCompany setText:[NSString stringWithFormat:@"%@",[self.possibleCompanies objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtCompany setText: @""];
-    }
-    
-    if([self.possibleEmails count] > 0 )
-    {
-        [txtEmail setText:[NSString stringWithFormat:@"%@",[self.possibleEmails objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtEmail setText: @""];
-    }
-    
-    if([self.possibleNames count] > 0 )
-    {
-        [txtName setText:[NSString stringWithFormat:@"%@",[self.possibleNames objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtName setText: @""];
-    }
-    
-    if([self.possiblePhones count] > 0 )
-    {
-        [txtPhone setText:[NSString stringWithFormat:@"%@",[self.possiblePhones objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtPhone setText: @""];
-    }
-    
-     if([self.possibleTitles count] > 0 )
-    {
-        [txtTitle setText:[NSString stringWithFormat:@"%@",[self.possibleTitles objectAtIndex:0]]];
-    }
-    else
-    {
-        [txtTitle setText: @""];
-    }
-    */
 }
 - (void)didReceiveMemoryWarning
 {
