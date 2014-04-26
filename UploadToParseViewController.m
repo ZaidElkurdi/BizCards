@@ -55,7 +55,6 @@
     
     NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
-    imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
 
 }
 
@@ -76,7 +75,9 @@
 -(IBAction)takeToParse
 {
     NSLog(@"Made it here");
-    [self profileApiCall];
+    
+    if(canSearch)
+        [self profileApiCall];
     
     PFUser *curr  = [PFUser currentUser];
     PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
@@ -88,12 +89,27 @@
     uploadCard[@"Address"] = txtAddress.text;
     [uploadCard saveInBackground];
     
+    NSLog(@"Made it to the photo");
+
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
+    UIImage *final = [self reduced:[UIImage imageWithData:decodedData]];
+    NSData *parseData = UIImagePNGRepresentation(final);
+    imageFile = [PFFile fileWithName:@"image.png" data:parseData];
 
     PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
     userPhoto[@"imageName"] = txtName.text;
     userPhoto[@"imageFile"] = imageFile;
     userPhoto[@"Owner"] = curr.objectId;
-    [userPhoto saveInBackground];
+    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+    {
+        if(!error)
+        {
+            NSLog(@"Finished uploading");
+        }
+    }];
+
+    
     
     
     UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
@@ -105,10 +121,10 @@
     [message show];
     //[self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
--(UIImage*)thumbnail:(UIImage*)fullImage
+-(UIImage*)reduced:(UIImage*)fullImage
 {
     UIImage *originalImage = fullImage;
-    CGSize destinationSize = CGSizeMake(80, 80);
+    CGSize destinationSize = CGSizeMake(fullImage.size.width/2, fullImage.size.height/2);
     UIGraphicsBeginImageContext(destinationSize);
     [originalImage drawInRect:CGRectMake(0,0,destinationSize.width,destinationSize.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();

@@ -15,6 +15,7 @@
     NSMutableData *webdata;
     int x;
     NSArray *foundResults;
+    NSArray *dataResults;
     NSDictionary *dictionary;
 }
 @end
@@ -73,19 +74,33 @@
     self.overallData = [[NSMutableArray alloc] init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    [query orderByAscending:@"createdAt"];
+    
     foundResults = [query findObjects];
    
   
-        for(PFObject *image in foundResults)
-        {
-            PFObject *image2 = image;
-            [self.overallData addObject:[image objectForKey:@"Owner"]];
-            PFFile *theImage = [image2 objectForKey:@"imageFile"];
-            NSData *theImageData = [theImage getData];
-            
-            if(theImageData != NULL)
-                [self.cardData addObject:theImageData];
-        }
+    for(PFObject *image in foundResults)
+    {
+        PFObject *image2 = image;
+        
+        PFFile *theImage = [image2 objectForKey:@"imageFile"];
+        NSData *theImageData = [theImage getData];
+        
+        if(theImageData != NULL)
+            [self.cardData addObject:theImageData];
+    }
+    
+    PFQuery *dataQuery = [PFQuery queryWithClassName:@"Card"];
+    [dataQuery orderByAscending:@"createdAt"];
+    
+    dataResults = [dataQuery findObjects];
+    
+    for(PFObject *cardData in dataResults)
+    {
+        [self.overallData addObject:cardData];
+    }
+    
+    
 }
 
 
@@ -152,9 +167,6 @@
 
     PFObject *object = [self.overallData objectAtIndex:indexPath.section];
 
-
-
-
     NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
 
     NSString *name = [object objectForKey:@"Name"];
@@ -175,21 +187,18 @@
     [objectArray addObject:address];
     [objectArray addObject:title];
     
-            dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            [prefs setObject:dictionary forKey:@"dictionary"];
-            [prefs synchronize];
+    dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:dictionary forKey:@"cardData"];
+    [prefs synchronize];
 
-
-    
- 
-            [self performSegueWithIdentifier:@"toDetail" sender:nil];
-    
-    
-
+    [self performSelector:@selector(moveToNext) withObject:nil afterDelay:5.0];
 }
 
-
+-(void)moveToNext
+{
+    [self performSegueWithIdentifier:@"toDetail" sender:nil];
+}
 
 #pragma mark - Other methods
 -(void)confirmDelete:(UIGestureRecognizer*)recognizer

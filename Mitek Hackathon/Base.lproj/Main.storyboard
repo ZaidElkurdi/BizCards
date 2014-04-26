@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jmi-td-GxJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HtQ-2W-lUR">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -341,7 +341,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdQ-xD-Rce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="540"/>
+            <point key="canvasLocation" x="1483" y="196"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="vRg-Bw-sFQ">
@@ -430,13 +430,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-zx-19A">
-                                <rect key="frame" x="6" y="14" width="39" height="36"/>
+                                <rect key="frame" x="6" y="14" width="29" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="backButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HtQ-2W-lUR" kind="push" id="aHc-us-iwn"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" id="TH3-AR-kIg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1014,7 +1014,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rSv-vN-uOt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K5Y-K0-JQt">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="K5Y-K0-JQt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1080,7 +1081,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APU-mU-81n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="866"/>
+            <point key="canvasLocation" x="1844" y="934"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ND6-qO-Nln">
@@ -1159,8 +1160,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="hK5-5t-v7F"/>
         <segue reference="Ipc-wm-JYa"/>
-        <segue reference="hyA-4k-Okx"/>
+        <segue reference="rjn-Kd-8KF"/>
+        <segue reference="hK5-5t-v7F"/>
+        <segue reference="TH3-AR-kIg"/>
     </inferredMetricsTieBreakers>
 </document>
