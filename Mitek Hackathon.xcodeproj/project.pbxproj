@@ -70,6 +70,13 @@
 		B8BD13D8190B85AE00AEF286 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13D7190B85AE00AEF286 /* detailViewController.m */; };
 		B8BD13DB190B85C700AEF286 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13DA190B85C700AEF286 /* cardCell.m */; };
 		B8BD13DD190B87C500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DC190B87C500AEF286 /* sendImage.xml */; };
+		93911A27190B35F500EB5DDB /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93911A26190B35F500EB5DDB /* CardViewController.m */; };
+		93911A29190B39B900EB5DDB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A28190B39B900EB5DDB /* AVFoundation.framework */; };
+		93911A2B190B39C700EB5DDB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2A190B39C700EB5DDB /* CoreImage.framework */; };
+		93911A2D190B39CE00EB5DDB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2C190B39CE00EB5DDB /* CoreMedia.framework */; };
+		93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2E190B39D600EB5DDB /* CoreMotion.framework */; };
+		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
+		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +162,14 @@
 		B8BD13D9190B85C700AEF286 /* cardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCell.h; sourceTree = "<group>"; };
 		B8BD13DA190B85C700AEF286 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8BD13DC190B87C500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
+		93911A25190B35F500EB5DDB /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		93911A26190B35F500EB5DDB /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		93911A28190B39B900EB5DDB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		93911A2A190B39C700EB5DDB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		93911A2C190B39CE00EB5DDB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		93911A2E190B39D600EB5DDB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		93911A30190B39DD00EB5DDB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
