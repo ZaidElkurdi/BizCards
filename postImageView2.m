@@ -1,18 +1,18 @@
 //
-//  postImageView.m
+//  postImageView22.m
 //  Mitek Hackathon
 //
 //  Created by Zaid Elkurdi on 4/26/14.
 //  Copyright (c) 2014 Tempest Vision. All rights reserved.
 //
 
-#import "postImageView.h"
+#import "postImageView2.h"
 
-@interface postImageView ()
+@interface postImageView2 ()
 
 @end
 
-@implementation postImageView
+@implementation postImageView2
 {
     int validEntry;
     int position;
@@ -73,22 +73,21 @@
     [passedImage setImage:rawImage];
     
     rawText = [prefs objectForKey:@"rawOCRText"];
-     NSLog(@"Raw Text: %@",rawText);
+    NSLog(@"Raw Text: %@",rawText);
     
     if(txtData.text.length == 0)
     {
         
-        
                
-        [self performSegueWithIdentifier:@"retryPhoto" sender:nil];
+        [self performSegueWithIdentifier:@"redo" sender:nil];
         
         
     }
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"rawTest" ofType:@".txt"];
-//    NSError *error;
-//    NSString *rawText =[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-//
-
+    //    NSString *path = [[NSBundle mainBundle] pathForResource:@"rawTest" ofType:@".txt"];
+    //    NSError *error;
+    //    NSString *rawText =[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    //
+    
     //[self parseText];
     rawLines = [[rawText componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] mutableCopy];
     [self progress:YES];
@@ -96,29 +95,29 @@
 }
 -(void)progress:(BOOL)doStuff
 {
-
     
-      NSLog(@"Position: %d", position);
-      NSLog(@"valid entry: %d", validEntry);
     
-      if([rawLines count] > position)
-      {
+    NSLog(@"Position: %d", position);
+    NSLog(@"valid entry: %d", validEntry);
+    
+    if([rawLines count] > position)
+    {
         [txtData setText:[rawLines objectAtIndex:position]];
         
-       }
-       else
-       {
-            [arrayToPass addObject:strName];
-            [arrayToPass addObject:strCompany];
-            [arrayToPass addObject:strTitle];
-            [arrayToPass addObject:strEmail];
-            [arrayToPass addObject:strPhone];
-            [arrayToPass addObject:strAddress];
-            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            [prefs setObject:arrayToPass forKey:@"formattedArray"];
-            [self performSegueWithIdentifier:@"transitionToEdit" sender:nil];
-            NSLog(@"Done");
-       }
+    }
+    else
+    {
+        [arrayToPass addObject:strName];
+        [arrayToPass addObject:strCompany];
+        [arrayToPass addObject:strTitle];
+        [arrayToPass addObject:strEmail];
+        [arrayToPass addObject:strPhone];
+        [arrayToPass addObject:strAddress];
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:arrayToPass forKey:@"formattedArray"];
+        [self performSegueWithIdentifier:@"transitionToUpload" sender:nil];
+        NSLog(@"Done");
+    }
     
 }
 -(IBAction)progressThrough:(id)sender
@@ -180,14 +179,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
