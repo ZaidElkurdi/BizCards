@@ -75,11 +75,10 @@
 
 -(IBAction)takeToParse
 {
-    if(canSearch)
-    {
-        [self profileApiCall];
-    }
+    NSLog(@"Made it here");
+    [self profileApiCall];
     
+    PFUser *curr  = [PFUser currentUser];
     PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
     uploadCard[@"Name"] = txtName.text;
     uploadCard[@"Email"] = txtEmail.text;
@@ -104,7 +103,7 @@
                                             otherButtonTitles:nil];
      
     [message show];
-    [self performSegueWithIdentifier:@"backToHome" sender:nil];
+    //[self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)thumbnail:(UIImage*)fullImage
 {
@@ -125,6 +124,8 @@
 
 - (void)profileApiCall
 {
+    NSLog(@"Making call!");
+    
     NSURL *url = [NSURL URLWithString:@"http://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,picture-url,headline),num-results)?first-name=aryaman&last-name=sharda"];
     
     OAMutableURLRequest *request =
