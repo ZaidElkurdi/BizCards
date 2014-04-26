@@ -3,10 +3,10 @@
    <soapenv:Body>
       <mit:AuthenticateUser>
          <!--See Project Custom Properties for the following Credentials:-->
-         <mit:userName>"zaid.elkurdi@gmail.com"</mit:userName>
-         <mit:password>"HI7WWP8VypoE"</mit:password>
+         <mit:userName>zaid.elkurdi@gmail.com</mit:userName>
+         <mit:password>HI7WWP8VypoE</mit:password>
          <mit:phoneKey>MitekTest</mit:phoneKey>
-         <mit:orgName>"UCSD-Hack"</mit:orgName>
+         <mit:orgName>UCSD-Hack</mit:orgName>
       </mit:AuthenticateUser>
    </soapenv:Body>
 </soapenv:Envelope>

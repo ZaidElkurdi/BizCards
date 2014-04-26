@@ -11,7 +11,15 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import <CoreMotion/CoreMotion.h>
 #import <ImageIO/ImageIO.h>
+#import "xmlreader.h"
+#import "xmlreader.h"
+#import "postImageView.h"
+
 @interface CardViewController ()
+{
+    NSDictionary *finalImageDict;
+    NSDictionary *finalTextDict;
+}
 @property (weak, nonatomic) IBOutlet UIButton *takeButton;
 @property (weak, nonatomic) IBOutlet UIButton *videoButton;
 @property (strong, nonatomic) NSString* serverVersion;
@@ -63,10 +71,26 @@
     }
 }
 
+- (void)miSnapFinishedReturningEncodedImage:(NSString *)encodedImage
+							  originalImage:(UIImage *)originalImage
+								 andResults:(NSDictionary *)results
+{
+    [self sendImage:encodedImage withResults:results];
+    
+}
+
+- (void)miSnapCancelledWithResults:(NSDictionary *)results
+{
+
+
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self authenticate];
     // Do any additional setup after loading the view.
     _isRunningMiSnap = NO;
     
@@ -77,8 +101,9 @@
     NSDictionary *dict = [[NSDictionary alloc] initWithObjects:arr forKeys:arr2];
     [self authenticateUserReturn:dict];
     //Make a call w/ dictionary
-
-
+    
+    self.rawText = nil;
+    self.rawData = nil;
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -86,8 +111,72 @@
     [self setTitle:@"Take Photo"];
 }
 
+-(void)sendImage:(NSString*)encodedImage withResults:(NSDictionary*)results
+{
+    NSDictionary *headerFieldsDict = [NSDictionary
+                                      dictionaryWithObjectsAndKeys:@"Apple iPhone",@"User-Agent",
+                                      @"text/xml; charset=utf-8", @"Content-Type",
+                                      @"soapAction",@"SOAP_ACTION",nil];
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"sendImage" ofType:@"xml"];
+
+    
+    NSError *error;
+    NSString *rawxmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
+    NSString *xmlString = [NSString stringWithFormat:rawxmlString,encodedImage];
+    if (error) {
+        NSLog(@"Error with XML conversion: %@", [error description]);
+    }
+    else {
+//        NSLog(@"XML Data: %@", xmlString);
+    }
+    
+    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    [theRequest setHTTPMethod:@"POST"];
+    [theRequest setAllHTTPHeaderFields:headerFieldsDict];
+    [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"Connection error: %@", [connectionError description]);
+        }
+        else
+        {
+            
+            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"String: %@", theString);
+            NSDictionary *dics=[[NSDictionary alloc]initWithDictionary:[XMLReader dictionaryForXMLString:theString error:nil]];
+            NSDictionary *dic1 = [[NSDictionary alloc] initWithDictionary:[dics objectForKey:@"soap:Envelope"]];
+            
+            NSDictionary *dic2 = [[NSDictionary alloc] initWithDictionary:[dic1 objectForKey:@"soap:Body"]];
+            NSDictionary *dic3 = [[NSDictionary alloc] initWithDictionary:[dic2 objectForKey:@"InsertPhoneTransactionResponse"]];
+            NSDictionary *dic4 = [[NSDictionary alloc] initWithDictionary:[dic3 objectForKey:@"InsertPhoneTransactionResult"]];
+            NSDictionary *dic5 = [[NSDictionary alloc] initWithDictionary:[dic4 objectForKey:@"Transaction"]];
+            
+            finalImageDict = [[dic5 objectForKey:@"GrayscaleImage"] copy];
+            self.rawData = [[finalImageDict objectForKey:@"text"] copy];
+            
+            finalTextDict =[[dic5 objectForKey:@"ExtractedRawOCR"] copy];
+            self.rawText = [[finalTextDict objectForKey:@"text"] copy];
+            
+            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+           [prefs setObject:[NSString stringWithFormat:@"%@",[finalImageDict objectForKey:@"text"]] forKey:@"rawImageText"];
+           [prefs setObject:[NSString stringWithFormat:@"%@",[finalTextDict objectForKey:@"text"]] forKey:@"rawOCRText"];
+           [prefs synchronize];
+        }
+    }];
+    
+    [self performSelector:@selector(presentNew) withObject:nil afterDelay:3.0];
+}
+
+-(void)presentNew
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+    postImageView *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"postImageView"];
+    [self presentModalViewController:controller animated:YES];
+}
+
 #pragma mark - Rotation methods
-#pragma mark -
 
 // iOS 6 methods
 - (NSUInteger)supportedInterfaceOrientations
@@ -120,5 +209,41 @@
 }
 
 
+-(void)authenticate
+{
+    NSDictionary *headerFieldsDict = [NSDictionary
+                                      dictionaryWithObjectsAndKeys:@"Apple iPhone",@"User-Agent",
+                                      @"text/xml; charset=utf-8", @"Content-Type",
+                                      @"soapAction",@"SOAP_ACTION",nil];
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"authenticate" ofType:@"xml"];
+    //NSLog(@"%@", xmlPath);
+    
+    NSError *error;
+    NSString *xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        NSLog(@"Error with XML conversion: %@", [error description]);
+    }
+    else {
+        //NSLog(@"XML Data: %@", xmlString);
+    }
+    
+    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    [theRequest setHTTPMethod:@"POST"];
+    [theRequest setAllHTTPHeaderFields:headerFieldsDict];
+    [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"Connection error: %@", [connectionError description]);
+        }
+        else {
+            
+            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+           // NSLog(@"Success : %@", [response description]);
+            //NSLog(@"Data: %@", theString);
+        }
+    }];
+}
 
 @end

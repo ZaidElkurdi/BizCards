@@ -1,11 +1,23 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mit="http://www.miteksystems.com/">
    <soapenv:Header/>
    <soapenv:Body>
-      <mit:CROP_IQA_OCR>
-         <mit:userName>"zaid.elkurdi@gmail.com"</mit:userName>
-         <mit:password>"HI7WWP8VypoE"</mit:password>
+      <mit:InsertPhoneTransaction>
+         <!--See Project Custom Properties for the following Credentials:-->
+         <mit:userName>zaid.elkurdi@gmail.com</mit:userName>
+         <mit:password>HI7WWP8VypoE</mit:password>
          <mit:phoneKey>MitekTest</mit:phoneKey>
-         <mit:orgName>"UCSD-Hack"</mit:orgName>
-      </mit:AuthenticateUser>
+         <mit:orgName>UCSD-Hack</mit:orgName>
+         <!--base64 encoded image string:-->
+         <mit:base64Image>%@</mit:base64Image>
+         <mit:compressionLevel>50</mit:compressionLevel>
+         <!--document type: ACH, Driver_License_XX (XX = State abbreviation), Remittance, Crop_IQA, CROP_IQA_OCR-->
+         <mit:documentIdentifier>CROP_IQA_OCR</mit:documentIdentifier>
+         <mit:documentHints></mit:documentHints>
+         <!-- See Vendor Web Services Guide Section 3.4 for dataReturnLevel -->
+         <mit:dataReturnLevel>30</mit:dataReturnLevel>
+         <mit:returnImageType>0</mit:returnImageType>
+         <mit:rotateImage>0</mit:rotateImage>
+         <mit:note>Mitek Test</mit:note>
+      </mit:InsertPhoneTransaction>
    </soapenv:Body>
 </soapenv:Envelope>

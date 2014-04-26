@@ -38,30 +38,26 @@
 		93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2E190B39D600EB5DDB /* CoreMotion.framework */; };
 		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
 		93ABC68F190B9259008FE209 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68C190B9259008FE209 /* libMiSnap.a */; };
-		93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
 		93ABC691190B9269008FE209 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
-		93ABC693190B9335008FE209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
-		93ABC696190B9446008FE209 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC694190B9446008FE209 /* cardCell.m */; };
 		93ABC697190B9446008FE209 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
-		93ABC6A8190B94B3008FE209 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC699190B94B3008FE209 /* addCard.png */; };
 		93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69A190B94B3008FE209 /* aryaman.png */; };
-		93ABC6AA190B94B3008FE209 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69B190B94B3008FE209 /* backButton.png */; };
-		93ABC6AB190B94B3008FE209 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69C190B94B3008FE209 /* callIIcon.png */; };
 		93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69D190B94B3008FE209 /* emailIcon.png */; };
 		93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69E190B94B3008FE209 /* forgotButton.png */; };
-		93ABC6AE190B94B3008FE209 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69F190B94B3008FE209 /* linkedInIcon.png */; };
-		93ABC6AF190B94B3008FE209 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A0190B94B3008FE209 /* loginBack.png */; };
 		93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A1190B94B3008FE209 /* loginButton.png */; };
 		93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A2190B94B3008FE209 /* passIcon.png */; };
-		93ABC6B2190B94B3008FE209 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A3190B94B3008FE209 /* profileBorder.png */; };
-		93ABC6B3190B94B3008FE209 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A4190B94B3008FE209 /* settingsIcon.png */; };
-		93ABC6B4190B94B3008FE209 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A5190B94B3008FE209 /* shareIcon.png */; };
 		93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A6190B94B3008FE209 /* signUpButton.png */; };
 		93ABC6B6190B94B3008FE209 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A7190B94B3008FE209 /* testCard.png */; };
-		93ABC6B9190B99BA008FE209 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
+		B8711DB6190B961400926B41 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DB4190B961400926B41 /* cardCollectionViewController.m */; };
+		B8711DB8190B976400926B41 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DB7190B976400926B41 /* cardCell.m */; };
+		B8711DBC190BA60A00926B41 /* xmlreader.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBB190BA60A00926B41 /* xmlreader.m */; };
+		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
+		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
+		B8711DC4190BC5D500926B41 /* rawTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = B8711DC3190BC5D500926B41 /* rawTest.txt */; };
+		B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DC6190BE68400926B41 /* UploadToParseViewController.m */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
+		B8BD13E7190B8AF200AEF286 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +112,6 @@
 		93ABC68C190B9259008FE209 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = "Mitek Hackathon/misnapsdk/libMiSnap.a"; sourceTree = "<group>"; };
 		93ABC68D190B9259008FE209 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = "Mitek Hackathon/misnapsdk/MiSnap.h"; sourceTree = "<group>"; };
 		93ABC68E190B9259008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = "Mitek Hackathon/misnapsdk/MiSnapResources.bundle"; sourceTree = "<group>"; };
-		93ABC694190B9446008FE209 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardCell.m; path = ../cardCell.m; sourceTree = "<group>"; };
 		93ABC695190B9446008FE209 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
 		93ABC699190B94B3008FE209 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
 		93ABC69A190B94B3008FE209 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
@@ -136,6 +131,16 @@
 		93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cardCollectionViewController.h; path = ../cardCollectionViewController.h; sourceTree = "<group>"; };
 		93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardCollectionViewController.m; path = ../cardCollectionViewController.m; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B8711DB3190B961400926B41 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCollectionViewController.h; sourceTree = "<group>"; };
+		B8711DB4190B961400926B41 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCollectionViewController.m; sourceTree = "<group>"; };
+		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
+		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
+		B8711DBB190BA60A00926B41 /* xmlreader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmlreader.m; sourceTree = "<group>"; };
+		B8711DBD190BAB5C00926B41 /* postImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postImageView.h; sourceTree = "<group>"; };
+		B8711DBE190BAB5C00926B41 /* postImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postImageView.m; sourceTree = "<group>"; };
+		B8711DC3190BC5D500926B41 /* rawTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rawTest.txt; sourceTree = "<group>"; };
+		B8711DC5190BE68400926B41 /* UploadToParseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadToParseViewController.h; path = ../UploadToParseViewController.h; sourceTree = "<group>"; };
+		B8711DC6190BE68400926B41 /* UploadToParseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadToParseViewController.m; path = ../UploadToParseViewController.m; sourceTree = "<group>"; };
 		B8BD13DE190B8AAE00AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
 		B8BD13E0190B8AB500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
 		B8BD13E2190B8ADB00AEF286 /* cardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCell.h; sourceTree = "<group>"; };
@@ -236,19 +241,28 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				B8711DBA190BA60A00926B41 /* xmlreader.h */,
+				B8711DBB190BA60A00926B41 /* xmlreader.m */,
+				B8711DB4190B961400926B41 /* cardCollectionViewController.m */,
+				B8711DB3190B961400926B41 /* cardCollectionViewController.h */,
 				B8BD13DE190B8AAE00AEF286 /* authenticate.xml */,
 				B8BD13E0190B8AB500AEF286 /* sendImage.xml */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
+				B8711DC5190BE68400926B41 /* UploadToParseViewController.h */,
+				B8711DC6190BE68400926B41 /* UploadToParseViewController.m */,
 				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,
 				93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */,
 				93ABC695190B9446008FE209 /* detailViewController.m */,
 				B8BD13E5190B8AF200AEF286 /* detailViewController.h */,
+				B8711DB7190B976400926B41 /* cardCell.m */,
 				B8BD13E2190B8ADB00AEF286 /* cardCell.h */,
-				93ABC694190B9446008FE209 /* cardCell.m */,
-				93911A26190B35F500EB5DDB /* CardViewController.m */,
 				93911A25190B35F500EB5DDB /* CardViewController.h */,
+				93911A26190B35F500EB5DDB /* CardViewController.m */,
+				B8711DBD190BAB5C00926B41 /* postImageView.h */,
+				B8711DBE190BAB5C00926B41 /* postImageView.m */,
+				B8711DC3190BC5D500926B41 /* rawTest.txt */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
 				939119E7190A05FC00EB5DDB /* ViewController.m */,
 				93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */,
@@ -391,22 +405,14 @@
 				93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */,
 				93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */,
 				93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */,
+				B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */,
 				93ABC6B6190B94B3008FE209 /* testCard.png in Resources */,
-				93ABC693190B9335008FE209 /* Main.storyboard in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
-				93ABC6B4190B94B3008FE209 /* shareIcon.png in Resources */,
-				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
-				93ABC6A8190B94B3008FE209 /* addCard.png in Resources */,
-				93ABC6B2190B94B3008FE209 /* profileBorder.png in Resources */,
-				93ABC6AA190B94B3008FE209 /* backButton.png in Resources */,
-				93ABC6B3190B94B3008FE209 /* settingsIcon.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
-				93ABC6AF190B94B3008FE209 /* loginBack.png in Resources */,
-				93ABC6AB190B94B3008FE209 /* callIIcon.png in Resources */,
-				93ABC6AE190B94B3008FE209 /* linkedInIcon.png in Resources */,
-				93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */,
+				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
 				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
+				B8711DC4190BC5D500926B41 /* rawTest.txt in Resources */,
 				93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,12 +434,16 @@
 			files = (
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
+				B8711DBC190BA60A00926B41 /* xmlreader.m in Sources */,
+				B8711DB6190B961400926B41 /* cardCollectionViewController.m in Sources */,
+				B8711DB8190B976400926B41 /* cardCell.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
 				93ABC697190B9446008FE209 /* detailViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
-				93ABC6B9190B99BA008FE209 /* cardCollectionViewController.m in Sources */,
-				93ABC696190B9446008FE209 /* cardCell.m in Sources */,
+				B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */,
+				B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */,
+				B8BD13E7190B8AF200AEF286 /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,8 +590,7 @@
 					Hackathon,
 					"$(PROJECT_DIR)/Mitek",
 					Hackathon,
-					"$(PROJECT_DIR)/Mitek",
-					Hackathon/misnapsdk,
+					"\"$(PROJECT_DIR)/Mitek Hackathon/misnapsdk\"",
 					"$(PROJECT_DIR)/Mitek",
 					Hackathon/misnapsdk,
 					"$(PROJECT_DIR)/Mitek",
