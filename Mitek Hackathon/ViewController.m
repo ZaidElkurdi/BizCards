@@ -15,12 +15,15 @@
 
 @implementation ViewController
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 -(void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+       NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@",[prefs stringForKey:@"username"]);
     
     if([prefs stringForKey:@"username"].length != 0)
@@ -29,7 +32,22 @@
     }
     
 }
+-(void)viewDidAppear:(BOOL)animated
+{
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if(currentUser == NULL)
+    {
+        
+    }
+    else
+    {
+        
+        [self performSegueWithIdentifier:@"succesfulLogin" sender:self];
+    }
+    
 
+}
 -(UIStatusBarStyle)preferredStatusBarStyle
 { 
     return UIStatusBarStyleLightContent; 
@@ -106,6 +124,7 @@
                                             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
                                             [prefs setObject:txtUsername.text forKey:@"username"];
                                             [prefs synchronize];
+                                            [user saveInBackground];
                                             
                                             //Call to segue
                                         } else {
@@ -115,6 +134,7 @@
                                             [alert show];
                                         }
                                     }];
+
 }
 - (void)didReceiveMemoryWarning
 {

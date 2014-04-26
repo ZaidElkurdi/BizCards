@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPI-zh-ajC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="-78"/>
+            <point key="canvasLocation" x="164" y="-199"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Fa4-0N-lXk">
@@ -417,9 +417,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIP-zx-19A">
-                                <rect key="frame" x="6" y="20" width="46" height="30"/>
+                                <rect key="frame" x="6" y="14" width="39" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" backgroundImage="backButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -478,10 +478,10 @@
             </objects>
             <point key="canvasLocation" x="-256" y="-78"/>
         </scene>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="mBq-YP-wM5">
             <objects>
-                <viewController id="Mxb-cD-WgT" sceneMemberID="viewController">
+                <viewController id="Mxb-cD-WgT" customClass="CardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bpG-XM-vbn"/>
                         <viewControllerLayoutGuide type="bottom" id="e02-Mg-tnh"/>
@@ -496,14 +496,20 @@
                                 <state key="normal" title="Launch">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="takeButtonPressed:" destination="Mxb-cD-WgT" eventType="touchUpInside" id="pUZ-CL-LiR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="takeButton" destination="PL3-cZ-04c" id="O1G-5M-sif"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRB-ch-DTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="-78"/>
+            <point key="canvasLocation" x="792" y="-860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="I3M-hJ-gJs">

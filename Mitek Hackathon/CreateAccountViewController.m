@@ -24,6 +24,9 @@
     }
     return self;
 }
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)viewDidLoad
 {
@@ -47,6 +50,7 @@
                 NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
                 [prefs setObject:txtEmail.text forKey:@"username"];
                 [prefs synchronize];
+                [user saveInBackground];
 
             } else {
                 NSString *errorString = [error userInfo][@"error"];
