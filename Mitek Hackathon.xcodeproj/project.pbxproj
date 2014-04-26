@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93411E97190B7807005E1977 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93411E94190B7807005E1977 /* libMiSnap.a */; };
-		93411E98190B7807005E1977 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93411E96190B7807005E1977 /* MiSnapResources.bundle */; };
-		93411E99190B782A005E1977 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93411E96190B7807005E1977 /* MiSnapResources.bundle */; };
 		93411EA9190B7A63005E1977 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9A190B7A62005E1977 /* addCard.png */; };
 		93411EAA190B7A63005E1977 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9B190B7A62005E1977 /* aryaman.png */; };
 		93411EAB190B7A63005E1977 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9C190B7A62005E1977 /* backButton.png */; };
@@ -27,7 +24,6 @@
 		939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 939119DA190A05FC00EB5DDB /* InfoPlist.strings */; };
 		939119DE190A05FC00EB5DDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119DD190A05FC00EB5DDB /* main.m */; };
 		939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119E1190A05FC00EB5DDB /* AppDelegate.m */; };
-		939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
 		939119E8190A05FC00EB5DDB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939119E7190A05FC00EB5DDB /* ViewController.m */; };
 		939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939119E9190A05FC00EB5DDB /* Images.xcassets */; };
 		939119F1190A05FC00EB5DDB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119F0190A05FC00EB5DDB /* XCTest.framework */; };
@@ -52,29 +48,13 @@
 		93911A2D190B39CE00EB5DDB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2C190B39CE00EB5DDB /* CoreMedia.framework */; };
 		93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2E190B39D600EB5DDB /* CoreMotion.framework */; };
 		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
+		93ABC68F190B9259008FE209 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68C190B9259008FE209 /* libMiSnap.a */; };
+		93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
+		93ABC691190B9269008FE209 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
+		93ABC693190B9335008FE209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
-		B8BD13A4190B368000AEF286 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD139E190B368000AEF286 /* emailIcon.png */; };
-		B8BD13A5190B368000AEF286 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD139F190B368000AEF286 /* forgotButton.png */; };
-		B8BD13A6190B368000AEF286 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A0190B368000AEF286 /* loginBack.png */; };
-		B8BD13A7190B368000AEF286 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A1190B368000AEF286 /* loginButton.png */; };
-		B8BD13A8190B368000AEF286 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A2190B368000AEF286 /* passIcon.png */; };
-		B8BD13A9190B368000AEF286 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A3190B368000AEF286 /* signUpButton.png */; };
-		B8BD13BC190B536E00AEF286 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13BB190B536E00AEF286 /* testCard.png */; };
-		B8BD13BF190B55F800AEF286 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13BD190B55F800AEF286 /* addCard.png */; };
-		B8BD13C0190B55F800AEF286 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13BE190B55F800AEF286 /* settingsIcon.png */; };
-		B8BD13C4190B623F00AEF286 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13C1190B623F00AEF286 /* callIIcon.png */; };
-		B8BD13C5190B623F00AEF286 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13C2190B623F00AEF286 /* linkedInIcon.png */; };
-		B8BD13CD190B63C300AEF286 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13CC190B63C300AEF286 /* backButton.png */; };
-		B8BD13CF190B6B9500AEF286 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13CE190B6B9500AEF286 /* profileBorder.png */; };
-		B8BD13D1190B6C1400AEF286 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13D0190B6C1400AEF286 /* aryaman.png */; };
-		B8BD13D3190B7FA200AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13D2190B7FA200AEF286 /* authenticate.xml */; };
-		B8BD13D8190B85AE00AEF286 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13D7190B85AE00AEF286 /* detailViewController.m */; };
-		B8BD13DB190B85C700AEF286 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13DA190B85C700AEF286 /* cardCell.m */; };
-		B8BD13DD190B87C500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DC190B87C500AEF286 /* sendImage.xml */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
-		B8BD13E4190B8ADB00AEF286 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13E3190B8ADB00AEF286 /* cardCell.m */; };
-		B8BD13E7190B8AF200AEF286 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BD13E6190B8AF200AEF286 /* detailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93411E94190B7807005E1977 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = misnapsdk/libMiSnap.a; sourceTree = "<group>"; };
-		93411E95190B7807005E1977 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = misnapsdk/MiSnap.h; sourceTree = "<group>"; };
-		93411E96190B7807005E1977 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = misnapsdk/MiSnapResources.bundle; sourceTree = "<group>"; };
 		93411E9A190B7A62005E1977 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
 		93411E9B190B7A62005E1977 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
 		93411E9C190B7A62005E1977 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -144,31 +121,14 @@
 		93911A2C190B39CE00EB5DDB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		93911A2E190B39D600EB5DDB /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		93911A30190B39DD00EB5DDB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		93ABC68C190B9259008FE209 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = "Mitek Hackathon/misnapsdk/libMiSnap.a"; sourceTree = "<group>"; };
+		93ABC68D190B9259008FE209 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = "Mitek Hackathon/misnapsdk/MiSnap.h"; sourceTree = "<group>"; };
+		93ABC68E190B9259008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = "Mitek Hackathon/misnapsdk/MiSnapResources.bundle"; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		B8BD139E190B368000AEF286 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
-		B8BD139F190B368000AEF286 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
-		B8BD13A0190B368000AEF286 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
-		B8BD13A1190B368000AEF286 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
-		B8BD13A2190B368000AEF286 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
-		B8BD13A3190B368000AEF286 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
-		B8BD13BB190B536E00AEF286 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
-		B8BD13BD190B55F800AEF286 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
-		B8BD13BE190B55F800AEF286 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
-		B8BD13C1190B623F00AEF286 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callIIcon.png; sourceTree = "<group>"; };
-		B8BD13C2190B623F00AEF286 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInIcon.png; sourceTree = "<group>"; };
-		B8BD13CC190B63C300AEF286 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
-		B8BD13CE190B6B9500AEF286 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBorder.png; sourceTree = "<group>"; };
-		B8BD13D0190B6C1400AEF286 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
-		B8BD13D2190B7FA200AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
-		B8BD13D7190B85AE00AEF286 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
-		B8BD13DA190B85C700AEF286 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
-		B8BD13DC190B87C500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
 		B8BD13DE190B8AAE00AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
 		B8BD13E0190B8AB500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
 		B8BD13E2190B8ADB00AEF286 /* cardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCell.h; sourceTree = "<group>"; };
-		B8BD13E3190B8ADB00AEF286 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8BD13E5190B8AF200AEF286 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
-		B8BD13E6190B8AF200AEF286 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93411E99190B782A005E1977 /* MiSnapResources.bundle in Frameworks */,
+				93ABC68F190B9259008FE209 /* libMiSnap.a in Frameworks */,
+				93ABC691190B9269008FE209 /* MiSnapResources.bundle in Frameworks */,
 				93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */,
 				93911A19190A158C00EB5DDB /* QuartzCore.framework in Frameworks */,
 				93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */,
@@ -194,7 +155,6 @@
 				93911A13190A157800EB5DDB /* CoreLocation.framework in Frameworks */,
 				93911A11190A156C00EB5DDB /* CFNetwork.framework in Frameworks */,
 				939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */,
-				93411E97190B7807005E1977 /* libMiSnap.a in Frameworks */,
 				93911A0D190A152800EB5DDB /* Parse.framework in Frameworks */,
 				939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */,
 			);
@@ -216,6 +176,9 @@
 		939119C5190A05FC00EB5DDB = {
 			isa = PBXGroup;
 			children = (
+				93ABC68C190B9259008FE209 /* libMiSnap.a */,
+				93ABC68D190B9259008FE209 /* MiSnap.h */,
+				93ABC68E190B9259008FE209 /* MiSnapResources.bundle */,
 				939119D7190A05FC00EB5DDB /* Mitek Hackathon */,
 				939119F6190A05FC00EB5DDB /* Mitek HackathonTests */,
 				939119D0190A05FC00EB5DDB /* Frameworks */,
@@ -264,16 +227,11 @@
 			children = (
 				B8BD13DE190B8AAE00AEF286 /* authenticate.xml */,
 				B8BD13E0190B8AB500AEF286 /* sendImage.xml */,
-				93411E94190B7807005E1977 /* libMiSnap.a */,
-				93411E95190B7807005E1977 /* MiSnap.h */,
-				93411E96190B7807005E1977 /* MiSnapResources.bundle */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
 				939119E1190A05FC00EB5DDB /* AppDelegate.m */,
 				939119E3190A05FC00EB5DDB /* Main.storyboard */,
 				B8BD13E5190B8AF200AEF286 /* detailViewController.h */,
-				B8BD13E6190B8AF200AEF286 /* detailViewController.m */,
 				B8BD13E2190B8ADB00AEF286 /* cardCell.h */,
-				B8BD13E3190B8ADB00AEF286 /* cardCell.m */,
 				93911A25190B35F500EB5DDB /* CardViewController.h */,
 				93911A26190B35F500EB5DDB /* CardViewController.m */,
 				939119E6190A05FC00EB5DDB /* ViewController.h */,
@@ -414,19 +372,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8BD13A5190B368000AEF286 /* forgotButton.png in Resources */,
-				B8BD13BF190B55F800AEF286 /* addCard.png in Resources */,
-				B8BD13C0190B55F800AEF286 /* settingsIcon.png in Resources */,
-				B8BD13A9190B368000AEF286 /* signUpButton.png in Resources */,
-				B8BD13C4190B623F00AEF286 /* callIIcon.png in Resources */,
-				B8BD13BC190B536E00AEF286 /* testCard.png in Resources */,
-				B8BD13A6190B368000AEF286 /* loginBack.png in Resources */,
-				B8BD13DD190B87C500AEF286 /* sendImage.xml in Resources */,
-				B8BD13A4190B368000AEF286 /* emailIcon.png in Resources */,
-				B8BD13A8190B368000AEF286 /* passIcon.png in Resources */,
+				93ABC693190B9335008FE209 /* Main.storyboard in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
 				93411EA9190B7A63005E1977 /* addCard.png in Resources */,
-				93411E98190B7807005E1977 /* MiSnapResources.bundle in Resources */,
 				93411EB3190B7A63005E1977 /* profileBorder.png in Resources */,
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				93411EB4190B7A63005E1977 /* settingsIcon.png in Resources */,
@@ -439,14 +387,8 @@
 				93411EB6190B7A63005E1977 /* signUpButton.png in Resources */,
 				93411EB2190B7A63005E1977 /* passIcon.png in Resources */,
 				93411EB1190B7A63005E1977 /* loginButton.png in Resources */,
-				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
-				B8BD13CD190B63C300AEF286 /* backButton.png in Resources */,
-				B8BD13CF190B6B9500AEF286 /* profileBorder.png in Resources */,
-				B8BD13C5190B623F00AEF286 /* linkedInIcon.png in Resources */,
-				B8BD13D1190B6C1400AEF286 /* aryaman.png in Resources */,
-				B8BD13A7190B368000AEF286 /* loginButton.png in Resources */,
+				93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
-				B8BD13D3190B7FA200AEF286 /* authenticate.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,11 +411,7 @@
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
-				B8BD13DB190B85C700AEF286 /* cardCell.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
-				B8BD13D8190B85AE00AEF286 /* detailViewController.m in Sources */,
-				B8BD13E4190B8ADB00AEF286 /* cardCell.m in Sources */,
-				B8BD13E7190B8AF200AEF286 /* detailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,9 +495,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -591,10 +529,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
@@ -624,11 +562,14 @@
 					Hackathon/misnapsdk,
 					"$(PROJECT_DIR)/Mitek",
 					Hackathon/misnapsdk,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon/misnapsdk,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -658,11 +599,14 @@
 					Hackathon/misnapsdk,
 					"$(PROJECT_DIR)/Mitek",
 					Hackathon/misnapsdk,
+					"$(PROJECT_DIR)/Mitek",
+					Hackathon/misnapsdk,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
