@@ -77,6 +77,7 @@
     [txtPhone setText:[myArray objectAtIndex:4]];
     [txtAddress setText:[myArray objectAtIndex:5]];
 }
+
 -(IBAction)takeToParse
 {
     NSLog(@"Made it here");
