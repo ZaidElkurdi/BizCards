@@ -33,6 +33,12 @@
 		93911A1B190A159200EB5DDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1A190A159200EB5DDB /* Security.framework */; };
 		93911A1D190A159700EB5DDB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1C190A159700EB5DDB /* StoreKit.framework */; };
 		93911A1F190A159D00EB5DDB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */; };
+		B8BD13A4190B368000AEF286 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD139E190B368000AEF286 /* emailIcon.png */; };
+		B8BD13A5190B368000AEF286 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD139F190B368000AEF286 /* forgotButton.png */; };
+		B8BD13A6190B368000AEF286 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A0190B368000AEF286 /* loginBack.png */; };
+		B8BD13A7190B368000AEF286 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A1190B368000AEF286 /* loginButton.png */; };
+		B8BD13A8190B368000AEF286 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A2190B368000AEF286 /* passIcon.png */; };
+		B8BD13A9190B368000AEF286 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13A3190B368000AEF286 /* signUpButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,12 @@
 		93911A1A190A159200EB5DDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		93911A1C190A159700EB5DDB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		93911A1E190A159D00EB5DDB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B8BD139E190B368000AEF286 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
+		B8BD139F190B368000AEF286 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
+		B8BD13A0190B368000AEF286 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
+		B8BD13A1190B368000AEF286 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
+		B8BD13A2190B368000AEF286 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
+		B8BD13A3190B368000AEF286 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +215,12 @@
 		93911A06190A078900EB5DDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B8BD139E190B368000AEF286 /* emailIcon.png */,
+				B8BD139F190B368000AEF286 /* forgotButton.png */,
+				B8BD13A0190B368000AEF286 /* loginBack.png */,
+				B8BD13A1190B368000AEF286 /* loginButton.png */,
+				B8BD13A2190B368000AEF286 /* passIcon.png */,
+				B8BD13A3190B368000AEF286 /* signUpButton.png */,
 				93911A07190A079000EB5DDB /* SignIn.png */,
 			);
 			name = Images;
@@ -284,10 +302,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8BD13A5190B368000AEF286 /* forgotButton.png in Resources */,
+				B8BD13A9190B368000AEF286 /* signUpButton.png in Resources */,
+				B8BD13A6190B368000AEF286 /* loginBack.png in Resources */,
+				B8BD13A4190B368000AEF286 /* emailIcon.png in Resources */,
+				B8BD13A8190B368000AEF286 /* passIcon.png in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
 				93911A08190A079000EB5DDB /* SignIn.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
 				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
+				B8BD13A7190B368000AEF286 /* loginButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +546,7 @@
 				93911A02190A05FC00EB5DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +555,7 @@
 				93911A05190A05FC00EB5DDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

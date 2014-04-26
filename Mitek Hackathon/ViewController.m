@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
 	// Do any additional setup after loading the view, typically from a nib.
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     if([prefs stringForKey:@"userPassword"].length != 0)
@@ -27,13 +28,17 @@
     
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{ 
+    return UIStatusBarStyleLightContent; 
+}
+
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if(self.view.frame.origin.y >= 0)
-        [self setViewMoveUp:YES];
+
 }
--(void)textFieldDidEndEditing:(UITextField *)textField{
-    [self setViewMoveUp:NO];
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
