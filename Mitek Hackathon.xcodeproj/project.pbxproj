@@ -79,6 +79,8 @@
 		93ABC834190C312D008FE209 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A4190B94B3008FE209 /* settingsIcon.png */; };
 		93ABC835190C3140008FE209 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A0190B94B3008FE209 /* loginBack.png */; };
 		93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC836190C3608008FE209 /* MiSnapResources.bundle */; };
+		93ABC83A190C4A75008FE209 /* Bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC838190C4A75008FE209 /* Bad.png */; };
+		93ABC83B190C4A75008FE209 /* Good.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC839190C4A75008FE209 /* Good.png */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
@@ -207,6 +209,8 @@
 		93ABC82C190C25D5008FE209 /* linkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = linkedInViewController.h; path = ../linkedInViewController.h; sourceTree = "<group>"; };
 		93ABC82D190C25D5008FE209 /* linkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = linkedInViewController.m; path = ../linkedInViewController.m; sourceTree = "<group>"; };
 		93ABC836190C3608008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MiSnapResources.bundle; sourceTree = "<group>"; };
+		93ABC838190C4A75008FE209 /* Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad.png; sourceTree = "<group>"; };
+		93ABC839190C4A75008FE209 /* Good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Good.png; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 		93ABC698190B94AA008FE209 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				93ABC838190C4A75008FE209 /* Bad.png */,
+				93ABC839190C4A75008FE209 /* Good.png */,
 				93ABC699190B94B3008FE209 /* addCard.png */,
 				93ABC69A190B94B3008FE209 /* aryaman.png */,
 				93ABC69B190B94B3008FE209 /* backButton.png */,
@@ -558,12 +564,14 @@
 				B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */,
 				93ABC6B6190B94B3008FE209 /* testCard.png in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
+				93ABC83A190C4A75008FE209 /* Bad.png in Resources */,
 				93ABC833190C3119008FE209 /* shareIcon.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
 				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
 				93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */,
+				93ABC83B190C4A75008FE209 /* Good.png in Resources */,
 				93ABC835190C3140008FE209 /* loginBack.png in Resources */,
 				93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */,
 			);
