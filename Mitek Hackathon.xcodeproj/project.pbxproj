@@ -39,7 +39,6 @@
 		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
 		93ABC68F190B9259008FE209 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68C190B9259008FE209 /* libMiSnap.a */; };
 		93ABC691190B9269008FE209 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
-		93ABC697190B9446008FE209 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
 		93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69A190B94B3008FE209 /* aryaman.png */; };
 		93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69D190B94B3008FE209 /* emailIcon.png */; };
 		93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69E190B94B3008FE209 /* forgotButton.png */; };
@@ -570,7 +569,6 @@
 				93ABC812190BF1B5008FE209 /* OAMutableURLRequest.m in Sources */,
 				93ABC813190BF1B5008FE209 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				93ABC81A190BF82B008FE209 /* xmlreader.m in Sources */,
-				93ABC697190B9446008FE209 /* detailViewController.m in Sources */,
 				93ABC810190BF1B5008FE209 /* OAProblem.m in Sources */,
 				93ABC80C190BF1B5008FE209 /* OATokenManager.m in Sources */,
 				93ABC80F190BF1B5008FE209 /* OARequestParameter.m in Sources */,
