@@ -11,6 +11,7 @@
 @interface cardCollectionViewController ()
 {
     NSIndexPath *currEditingIndex;
+    NSMutableData *webdata;
 }
 @end
 
@@ -28,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self makeRequest];
     
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
@@ -68,6 +71,43 @@
 -(UIStatusBarStyle)preferredStatusBarStyle
 { 
     return UIStatusBarStyleLightContent; 
+}
+
+-(void)makeRequest
+{
+    NSDictionary *headerFieldsDict = [NSDictionary
+                                      dictionaryWithObjectsAndKeys:@"Apple iPhone",@"User-Agent",
+                                      @"text/xml; charset=utf-8", @"Content-Type",
+                                      @"soapAction",@"SOAP_ACTION",nil];
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"authenticate" ofType:@"xml"];
+    NSLog(@"%@", xmlPath);
+    
+    NSError *error;
+    NSString *xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        NSLog(@"Error with XML conversion: %@", [error description]);
+    }
+    else {
+        NSLog(@"XML Data: %@", xmlString);
+    }
+    
+    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
+    [theRequest setHTTPMethod:@"POST"];
+    [theRequest setAllHTTPHeaderFields:headerFieldsDict];
+    [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            NSLog(@"Connection error: %@", [connectionError description]);
+        }
+        else {
+            
+            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"Success : %@", [response description]);
+            NSLog(@"Data: %@", theString);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
