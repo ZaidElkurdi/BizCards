@@ -71,6 +71,7 @@
 		93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC825190C1B8D008FE209 /* settingsViewController.m */; };
 		93ABC828190C1D41008FE209 /* OAuthLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC827190C1D41008FE209 /* OAuthLoginView.xib */; };
 		93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC829190C1F2C008FE209 /* OAuthLoginView.m */; };
+		93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC82D190C25D5008FE209 /* linkedInViewController.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
@@ -196,6 +197,8 @@
 		93ABC827190C1D41008FE209 /* OAuthLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthLoginView.xib; sourceTree = "<group>"; };
 		93ABC829190C1F2C008FE209 /* OAuthLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginView.m; sourceTree = "<group>"; };
 		93ABC82A190C1F2C008FE209 /* OAuthLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginView.h; sourceTree = "<group>"; };
+		93ABC82C190C25D5008FE209 /* linkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = linkedInViewController.h; path = ../linkedInViewController.h; sourceTree = "<group>"; };
+		93ABC82D190C25D5008FE209 /* linkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = linkedInViewController.m; path = ../linkedInViewController.m; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
 		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				93ABC82C190C25D5008FE209 /* linkedInViewController.h */,
+				93ABC82D190C25D5008FE209 /* linkedInViewController.m */,
 				93ABC81F190BFAD9008FE209 /* ProfileTabView.m */,
 				93ABC820190BFAD9008FE209 /* ProfileTabView.h */,
 				B8711DBA190BA60A00926B41 /* xmlreader.h */,
@@ -569,6 +574,7 @@
 				93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */,
 				93ABC816190BF1B5008FE209 /* OACall.m in Sources */,
 				93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */,
+				93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				93ABC7EE190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,

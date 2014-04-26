@@ -125,6 +125,24 @@ statusTextView, updateStatusLabel;
 
 - (void)networkApiCall
 {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *consumerArray = [[NSArray alloc] initWithObjects:oAuthLoginView.consumer.key,oAuthLoginView.consumer.secret,oAuthLoginView.consumer.realm, nil];
+    NSArray *consumerKeys = [[NSArray alloc] initWithObjects:@"key",@"secret", @"realm", nil];
+    
+    NSDictionary *consumerInfo = [[NSDictionary alloc] initWithObjects:consumerArray forKeys:consumerKeys];
+    ////////
+    
+    NSArray *tokenArray = [[NSArray alloc] initWithObjects:oAuthLoginView.accessToken.key,oAuthLoginView.accessToken.secret, nil];
+    NSArray *tokenKeys = [[NSArray alloc] initWithObjects:@"key",@"secret", nil];
+    
+    NSDictionary *tokenInfo = [[NSDictionary alloc] initWithObjects:tokenArray forKeys:tokenKeys];
+    
+    [prefs setObject:consumerInfo forKey:@"oAuthConsumerInfo"];
+    [prefs setObject:tokenInfo forKey:@"oAuthTokenInfo"];
+    
+    [prefs synchronize];
+    
     NSURL *url = [NSURL URLWithString:@"http://api.linkedin.com/v1/people/~/network/updates?scope=self&count=1&type=STAT"];
     OAMutableURLRequest *request =
     [[OAMutableURLRequest alloc] initWithURL:url
