@@ -7,17 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93411EA9190B7A63005E1977 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9A190B7A62005E1977 /* addCard.png */; };
-		93411EAA190B7A63005E1977 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9B190B7A62005E1977 /* aryaman.png */; };
-		93411EAB190B7A63005E1977 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9C190B7A62005E1977 /* backButton.png */; };
-		93411EAD190B7A63005E1977 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411E9E190B7A62005E1977 /* emailIcon.png */; };
-		93411EB0190B7A63005E1977 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA1190B7A62005E1977 /* loginBack.png */; };
-		93411EB1190B7A63005E1977 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA2190B7A62005E1977 /* loginButton.png */; };
-		93411EB2190B7A63005E1977 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA3190B7A62005E1977 /* passIcon.png */; };
-		93411EB3190B7A63005E1977 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA4190B7A63005E1977 /* profileBorder.png */; };
-		93411EB4190B7A63005E1977 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA5190B7A63005E1977 /* settingsIcon.png */; };
-		93411EB6190B7A63005E1977 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA7190B7A63005E1977 /* signUpButton.png */; };
-		93411EB7190B7A63005E1977 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93411EA8190B7A63005E1977 /* testCard.png */; };
 		939119D2190A05FC00EB5DDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D1190A05FC00EB5DDB /* Foundation.framework */; };
 		939119D4190A05FC00EB5DDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D3190A05FC00EB5DDB /* CoreGraphics.framework */; };
 		939119D6190A05FC00EB5DDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939119D5190A05FC00EB5DDB /* UIKit.framework */; };
@@ -52,6 +41,23 @@
 		93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
 		93ABC691190B9269008FE209 /* MiSnapResources.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68E190B9259008FE209 /* MiSnapResources.bundle */; };
 		93ABC693190B9335008FE209 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
+		93ABC696190B9446008FE209 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC694190B9446008FE209 /* cardCell.m */; };
+		93ABC697190B9446008FE209 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
+		93ABC6A8190B94B3008FE209 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC699190B94B3008FE209 /* addCard.png */; };
+		93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69A190B94B3008FE209 /* aryaman.png */; };
+		93ABC6AA190B94B3008FE209 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69B190B94B3008FE209 /* backButton.png */; };
+		93ABC6AB190B94B3008FE209 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69C190B94B3008FE209 /* callIIcon.png */; };
+		93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69D190B94B3008FE209 /* emailIcon.png */; };
+		93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69E190B94B3008FE209 /* forgotButton.png */; };
+		93ABC6AE190B94B3008FE209 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69F190B94B3008FE209 /* linkedInIcon.png */; };
+		93ABC6AF190B94B3008FE209 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A0190B94B3008FE209 /* loginBack.png */; };
+		93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A1190B94B3008FE209 /* loginButton.png */; };
+		93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A2190B94B3008FE209 /* passIcon.png */; };
+		93ABC6B2190B94B3008FE209 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A3190B94B3008FE209 /* profileBorder.png */; };
+		93ABC6B3190B94B3008FE209 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A4190B94B3008FE209 /* settingsIcon.png */; };
+		93ABC6B4190B94B3008FE209 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A5190B94B3008FE209 /* shareIcon.png */; };
+		93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A6190B94B3008FE209 /* signUpButton.png */; };
+		93ABC6B6190B94B3008FE209 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A7190B94B3008FE209 /* testCard.png */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
@@ -68,21 +74,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93411E9A190B7A62005E1977 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
-		93411E9B190B7A62005E1977 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
-		93411E9C190B7A62005E1977 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
-		93411E9D190B7A62005E1977 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callIIcon.png; sourceTree = "<group>"; };
-		93411E9E190B7A62005E1977 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
-		93411E9F190B7A62005E1977 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
-		93411EA0190B7A62005E1977 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInIcon.png; sourceTree = "<group>"; };
-		93411EA1190B7A62005E1977 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
-		93411EA2190B7A62005E1977 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
-		93411EA3190B7A62005E1977 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
-		93411EA4190B7A63005E1977 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBorder.png; sourceTree = "<group>"; };
-		93411EA5190B7A63005E1977 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
-		93411EA6190B7A63005E1977 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareIcon.png; sourceTree = "<group>"; };
-		93411EA7190B7A63005E1977 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
-		93411EA8190B7A63005E1977 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
 		939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mitek Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939119D1190A05FC00EB5DDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		939119D3190A05FC00EB5DDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +115,23 @@
 		93ABC68C190B9259008FE209 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = "Mitek Hackathon/misnapsdk/libMiSnap.a"; sourceTree = "<group>"; };
 		93ABC68D190B9259008FE209 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = "Mitek Hackathon/misnapsdk/MiSnap.h"; sourceTree = "<group>"; };
 		93ABC68E190B9259008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MiSnapResources.bundle; path = "Mitek Hackathon/misnapsdk/MiSnapResources.bundle"; sourceTree = "<group>"; };
+		93ABC694190B9446008FE209 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardCell.m; path = ../cardCell.m; sourceTree = "<group>"; };
+		93ABC695190B9446008FE209 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
+		93ABC699190B94B3008FE209 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
+		93ABC69A190B94B3008FE209 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
+		93ABC69B190B94B3008FE209 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		93ABC69C190B94B3008FE209 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callIIcon.png; sourceTree = "<group>"; };
+		93ABC69D190B94B3008FE209 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
+		93ABC69E190B94B3008FE209 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
+		93ABC69F190B94B3008FE209 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInIcon.png; sourceTree = "<group>"; };
+		93ABC6A0190B94B3008FE209 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
+		93ABC6A1190B94B3008FE209 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
+		93ABC6A2190B94B3008FE209 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
+		93ABC6A3190B94B3008FE209 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBorder.png; sourceTree = "<group>"; };
+		93ABC6A4190B94B3008FE209 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
+		93ABC6A5190B94B3008FE209 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareIcon.png; sourceTree = "<group>"; };
+		93ABC6A6190B94B3008FE209 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
+		93ABC6A7190B94B3008FE209 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		B8BD13DE190B8AAE00AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
 		B8BD13E0190B8AB500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
@@ -225,6 +233,8 @@
 		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				93ABC694190B9446008FE209 /* cardCell.m */,
+				93ABC695190B9446008FE209 /* detailViewController.m */,
 				B8BD13DE190B8AAE00AEF286 /* authenticate.xml */,
 				B8BD13E0190B8AB500AEF286 /* sendImage.xml */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
@@ -247,7 +257,7 @@
 		939119D8190A05FC00EB5DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93911A06190A078900EB5DDB /* Images */,
+				93ABC698190B94AA008FE209 /* Images */,
 				939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */,
 				939119DA190A05FC00EB5DDB /* InfoPlist.strings */,
 				939119DD190A05FC00EB5DDB /* main.m */,
@@ -274,24 +284,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		93911A06190A078900EB5DDB /* Images */ = {
+		93ABC698190B94AA008FE209 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				93411E9A190B7A62005E1977 /* addCard.png */,
-				93411E9B190B7A62005E1977 /* aryaman.png */,
-				93411E9C190B7A62005E1977 /* backButton.png */,
-				93411E9D190B7A62005E1977 /* callIIcon.png */,
-				93411E9E190B7A62005E1977 /* emailIcon.png */,
-				93411E9F190B7A62005E1977 /* forgotButton.png */,
-				93411EA0190B7A62005E1977 /* linkedInIcon.png */,
-				93411EA1190B7A62005E1977 /* loginBack.png */,
-				93411EA2190B7A62005E1977 /* loginButton.png */,
-				93411EA3190B7A62005E1977 /* passIcon.png */,
-				93411EA4190B7A63005E1977 /* profileBorder.png */,
-				93411EA5190B7A63005E1977 /* settingsIcon.png */,
-				93411EA6190B7A63005E1977 /* shareIcon.png */,
-				93411EA7190B7A63005E1977 /* signUpButton.png */,
-				93411EA8190B7A63005E1977 /* testCard.png */,
+				93ABC699190B94B3008FE209 /* addCard.png */,
+				93ABC69A190B94B3008FE209 /* aryaman.png */,
+				93ABC69B190B94B3008FE209 /* backButton.png */,
+				93ABC69C190B94B3008FE209 /* callIIcon.png */,
+				93ABC69D190B94B3008FE209 /* emailIcon.png */,
+				93ABC69E190B94B3008FE209 /* forgotButton.png */,
+				93ABC69F190B94B3008FE209 /* linkedInIcon.png */,
+				93ABC6A0190B94B3008FE209 /* loginBack.png */,
+				93ABC6A1190B94B3008FE209 /* loginButton.png */,
+				93ABC6A2190B94B3008FE209 /* passIcon.png */,
+				93ABC6A3190B94B3008FE209 /* profileBorder.png */,
+				93ABC6A4190B94B3008FE209 /* settingsIcon.png */,
+				93ABC6A5190B94B3008FE209 /* shareIcon.png */,
+				93ABC6A6190B94B3008FE209 /* signUpButton.png */,
+				93ABC6A7190B94B3008FE209 /* testCard.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -372,23 +382,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */,
+				93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */,
+				93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */,
+				93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */,
+				93ABC6B6190B94B3008FE209 /* testCard.png in Resources */,
 				93ABC693190B9335008FE209 /* Main.storyboard in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
-				93411EA9190B7A63005E1977 /* addCard.png in Resources */,
-				93411EB3190B7A63005E1977 /* profileBorder.png in Resources */,
+				93ABC6B4190B94B3008FE209 /* shareIcon.png in Resources */,
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
-				93411EB4190B7A63005E1977 /* settingsIcon.png in Resources */,
-				93411EAA190B7A63005E1977 /* aryaman.png in Resources */,
-				93411EB0190B7A63005E1977 /* loginBack.png in Resources */,
-				93411EAD190B7A63005E1977 /* emailIcon.png in Resources */,
-				93411EB7190B7A63005E1977 /* testCard.png in Resources */,
+				93ABC6A8190B94B3008FE209 /* addCard.png in Resources */,
+				93ABC6B2190B94B3008FE209 /* profileBorder.png in Resources */,
+				93ABC6AA190B94B3008FE209 /* backButton.png in Resources */,
+				93ABC6B3190B94B3008FE209 /* settingsIcon.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
-				93411EAB190B7A63005E1977 /* backButton.png in Resources */,
-				93411EB6190B7A63005E1977 /* signUpButton.png in Resources */,
-				93411EB2190B7A63005E1977 /* passIcon.png in Resources */,
-				93411EB1190B7A63005E1977 /* loginButton.png in Resources */,
+				93ABC6AF190B94B3008FE209 /* loginBack.png in Resources */,
+				93ABC6AB190B94B3008FE209 /* callIIcon.png in Resources */,
+				93ABC6AE190B94B3008FE209 /* linkedInIcon.png in Resources */,
 				93ABC690190B9259008FE209 /* MiSnapResources.bundle in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
+				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
+				93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +424,10 @@
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
+				93ABC697190B9446008FE209 /* detailViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
+				93ABC696190B9446008FE209 /* cardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
