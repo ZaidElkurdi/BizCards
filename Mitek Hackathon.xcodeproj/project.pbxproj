@@ -73,6 +73,7 @@
 		93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC829190C1F2C008FE209 /* OAuthLoginView.m */; };
 		93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC82D190C25D5008FE209 /* linkedInViewController.m */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
+		B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
 		B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DC6190BE68400926B41 /* UploadToParseViewController.m */; };
@@ -569,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */,
 				93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */,
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */,

@@ -87,13 +87,13 @@
     uploadCard[@"Title"] = txtTitle.text;
     uploadCard[@"Phone"] = txtPhone.text;
     uploadCard[@"Address"] = txtAddress.text;
-    uploadCard[@"Owner"] = [PFUser currentUser].objectId;
     [uploadCard saveInBackground];
     
 
     PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
     userPhoto[@"imageName"] = txtName.text;
     userPhoto[@"imageFile"] = imageFile;
+    userPhoto[@"Owner"] = curr.objectId;
     [userPhoto saveInBackground];
     
     

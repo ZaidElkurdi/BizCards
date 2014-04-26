@@ -8,13 +8,14 @@
 
 #import "cardCollectionViewController.h"
 #import <Parse/Parse.h>
-
+#import "detailViewController.h"
 @interface cardCollectionViewController ()
 {
     NSIndexPath *currEditingIndex;
     NSMutableData *webdata;
     int x;
     NSArray *foundResults;
+    NSDictionary *dictionary;
 }
 @end
 
@@ -62,30 +63,29 @@
     [self.view addSubview:self.cardCollectionTable];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    self.overallData = [[NSMutableArray alloc] init];
+    
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
     [swipeRecognizer setDelegate:self];
     [swipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.cardCollectionTable addGestureRecognizer:swipeRecognizer];
     
     self.cardData = [[NSMutableArray alloc] init];
-
+    self.overallData = [[NSMutableArray alloc] init];
+    
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
     foundResults = [query findObjects];
    
   
         for(PFObject *image in foundResults)
         {
-            [self.overallData addObject:[image objectForKey:@"Owner"]];
             PFObject *image2 = image;
+            [self.overallData addObject:[image objectForKey:@"Owner"]];
             PFFile *theImage = [image2 objectForKey:@"imageFile"];
             NSData *theImageData = [theImage getData];
             
             if(theImageData != NULL)
                 [self.cardData addObject:theImageData];
         }
-    
-                    NSLog(@"Score: %@", foundResults);
 }
 
 
@@ -152,11 +152,12 @@
 
             PFQuery *query = [PFQuery queryWithClassName:@"Card"];
             [query whereKey:@"objectId" equalTo:[self.overallData objectAtIndex:indexPath.section]];
-            NSArray* scoreArray = [query findObjects];
+            NSArray* results = [query findObjects];
+    
+            PFObject *object = [results objectAtIndex:0];
 
-
-            NSLog(@"Score: %@", scoreArray);
-            PFObject *object = [scoreArray objectAtIndex:0];
+    
+    
 
             NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
     
@@ -172,18 +173,31 @@
             
             NSMutableArray *objectArray = [[NSMutableArray alloc] init];
             [objectArray addObject:name];
+            [objectArray addObject:email];
+            [objectArray addObject:company];
+            [objectArray addObject:phone];
+            [objectArray addObject:address];
+            [objectArray addObject:title];
             
 
-            //initWithObjects:name,email,company,phone,address,title,nil];
+    
             
     
-            NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
+            dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
     
             [self performSegueWithIdentifier:@"toDetail" sender:nil];
+    
     
 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toDetail"]) {
+
+        detailViewController *destViewController = segue.destinationViewController;
+        destViewController.cardData = dictionary;
+    }
+}
 
 #pragma mark - Other methods
 -(void)confirmDelete:(UIGestureRecognizer*)recognizer
