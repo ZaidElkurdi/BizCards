@@ -77,32 +77,6 @@
 {
     NSLog(@"Made it here");
     [self profileApiCall];
-    
-    PFUser *curr  = [PFUser currentUser];
-    PFObject *uploadCard = [PFObject objectWithClassName:@"Card"];
-    uploadCard[@"Name"] = txtName.text;
-    uploadCard[@"Email"] = txtEmail.text;
-    uploadCard[@"Company"] = txtCompany.text;
-    uploadCard[@"Title"] = txtTitle.text;
-    uploadCard[@"Phone"] = txtPhone.text;
-    uploadCard[@"Address"] = txtAddress.text;
-    [uploadCard saveInBackground];
-    
-
-    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = txtName.text;
-    userPhoto[@"imageFile"] = imageFile;
-    userPhoto[@"Owner"] = curr.objectId;
-    [userPhoto saveInBackground];
-    
-    
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
-                                                      message:@"Your card was succesfully added to your rolodex."
-                                                      delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-     
-    [message show];
     //[self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)thumbnail:(UIImage*)fullImage
@@ -155,11 +129,16 @@
     
     if (profile)
     {
-        NSString *name = [[NSString alloc] initWithFormat:@"%@ %@",
-                     [profile objectForKey:@"firstName"], [profile objectForKey:@"lastName"]];
-        NSString *headline = [profile objectForKey:@"headline"];
-        
-        NSLog(@"Name: %@ Headline: %@",name,headline);
+        if([profile objectForKey:@"numResults"]>0)
+        {
+            NSDictionary *people = [profile objectForKey:@"people"];
+            NSArray *values = [people objectForKey:@"values"];
+            NSDictionary *person = [values objectAtIndex:0];
+            NSLog(@"%@", [person objectForKey:@"firstName"]);
+            NSLog(@"%@", [person objectForKey:@"lastName"]);
+            NSLog(@"%@", [person objectForKey:@"headline"]);
+            NSLog(@"%@", [person objectForKey:@"id"]);
+        }
     }
 }
 
