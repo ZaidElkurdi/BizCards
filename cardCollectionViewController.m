@@ -52,14 +52,17 @@
     
     self.cardCollectionTable.delegate = self;
     self.cardCollectionTable.dataSource = self;
-    
+
+    [self.cardCollectionTable setShowsHorizontalScrollIndicator:NO];
+    [self.cardCollectionTable setShowsVerticalScrollIndicator:NO];
+
     UIColor *tableBGColor = [UIColor colorWithRed:219.0f/255.0f green:219.0f/255.0f blue:219.0f/255.0f alpha: 1.0];
     self.cardCollectionTable.backgroundColor = tableBGColor;
     
     [self.view addSubview:self.cardCollectionTable];
     [self setNeedsStatusBarAppearanceUpdate];
     
-
+    self.overallData = [[NSMutableArray alloc] init];
     UISwipeGestureRecognizer * swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(confirmDelete:)];
     [swipeRecognizer setDelegate:self];
     [swipeRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
@@ -73,6 +76,7 @@
   
         for(PFObject *image in foundResults)
         {
+            [self.overallData addObject:[image objectForKey:@"Owner"]];
             PFObject *image2 = image;
             PFFile *theImage = [image2 objectForKey:@"imageFile"];
             NSData *theImageData = [theImage getData];
@@ -80,6 +84,8 @@
             if(theImageData != NULL)
                 [self.cardData addObject:theImageData];
         }
+    
+                    NSLog(@"Score: %@", foundResults);
 }
 
 
@@ -112,8 +118,7 @@
         cell = [[cardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    [cell.cardImageView setImage:[UIImage imageWithData:[self.cardData objectAtIndex:x]]];
-    x++;
+    [cell.cardImageView setImage:[UIImage imageWithData:[self.cardData objectAtIndex:indexPath.section]]];
     
     return cell;
 }
@@ -144,14 +149,35 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-            PFObject *object = [foundResults objectAtIndex:indexPath.row];
-    
+
+            PFQuery *query = [PFQuery queryWithClassName:@"Card"];
+            [query whereKey:@"objectId" equalTo:[self.overallData objectAtIndex:indexPath.section]];
+            NSArray* scoreArray = [query findObjects];
+
+
+            NSLog(@"Score: %@", scoreArray);
+            PFObject *object = [scoreArray objectAtIndex:0];
+
             NSArray *dataToPass = [[NSArray alloc] initWithObjects:@"Name", @"Email", @"Company", @"Phone",@"Address",@"Title", nil];
     
-            NSArray *objects = [NSArray arrayWithObjects:[object objectForKey:@"Name"],[object objectForKey:@"Email"],[object objectForKey:@"Company"],[object objectForKey:@"Phone"],[object objectForKey:@"Address"],[object objectForKey:@"Title"],nil];
+            NSString *name = [object objectForKey:@"Name"];
+            NSString *email = [object objectForKey:@"Email"];
+            NSString *company = [object objectForKey:@"Company"];
+            NSString *phone = [object objectForKey:@"Phone"];
+            NSString *address = [object objectForKey:@"Address"];
+            NSString *title = [object objectForKey:@"Title"];
+    
+            NSLog(@"Array: %@", [object objectForKey:@"Name"]);
+    
             
+            NSMutableArray *objectArray = [[NSMutableArray alloc] init];
+            [objectArray addObject:name];
             
-            NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:objects forKeys:dataToPass];
+
+            //initWithObjects:name,email,company,phone,address,title,nil];
+            
+    
+            NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects:objectArray forKeys:dataToPass ];
     
             [self performSegueWithIdentifier:@"toDetail" sender:nil];
     
