@@ -35,7 +35,7 @@
     x = 0;
     /* Init Nav Bar */
     UIColor *barColor = [UIColor colorWithRed:29.0f/255.0f green:143.0f/255.0f blue:102.0f/255.0f alpha: 1.0];
-    self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
+    //self.navigationController.navigationBar.frame = CGRectMake(0, 0, 320, 40);
     self.navigationController.navigationBar.barTintColor=barColor;
     
     UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
