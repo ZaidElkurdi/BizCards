@@ -241,9 +241,55 @@
 		93911A06190A078900EB5DDB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B8BD13D0190B6C1400AEF286 /* aryaman.png */,
+				B8BD13CE190B6B9500AEF286 /* profileBorder.png */,
+				B8BD13CC190B63C300AEF286 /* backButton.png */,
+				B8BD13C1190B623F00AEF286 /* callIIcon.png */,
+				B8BD13C2190B623F00AEF286 /* linkedInIcon.png */,
+				B8BD13C3190B623F00AEF286 /* shareIcon.png */,
+				B8BD13BD190B55F800AEF286 /* addCard.png */,
+				B8BD13BE190B55F800AEF286 /* settingsIcon.png */,
+				B8BD13BB190B536E00AEF286 /* testCard.png */,
+				B8BD139E190B368000AEF286 /* emailIcon.png */,
+				B8BD139F190B368000AEF286 /* forgotButton.png */,
+				B8BD13A0190B368000AEF286 /* loginBack.png */,
+				B8BD13A1190B368000AEF286 /* loginButton.png */,
+				B8BD13A2190B368000AEF286 /* passIcon.png */,
+				B8BD13A3190B368000AEF286 /* signUpButton.png */,
 				93911A07190A079000EB5DDB /* SignIn.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B8BD13BA190B51C100AEF286 /* Card Collection */ = {
+			isa = PBXGroup;
+			children = (
+				B8BD13B7190B51B100AEF286 /* cardCell.h */,
+				B8BD13B8190B51B100AEF286 /* cardCell.m */,
+				B8BD13B4190B4A0500AEF286 /* cardCollectionViewController.h */,
+				B8BD13B5190B4A0500AEF286 /* cardCollectionViewController.m */,
+			);
+			name = "Card Collection";
+			sourceTree = "<group>";
+		};
+		B8BD13C7190B62FD00AEF286 /* Login/Signup */ = {
+			isa = PBXGroup;
+			children = (
+				939119E6190A05FC00EB5DDB /* ViewController.h */,
+				939119E7190A05FC00EB5DDB /* ViewController.m */,
+				93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */,
+				93911A0A190A07BF00EB5DDB /* CreateAccountViewController.m */,
+			);
+			name = Login/Signup;
+			sourceTree = "<group>";
+		};
+		B8BD13CB190B633D00AEF286 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				B8BD13C8190B631E00AEF286 /* detailViewController.h */,
+				B8BD13C9190B631E00AEF286 /* detailViewController.m */,
+			);
+			name = "Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,11 +368,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8BD13A5190B368000AEF286 /* forgotButton.png in Resources */,
+				B8BD13BF190B55F800AEF286 /* addCard.png in Resources */,
+				B8BD13C0190B55F800AEF286 /* settingsIcon.png in Resources */,
+				B8BD13A9190B368000AEF286 /* signUpButton.png in Resources */,
+				B8BD13C4190B623F00AEF286 /* callIIcon.png in Resources */,
+				B8BD13BC190B536E00AEF286 /* testCard.png in Resources */,
+				B8BD13A6190B368000AEF286 /* loginBack.png in Resources */,
+				B8BD13A4190B368000AEF286 /* emailIcon.png in Resources */,
+				B8BD13A8190B368000AEF286 /* passIcon.png in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
 				93CCE7AF190B55EE00CDB1AB /* MiSnapResources.bundle in Resources */,
 				93911A08190A079000EB5DDB /* SignIn.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
+				B8BD13C6190B623F00AEF286 /* shareIcon.png in Resources */,
 				939119E5190A05FC00EB5DDB /* Main.storyboard in Resources */,
+				B8BD13CD190B63C300AEF286 /* backButton.png in Resources */,
+				B8BD13CF190B6B9500AEF286 /* profileBorder.png in Resources */,
+				B8BD13C5190B623F00AEF286 /* linkedInIcon.png in Resources */,
+				B8BD13D1190B6C1400AEF286 /* aryaman.png in Resources */,
+				B8BD13A7190B368000AEF286 /* loginButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,8 +409,10 @@
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
 				939119E8190A05FC00EB5DDB /* ViewController.m in Sources */,
+				B8BD13CA190B631E00AEF286 /* detailViewController.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
+				B8BD13B9190B51B100AEF286 /* cardCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
