@@ -167,11 +167,6 @@
                                     callback:nil
                            signatureProvider:nil];
     
-    NSDictionary *update = [[NSDictionary alloc] initWithObjectsAndKeys:
-                            [[NSDictionary alloc] 
-                             initWithObjectsAndKeys:
-                             @"anyone",@"code",nil], @"visibility", 
-                            statusTextView.text, @"comment", nil];
     
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     NSString *updateString;

@@ -55,17 +55,6 @@
     rawLines = [[NSMutableArray alloc] init];
     position = 0;
     validEntry = 0;
-    self.addressFlags = [[NSArray alloc] initWithObjects:@"road",@"drive",@"avenue",@"place", @"st.", @"rd.", nil];
-    
-    self.titleFlags = [[NSArray alloc] initWithObjects:@"director",@"president", @"vice", @"operations", @"founder", @"ceo", @"analyst", @"marketing", @"developer", @"programmer", @"resources", @"partner", @"officer", @"executive", nil];
-    
-    self.possibleTitles = [[NSMutableArray alloc] init];
-    self.possibleAddresses = [[NSMutableArray alloc] init];
-    self.possibleCities = [[NSMutableArray alloc] init];
-    self.possibleCompanies = [[NSMutableArray alloc] init];
-    self.possibleEmails = [[NSMutableArray alloc] init];
-    self.possibleNames = [[NSMutableArray alloc] init];
-    self.possiblePhones = [[NSMutableArray alloc] init];
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
@@ -84,12 +73,6 @@
         
         
     }
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"rawTest" ofType:@".txt"];
-//    NSError *error;
-//    NSString *rawText =[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
-//
-
-    //[self parseText];
     rawLines = [[rawText componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] mutableCopy];
     [self progress:YES];
     
@@ -163,13 +146,6 @@
     }
 }
 
--(void)parseText
-{
-    NSLog(@"Raw: %@",rawText);
-    NSMutableArray *rawLines = [[rawText componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] mutableCopy];
-    
-    
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

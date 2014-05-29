@@ -235,16 +235,9 @@
     [theRequest setHTTPBody:[xmlString dataUsingEncoding:NSUTF8StringEncoding]];
     
     [NSURLConnection sendAsynchronousRequest:theRequest queue:[[NSOperationQueue alloc]init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (connectionError) {
+        if (connectionError)
             NSLog(@"Connection error: %@", [connectionError description]);
-        }
-        else {
-            
-            NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-           // NSLog(@"Success : %@", [response description]);
-            //NSLog(@"Data: %@", theString);
-        }
-    }];
+        }];
 }
 
 @end

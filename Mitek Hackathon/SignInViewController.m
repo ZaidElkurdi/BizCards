@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Tempest Vision. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SignInViewController.h"
 #import <Parse/Parse.h>
 #define kOFFSET_FOR_KEYBOARD 140.0
 @interface ViewController ()

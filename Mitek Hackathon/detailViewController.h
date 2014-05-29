@@ -18,7 +18,6 @@
     bool hasNotes;
 }
 @property (strong,nonatomic) NSDictionary *cardData;
-@property (nonatomic,strong) NSString *fullName;
 @property (nonatomic,strong) NSString *position;
 @property (nonatomic,strong) NSArray *phoneNumbers;
 @property (nonatomic,strong) NSArray *emailAddresses;

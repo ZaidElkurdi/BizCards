@@ -116,16 +116,7 @@
         }
     }];
 
-    
-    
-    
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Card Uploaded"
-                                                      message:@"Your card was succesfully added to your rolodex."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"OK"
-                                            otherButtonTitles:nil];
-
-      [self performSegueWithIdentifier:@"backToHome" sender:nil];
+    [self performSegueWithIdentifier:@"backToHome" sender:nil];
 }
 -(UIImage*)reduced:(UIImage*)fullImage
 {

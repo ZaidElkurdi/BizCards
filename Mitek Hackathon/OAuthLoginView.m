@@ -241,6 +241,11 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)accessTokenResult:(OAServiceTicket *)ticket didFail:(NSData *)data
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 //
 //  This api consumer data could move to a provider object
 //  to allow easy switching between LinkedIn, Twitter, etc.

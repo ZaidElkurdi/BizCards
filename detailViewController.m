@@ -54,7 +54,6 @@
     
     UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     navTitle.text = fullName;
-    NSLog(@"name: %@",self.fullName);
     navTitle.textColor = [UIColor whiteColor];
     UIFont *navFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:28.0];
     navTitle.font = navFont;
