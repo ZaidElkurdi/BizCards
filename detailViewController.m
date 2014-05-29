@@ -50,12 +50,7 @@
     self.position = [self.cardData objectForKey:@"position"];
     self.uniqueID = [self.cardData objectForKey:@"uniqueID"];
     self.linkedInID = [self.cardData objectForKey:@"linkedInID"];
-    
-    profileImageView.layer.borderWidth = 3.0f;
-    profileImageView.layer.borderColor =[UIColor whiteColor].CGColor;
-    profileImageView.layer.masksToBounds = NO;
-    profileImageView.clipsToBounds = YES;
-    profileImageView.layer.cornerRadius=70;
+
     
     UILabel *navTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
     navTitle.text = fullName;

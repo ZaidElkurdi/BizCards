@@ -467,7 +467,7 @@
 				93ABC80A190BF1B5008FE209 /* OAAttachment.h */,
 				93ABC80B190BF1B5008FE209 /* OAAtachmentF.h */,
 			);
-			name = OAuth;
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		93ABC7DD190BEF3E008FE209 /* Crypto */ = {
