@@ -16,4 +16,4 @@ Card Collection:
 Detailed View of a Card:
 
 
-![ScreenShot](http://i.imgur.com/0tpvz6Bl.png)
+![ScreenShot](http://i.imgur.com/l1okDlGl.png)
