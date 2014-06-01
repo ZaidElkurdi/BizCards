@@ -80,8 +80,7 @@
 
 - (void)miSnapCancelledWithResults:(NSDictionary *)results
 {
-
-
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -141,7 +140,6 @@
         {
             
             NSString* theString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"String: %@", theString);
             NSDictionary *dics=[[NSDictionary alloc]initWithDictionary:[XMLReader dictionaryForXMLString:theString error:nil]];
             NSDictionary *dic1 = [[NSDictionary alloc] initWithDictionary:[dics objectForKey:@"soap:Envelope"]];
             
@@ -160,7 +158,6 @@
            
            [prefs setObject:[NSString stringWithFormat:@"%@",[finalImageDict objectForKey:@"text"]] forKey:@"rawImageText"];
            
-           NSLog(@"Raw Image Text : %@", finalImageDict);
            
            [prefs setObject:[NSString stringWithFormat:@"%@",[finalTextDict objectForKey:@"text"]] forKey:@"rawOCRText"];
            [prefs synchronize];
@@ -218,16 +215,12 @@
                                       @"soapAction",@"SOAP_ACTION",nil];
     
     NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"authenticate" ofType:@"xml"];
-    //NSLog(@"%@", xmlPath);
     
     NSError *error;
     NSString *xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:&error];
-    if (error) {
+    
+    if (error)
         NSLog(@"Error with XML conversion: %@", [error description]);
-    }
-    else {
-        //NSLog(@"XML Data: %@", xmlString);
-    }
     
     NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://mip03.ddc.mitekmobile.com/MobileImagingPlatformWebServices/ImagingPhoneService.asmx"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10.0];
     [theRequest setHTTPMethod:@"POST"];

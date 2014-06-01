@@ -7,23 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "businessCard.h"
+#import <Parse/Parse.h>
 
-@interface detailViewController : UIViewController <UIActionSheetDelegate, UIAlertViewDelegate>
+@interface detailViewController : UIViewController <UIActionSheetDelegate, UITextFieldDelegate, UIAlertViewDelegate, UITextViewDelegate>
 {
     IBOutlet UIImageView *profileImageView;
     IBOutlet UIButton *linkedInButton;
     IBOutlet UIButton *phoneButton;
-    IBOutlet UILabel *positionLabel;
+    IBOutlet UITextField *positionField;
+    IBOutlet UITextField *emailField;
+    IBOutlet UITextField *phoneField;
+    IBOutlet UITextView *notesField;
     IBOutlet UIButton *shareButton;
-    bool hasNotes;
 }
-@property (strong,nonatomic) NSDictionary *cardData;
+@property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *position;
-@property (nonatomic,strong) NSArray *phoneNumbers;
-@property (nonatomic,strong) NSArray *emailAddresses;
+@property (nonatomic,strong) NSString *phoneNumber;
+@property (nonatomic,strong) NSString *email;
 @property (nonatomic,strong) NSString *notes;
 @property (nonatomic,strong) UIImage *profilePic;
-@property (nonatomic,strong) NSString *uniqueID;
+@property (nonatomic,strong) NSString *cardID;
 @property (nonatomic,strong) NSString *linkedInID;
+@property (nonatomic,strong) businessCard *oldCard;
+
+-(IBAction)didTapShare;
+-(IBAction)didTapBack;
+-(IBAction)didTapCall;
+-(IBAction)didTapLinkedIn;
+-(void)initWithCard:(businessCard*)theCard;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+
 @end

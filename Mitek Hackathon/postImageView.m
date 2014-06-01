@@ -79,8 +79,6 @@
 }
 -(void)progress:(BOOL)doStuff
 {
-
-    
       NSLog(@"Position: %d", position);
       NSLog(@"valid entry: %d", validEntry);
     
@@ -102,13 +100,12 @@
             [self performSegueWithIdentifier:@"transitionToEdit" sender:nil];
             NSLog(@"Done");
        }
-    
 }
+
 -(IBAction)progressThrough:(id)sender
 {
     if ([sender tag] == 1)
     {
-        NSLog(@"here");
         position++;
         [self progress:NO];
         

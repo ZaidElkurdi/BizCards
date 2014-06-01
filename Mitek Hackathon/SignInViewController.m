@@ -7,13 +7,16 @@
 //
 
 #import "SignInViewController.h"
+#import "cardCollectionViewController.h"
 #import <Parse/Parse.h>
+
 #define kOFFSET_FOR_KEYBOARD 140.0
-@interface ViewController ()
+
+@interface SignInViewController ()
 @property (strong, nonatomic) NSString* serverVersion;
 @end
 
-@implementation ViewController
+@implementation SignInViewController
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -42,7 +45,6 @@
     }
     else
     {
-        
         [self performSegueWithIdentifier:@"succesfulLogin" sender:self];
     }
     
@@ -92,15 +94,6 @@
 }
 -(IBAction)forgotPassword
 {
-    /*
-    UIImage *imagetoshare = [UIImage imageNamed:@"aryaman.png"];
-    NSArray *activityItems = @[@"hi", imagetoshare];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-    //activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypePostToWeibo];
-    [self presentViewController:activityVC animated:TRUE completion:nil];
-     */
-    
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Reset Password" message:@"To reset your password, enter your email address below." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Submit",nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
@@ -116,24 +109,25 @@
 -(IBAction)signIn
 {
     [PFUser logInWithUsernameInBackground:txtUsername.text password:txtPassword.text
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-                                            // Do stuff after successful login.
-                                            [self performSegueWithIdentifier:@"succesfulLogin" sender:nil];
-                                            NSLog(@"Succesfully logged in!");
-                                            NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-                                            [prefs setObject:txtUsername.text forKey:@"username"];
-                                            [prefs synchronize];
-                                            [user saveInBackground];
-                                            
-                                            //Call to segue
-                                        } else {
-                                            // The login failed. Check error to see why.
-                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid login credentials" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
-                                            // optional - add more buttons:
-                                            [alert show];
-                                        }
-                                    }];
+        block:^(PFUser *user, NSError *error) {
+            if (user) {
+                // Do stuff after successful login.
+                NSLog(@"Succesfully logged in!");
+                NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+                [prefs setObject:txtUsername.text forKey:@"username"];
+                [prefs synchronize];
+                [user saveInBackground];
+                
+                //Call to segue
+                [self performSegueWithIdentifier:@"succesfulLogin" sender:self];
+
+            } else {
+                // The login failed. Check error to see why.
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Invalid login credentials" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
+                // optional - add more buttons:
+                [alert show];
+            }
+        }];
 
 }
 - (void)didReceiveMemoryWarning

@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
                BuildableName = "Mitek Hackathon.app"
-               BlueprintName = "Mitek Hackathon"
-               ReferencedContainer = "container:Mitek Hackathon.xcodeproj">
+               BlueprintName = "BizCards"
+               ReferencedContainer = "container:BizCards.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "939119EE190A05FC00EB5DDB"
                BuildableName = "Mitek HackathonTests.xctest"
-               BlueprintName = "Mitek HackathonTests"
-               ReferencedContainer = "container:Mitek Hackathon.xcodeproj">
+               BlueprintName = "BizCardsTests"
+               ReferencedContainer = "container:BizCards.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
             BuildableName = "Mitek Hackathon.app"
-            BlueprintName = "Mitek Hackathon"
-            ReferencedContainer = "container:Mitek Hackathon.xcodeproj">
+            BlueprintName = "BizCards"
+            ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
             BuildableName = "Mitek Hackathon.app"
-            BlueprintName = "Mitek Hackathon"
-            ReferencedContainer = "container:Mitek Hackathon.xcodeproj">
+            BlueprintName = "BizCards"
+            ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
             BuildableName = "Mitek Hackathon.app"
-            BlueprintName = "Mitek Hackathon"
-            ReferencedContainer = "container:Mitek Hackathon.xcodeproj">
+            BlueprintName = "BizCards"
+            ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

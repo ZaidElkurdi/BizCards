@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "cardCell.h"
 #import <Parse/Parse.h>
+#import "businessCard.h"
 
 @interface cardCollectionViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 @property (nonatomic,strong) UITableView *cardCollectionTable;
-@property (nonatomic,strong) NSMutableArray *cardData;
-@property (nonatomic,strong) NSMutableArray *overallData;
+@property (nonatomic,strong) businessCard *selectedCard;
+@property (nonatomic,strong) NSMutableArray *cardImages;
+@property (nonatomic,strong) NSMutableArray *cardInfo;
 @end

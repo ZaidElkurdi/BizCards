@@ -38,15 +38,6 @@
 		93911A2F190B39D600EB5DDB /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A2E190B39D600EB5DDB /* CoreMotion.framework */; };
 		93911A31190B39DD00EB5DDB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93911A30190B39DD00EB5DDB /* CoreVideo.framework */; };
 		93ABC68F190B9259008FE209 /* libMiSnap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ABC68C190B9259008FE209 /* libMiSnap.a */; };
-		93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69A190B94B3008FE209 /* aryaman.png */; };
-		93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69D190B94B3008FE209 /* emailIcon.png */; };
-		93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69E190B94B3008FE209 /* forgotButton.png */; };
-		93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A1190B94B3008FE209 /* loginButton.png */; };
-		93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A2190B94B3008FE209 /* passIcon.png */; };
-		93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A6190B94B3008FE209 /* signUpButton.png */; };
-		93ABC6B6190B94B3008FE209 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A7190B94B3008FE209 /* testCard.png */; };
-		93ABC7E5190BEF4F008FE209 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7E0190BEF4F008FE209 /* hmac.c */; };
-		93ABC7E6190BEF4F008FE209 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7E2190BEF4F008FE209 /* sha1.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC7EE190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7E9190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC7EF190BEFC0008FE209 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7EB190BEFC0008FE209 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC7F0190BEFC0008FE209 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7ED190BEFC0008FE209 /* NSURL+Base.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -62,35 +53,45 @@
 		93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC805190BF1B5008FE209 /* OAConsumer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC816190BF1B5008FE209 /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC807190BF1B5008FE209 /* OACall.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		93ABC817190BF1B5008FE209 /* OAAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC809190BF1B5008FE209 /* OAAttachment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93ABC81A190BF82B008FE209 /* xmlreader.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBB190BA60A00926B41 /* xmlreader.m */; };
-		93ABC81B190BF85B008FE209 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC7DE190BEF4F008FE209 /* Base64Transcoder.c */; };
 		93ABC821190BFAD9008FE209 /* ProfileTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC81F190BFAD9008FE209 /* ProfileTabView.m */; };
-		93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */; };
 		93ABC823190BFD77008FE209 /* cardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DB7190B976400926B41 /* cardCell.m */; };
 		93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC825190C1B8D008FE209 /* settingsViewController.m */; };
 		93ABC828190C1D41008FE209 /* OAuthLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC827190C1D41008FE209 /* OAuthLoginView.xib */; };
 		93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC829190C1F2C008FE209 /* OAuthLoginView.m */; };
 		93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC82D190C25D5008FE209 /* linkedInViewController.m */; };
-		93ABC82F190C3104008FE209 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC699190B94B3008FE209 /* addCard.png */; };
-		93ABC830190C3106008FE209 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69B190B94B3008FE209 /* backButton.png */; };
-		93ABC831190C310E008FE209 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69C190B94B3008FE209 /* callIIcon.png */; };
-		93ABC832190C3116008FE209 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC69F190B94B3008FE209 /* linkedInIcon.png */; };
-		93ABC833190C3119008FE209 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A5190B94B3008FE209 /* shareIcon.png */; };
-		93ABC834190C312D008FE209 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A4190B94B3008FE209 /* settingsIcon.png */; };
-		93ABC835190C3140008FE209 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC6A0190B94B3008FE209 /* loginBack.png */; };
 		93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC836190C3608008FE209 /* MiSnapResources.bundle */; };
-		93ABC83A190C4A75008FE209 /* Bad.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC838190C4A75008FE209 /* Bad.png */; };
-		93ABC83B190C4A75008FE209 /* Good.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC839190C4A75008FE209 /* Good.png */; };
 		93F81717190B54AA004AB209 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F81716190B54AA004AB209 /* ImageIO.framework */; };
 		B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC695190B9446008FE209 /* detailViewController.m */; };
-		B861B6A2190C5415003DA083 /* bigPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = B861B6A1190C5415003DA083 /* bigPhoto.png */; };
-		B861B6A4190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */; };
 		B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DBE190BAB5C00926B41 /* postImageView.m */; };
 		B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939119E3190A05FC00EB5DDB /* Main.storyboard */; };
 		B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8711DC6190BE68400926B41 /* UploadToParseViewController.m */; };
+		B891B6E219397BAC00DA7C22 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B891B6DC19397BAC00DA7C22 /* Base64Transcoder.c */; };
+		B891B6E319397BAC00DA7C22 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = B891B6DE19397BAC00DA7C22 /* hmac.c */; };
+		B891B6E419397BAC00DA7C22 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = B891B6E019397BAC00DA7C22 /* sha1.c */; };
+		B891B6E719397DD800DA7C22 /* xmlreader.m in Sources */ = {isa = PBXBuildFile; fileRef = B891B6E619397DD800DA7C22 /* xmlreader.m */; };
+		B891B6FD19397FC900DA7C22 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6EA19397FC900DA7C22 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */; };
+		B891B6FE19397FC900DA7C22 /* addCard.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6EB19397FC900DA7C22 /* addCard.png */; };
+		B891B6FF19397FC900DA7C22 /* aryaman.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6EC19397FC900DA7C22 /* aryaman.png */; };
+		B891B70019397FC900DA7C22 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6ED19397FC900DA7C22 /* backButton.png */; };
+		B891B70119397FC900DA7C22 /* Bad.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6EE19397FC900DA7C22 /* Bad.png */; };
+		B891B70219397FC900DA7C22 /* bigPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6EF19397FC900DA7C22 /* bigPhoto.png */; };
+		B891B70319397FC900DA7C22 /* callIIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F019397FC900DA7C22 /* callIIcon.png */; };
+		B891B70419397FC900DA7C22 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F119397FC900DA7C22 /* emailIcon.png */; };
+		B891B70519397FC900DA7C22 /* forgotButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F219397FC900DA7C22 /* forgotButton.png */; };
+		B891B70619397FC900DA7C22 /* Good.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F319397FC900DA7C22 /* Good.png */; };
+		B891B70719397FC900DA7C22 /* linkedInIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F419397FC900DA7C22 /* linkedInIcon.png */; };
+		B891B70819397FC900DA7C22 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F519397FC900DA7C22 /* loginBack.png */; };
+		B891B70919397FC900DA7C22 /* loginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F619397FC900DA7C22 /* loginButton.png */; };
+		B891B70A19397FC900DA7C22 /* passIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F719397FC900DA7C22 /* passIcon.png */; };
+		B891B70B19397FC900DA7C22 /* profileBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F819397FC900DA7C22 /* profileBorder.png */; };
+		B891B70C19397FC900DA7C22 /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6F919397FC900DA7C22 /* settingsIcon.png */; };
+		B891B70D19397FC900DA7C22 /* shareIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6FA19397FC900DA7C22 /* shareIcon.png */; };
+		B891B70E19397FC900DA7C22 /* signUpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6FB19397FC900DA7C22 /* signUpButton.png */; };
+		B891B70F19397FC900DA7C22 /* testCard.png in Resources */ = {isa = PBXBuildFile; fileRef = B891B6FC19397FC900DA7C22 /* testCard.png */; };
 		B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13DE190B8AAE00AEF286 /* authenticate.xml */; };
 		B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */ = {isa = PBXBuildFile; fileRef = B8BD13E0190B8AB500AEF286 /* sendImage.xml */; };
-		B8BD13E7190B8AF200AEF286 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		B8CB431B1939B1B0007CBCEE /* cardCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC6B7190B99BA008FE209 /* cardCollectionViewController.m */; };
+		B8CB43211939BB1C007CBCEE /* businessCard.m in Sources */ = {isa = PBXBuildFile; fileRef = B8CB43201939BB1C007CBCEE /* businessCard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,23 +105,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mitek Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939119CE190A05FC00EB5DDB /* BizCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BizCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		939119D1190A05FC00EB5DDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		939119D3190A05FC00EB5DDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		939119D5190A05FC00EB5DDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek Hackathon-Info.plist"; sourceTree = "<group>"; };
+		939119D9190A05FC00EB5DDB /* BizCards-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BizCards-Info.plist"; sourceTree = "<group>"; };
 		939119DB190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		939119DD190A05FC00EB5DDB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		939119DF190A05FC00EB5DDB /* Mitek Hackathon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mitek Hackathon-Prefix.pch"; sourceTree = "<group>"; };
+		939119DF190A05FC00EB5DDB /* BizCards-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BizCards-Prefix.pch"; sourceTree = "<group>"; };
 		939119E0190A05FC00EB5DDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		939119E1190A05FC00EB5DDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		939119E4190A05FC00EB5DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		939119E6190A05FC00EB5DDB /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		939119E7190A05FC00EB5DDB /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		939119E9190A05FC00EB5DDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mitek HackathonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939119EF190A05FC00EB5DDB /* BizCardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BizCardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		939119F0190A05FC00EB5DDB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mitek HackathonTests-Info.plist"; sourceTree = "<group>"; };
+		939119F8190A05FC00EB5DDB /* BizCardsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BizCardsTests-Info.plist"; sourceTree = "<group>"; };
 		939119FA190A05FC00EB5DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mitek_HackathonTests.m; sourceTree = "<group>"; };
 		93911A09190A07BF00EB5DDB /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -144,36 +145,15 @@
 		93911A30190B39DD00EB5DDB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		93ABC68C190B9259008FE209 /* libMiSnap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMiSnap.a; path = "Mitek Hackathon/misnapsdk/libMiSnap.a"; sourceTree = "<group>"; };
 		93ABC68D190B9259008FE209 /* MiSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiSnap.h; path = "Mitek Hackathon/misnapsdk/MiSnap.h"; sourceTree = "<group>"; };
-		93ABC695190B9446008FE209 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = detailViewController.m; path = ../detailViewController.m; sourceTree = "<group>"; };
-		93ABC699190B94B3008FE209 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCard.png; sourceTree = "<group>"; };
-		93ABC69A190B94B3008FE209 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aryaman.png; sourceTree = "<group>"; };
-		93ABC69B190B94B3008FE209 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
-		93ABC69C190B94B3008FE209 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callIIcon.png; sourceTree = "<group>"; };
-		93ABC69D190B94B3008FE209 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
-		93ABC69E190B94B3008FE209 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forgotButton.png; sourceTree = "<group>"; };
-		93ABC69F190B94B3008FE209 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linkedInIcon.png; sourceTree = "<group>"; };
-		93ABC6A0190B94B3008FE209 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
-		93ABC6A1190B94B3008FE209 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginButton.png; sourceTree = "<group>"; };
-		93ABC6A2190B94B3008FE209 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passIcon.png; sourceTree = "<group>"; };
-		93ABC6A3190B94B3008FE209 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileBorder.png; sourceTree = "<group>"; };
-		93ABC6A4190B94B3008FE209 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
-		93ABC6A5190B94B3008FE209 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shareIcon.png; sourceTree = "<group>"; };
-		93ABC6A6190B94B3008FE209 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpButton.png; sourceTree = "<group>"; };
-		93ABC6A7190B94B3008FE209 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testCard.png; sourceTree = "<group>"; };
-		93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cardCollectionViewController.h; path = ../cardCollectionViewController.h; sourceTree = "<group>"; };
-		93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cardCollectionViewController.m; path = ../cardCollectionViewController.m; sourceTree = "<group>"; };
-		93ABC7DE190BEF4F008FE209 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		93ABC7DF190BEF4F008FE209 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		93ABC7E0190BEF4F008FE209 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
-		93ABC7E1190BEF4F008FE209 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
-		93ABC7E2190BEF4F008FE209 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
-		93ABC7E3190BEF4F008FE209 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
-		93ABC7E8190BEFC0008FE209 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
-		93ABC7E9190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
-		93ABC7EA190BEFC0008FE209 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
-		93ABC7EB190BEFC0008FE209 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
-		93ABC7EC190BEFC0008FE209 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
-		93ABC7ED190BEFC0008FE209 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
+		93ABC695190B9446008FE209 /* detailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailViewController.m; sourceTree = "<group>"; };
+		93ABC6B7190B99BA008FE209 /* cardCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCollectionViewController.m; sourceTree = "<group>"; };
+		93ABC6B8190B99BA008FE209 /* cardCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCollectionViewController.h; sourceTree = "<group>"; };
+		93ABC7E8190BEFC0008FE209 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+Parameters.h"; path = "Categories/NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		93ABC7E9190BEFC0008FE209 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+Parameters.m"; path = "Categories/NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		93ABC7EA190BEFC0008FE209 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "Categories/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		93ABC7EB190BEFC0008FE209 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "Categories/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		93ABC7EC190BEFC0008FE209 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+Base.h"; path = "Categories/NSURL+Base.h"; sourceTree = "<group>"; };
+		93ABC7ED190BEFC0008FE209 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+Base.m"; path = "Categories/NSURL+Base.m"; sourceTree = "<group>"; };
 		93ABC7F1190BF1B5008FE209 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
 		93ABC7F2190BF1B5008FE209 /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
 		93ABC7F3190BF1B5008FE209 /* OATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATokenManager.h; sourceTree = "<group>"; };
@@ -208,25 +188,48 @@
 		93ABC827190C1D41008FE209 /* OAuthLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthLoginView.xib; sourceTree = "<group>"; };
 		93ABC829190C1F2C008FE209 /* OAuthLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthLoginView.m; sourceTree = "<group>"; };
 		93ABC82A190C1F2C008FE209 /* OAuthLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthLoginView.h; sourceTree = "<group>"; };
-		93ABC82C190C25D5008FE209 /* linkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = linkedInViewController.h; path = ../linkedInViewController.h; sourceTree = "<group>"; };
-		93ABC82D190C25D5008FE209 /* linkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = linkedInViewController.m; path = ../linkedInViewController.m; sourceTree = "<group>"; };
+		93ABC82C190C25D5008FE209 /* linkedInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linkedInViewController.h; sourceTree = "<group>"; };
+		93ABC82D190C25D5008FE209 /* linkedInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = linkedInViewController.m; sourceTree = "<group>"; };
 		93ABC836190C3608008FE209 /* MiSnapResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MiSnapResources.bundle; sourceTree = "<group>"; };
-		93ABC838190C4A75008FE209 /* Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bad.png; sourceTree = "<group>"; };
-		93ABC839190C4A75008FE209 /* Good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Good.png; sourceTree = "<group>"; };
 		93F81716190B54AA004AB209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		B861B6A1190C5415003DA083 /* bigPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigPhoto.png; sourceTree = "<group>"; };
-		B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3016588c-9e21-45f1-baaf-b935990c76cf-image.png"; sourceTree = "<group>"; };
 		B8711DB7190B976400926B41 /* cardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cardCell.m; sourceTree = "<group>"; };
-		B8711DBA190BA60A00926B41 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmlreader.h; sourceTree = "<group>"; };
-		B8711DBB190BA60A00926B41 /* xmlreader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xmlreader.m; sourceTree = "<group>"; };
 		B8711DBD190BAB5C00926B41 /* postImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postImageView.h; sourceTree = "<group>"; };
 		B8711DBE190BAB5C00926B41 /* postImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = postImageView.m; sourceTree = "<group>"; };
-		B8711DC5190BE68400926B41 /* UploadToParseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadToParseViewController.h; path = ../UploadToParseViewController.h; sourceTree = "<group>"; };
-		B8711DC6190BE68400926B41 /* UploadToParseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadToParseViewController.m; path = ../UploadToParseViewController.m; sourceTree = "<group>"; };
+		B8711DC5190BE68400926B41 /* UploadToParseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadToParseViewController.h; sourceTree = "<group>"; };
+		B8711DC6190BE68400926B41 /* UploadToParseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadToParseViewController.m; sourceTree = "<group>"; };
+		B891B6DC19397BAC00DA7C22 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Base64Transcoder.c; path = Crypto/Base64Transcoder.c; sourceTree = "<group>"; };
+		B891B6DD19397BAC00DA7C22 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = Crypto/Base64Transcoder.h; sourceTree = "<group>"; };
+		B891B6DE19397BAC00DA7C22 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = Crypto/hmac.c; sourceTree = "<group>"; };
+		B891B6DF19397BAC00DA7C22 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = Crypto/hmac.h; sourceTree = "<group>"; };
+		B891B6E019397BAC00DA7C22 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = Crypto/sha1.c; sourceTree = "<group>"; };
+		B891B6E119397BAC00DA7C22 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = Crypto/sha1.h; sourceTree = "<group>"; };
+		B891B6E519397DD800DA7C22 /* xmlreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xmlreader.h; path = XMLReader/xmlreader.h; sourceTree = "<group>"; };
+		B891B6E619397DD800DA7C22 /* xmlreader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = xmlreader.m; path = XMLReader/xmlreader.m; sourceTree = "<group>"; };
+		B891B6EA19397FC900DA7C22 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3016588c-9e21-45f1-baaf-b935990c76cf-image.png"; path = "Images.xcassets/3016588c-9e21-45f1-baaf-b935990c76cf-image.png"; sourceTree = "<group>"; };
+		B891B6EB19397FC900DA7C22 /* addCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addCard.png; path = Images.xcassets/addCard.png; sourceTree = "<group>"; };
+		B891B6EC19397FC900DA7C22 /* aryaman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aryaman.png; path = Images.xcassets/aryaman.png; sourceTree = "<group>"; };
+		B891B6ED19397FC900DA7C22 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = Images.xcassets/backButton.png; sourceTree = "<group>"; };
+		B891B6EE19397FC900DA7C22 /* Bad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bad.png; path = Images.xcassets/Bad.png; sourceTree = "<group>"; };
+		B891B6EF19397FC900DA7C22 /* bigPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigPhoto.png; path = Images.xcassets/bigPhoto.png; sourceTree = "<group>"; };
+		B891B6F019397FC900DA7C22 /* callIIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = callIIcon.png; path = Images.xcassets/callIIcon.png; sourceTree = "<group>"; };
+		B891B6F119397FC900DA7C22 /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emailIcon.png; path = Images.xcassets/emailIcon.png; sourceTree = "<group>"; };
+		B891B6F219397FC900DA7C22 /* forgotButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = forgotButton.png; path = Images.xcassets/forgotButton.png; sourceTree = "<group>"; };
+		B891B6F319397FC900DA7C22 /* Good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Good.png; path = Images.xcassets/Good.png; sourceTree = "<group>"; };
+		B891B6F419397FC900DA7C22 /* linkedInIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = linkedInIcon.png; path = Images.xcassets/linkedInIcon.png; sourceTree = "<group>"; };
+		B891B6F519397FC900DA7C22 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginBack.png; path = Images.xcassets/loginBack.png; sourceTree = "<group>"; };
+		B891B6F619397FC900DA7C22 /* loginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginButton.png; path = Images.xcassets/loginButton.png; sourceTree = "<group>"; };
+		B891B6F719397FC900DA7C22 /* passIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = passIcon.png; path = Images.xcassets/passIcon.png; sourceTree = "<group>"; };
+		B891B6F819397FC900DA7C22 /* profileBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profileBorder.png; path = Images.xcassets/profileBorder.png; sourceTree = "<group>"; };
+		B891B6F919397FC900DA7C22 /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsIcon.png; path = Images.xcassets/settingsIcon.png; sourceTree = "<group>"; };
+		B891B6FA19397FC900DA7C22 /* shareIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shareIcon.png; path = Images.xcassets/shareIcon.png; sourceTree = "<group>"; };
+		B891B6FB19397FC900DA7C22 /* signUpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signUpButton.png; path = Images.xcassets/signUpButton.png; sourceTree = "<group>"; };
+		B891B6FC19397FC900DA7C22 /* testCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = testCard.png; path = Images.xcassets/testCard.png; sourceTree = "<group>"; };
 		B8BD13DE190B8AAE00AEF286 /* authenticate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = authenticate.xml; sourceTree = "<group>"; };
 		B8BD13E0190B8AB500AEF286 /* sendImage.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sendImage.xml; sourceTree = "<group>"; };
 		B8BD13E2190B8ADB00AEF286 /* cardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cardCell.h; sourceTree = "<group>"; };
 		B8BD13E5190B8AF200AEF286 /* detailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailViewController.h; sourceTree = "<group>"; };
+		B8CB431C1939B419007CBCEE /* businessCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = businessCard.h; sourceTree = "<group>"; };
+		B8CB43201939BB1C007CBCEE /* businessCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = businessCard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,14 +276,15 @@
 		939119C5190A05FC00EB5DDB = {
 			isa = PBXGroup;
 			children = (
+				B891B6E819397DE000DA7C22 /* XMLReader */,
 				93ABC7E7190BEFB5008FE209 /* Categories */,
 				93ABC7DD190BEF3E008FE209 /* Crypto */,
 				93ABC7B2190BEF0B008FE209 /* OAuth */,
 				93ABC68C190B9259008FE209 /* libMiSnap.a */,
 				93ABC68D190B9259008FE209 /* MiSnap.h */,
 				93ABC836190C3608008FE209 /* MiSnapResources.bundle */,
-				939119D7190A05FC00EB5DDB /* Mitek Hackathon */,
-				939119F6190A05FC00EB5DDB /* Mitek HackathonTests */,
+				939119D7190A05FC00EB5DDB /* BizCards */,
+				939119F6190A05FC00EB5DDB /* BizCardsTests */,
 				939119D0190A05FC00EB5DDB /* Frameworks */,
 				939119CF190A05FC00EB5DDB /* Products */,
 			);
@@ -289,8 +293,8 @@
 		939119CF190A05FC00EB5DDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */,
-				939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */,
+				939119CE190A05FC00EB5DDB /* BizCards.app */,
+				939119EF190A05FC00EB5DDB /* BizCardsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,15 +326,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		939119D7190A05FC00EB5DDB /* Mitek Hackathon */ = {
+		939119D7190A05FC00EB5DDB /* BizCards */ = {
 			isa = PBXGroup;
 			children = (
 				93ABC82C190C25D5008FE209 /* linkedInViewController.h */,
 				93ABC82D190C25D5008FE209 /* linkedInViewController.m */,
 				93ABC81F190BFAD9008FE209 /* ProfileTabView.m */,
 				93ABC820190BFAD9008FE209 /* ProfileTabView.h */,
-				B8711DBA190BA60A00926B41 /* xmlreader.h */,
-				B8711DBB190BA60A00926B41 /* xmlreader.m */,
 				B8BD13DE190B8AAE00AEF286 /* authenticate.xml */,
 				B8BD13E0190B8AB500AEF286 /* sendImage.xml */,
 				939119E0190A05FC00EB5DDB /* AppDelegate.h */,
@@ -343,14 +345,16 @@
 				93ABC825190C1B8D008FE209 /* settingsViewController.m */,
 				B8711DC5190BE68400926B41 /* UploadToParseViewController.h */,
 				B8711DC6190BE68400926B41 /* UploadToParseViewController.m */,
-				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.h */,
-				93ABC6B8190B99BA008FE209 /* cardCollectionViewController.m */,
+				93ABC6B8190B99BA008FE209 /* cardCollectionViewController.h */,
+				93ABC6B7190B99BA008FE209 /* cardCollectionViewController.m */,
 				B8BD13E5190B8AF200AEF286 /* detailViewController.h */,
 				93ABC695190B9446008FE209 /* detailViewController.m */,
 				B8711DB7190B976400926B41 /* cardCell.m */,
 				B8BD13E2190B8ADB00AEF286 /* cardCell.h */,
 				93911A25190B35F500EB5DDB /* CardViewController.h */,
 				93911A26190B35F500EB5DDB /* CardViewController.m */,
+				B8CB431C1939B419007CBCEE /* businessCard.h */,
+				B8CB43201939BB1C007CBCEE /* businessCard.m */,
 				B8711DBD190BAB5C00926B41 /* postImageView.h */,
 				B8711DBE190BAB5C00926B41 /* postImageView.m */,
 				939119E6190A05FC00EB5DDB /* SignInViewController.h */,
@@ -360,63 +364,39 @@
 				939119E9190A05FC00EB5DDB /* Images.xcassets */,
 				939119D8190A05FC00EB5DDB /* Supporting Files */,
 			);
+			name = BizCards;
 			path = "Mitek Hackathon";
 			sourceTree = "<group>";
 		};
 		939119D8190A05FC00EB5DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				93ABC698190B94AA008FE209 /* Images */,
-				939119D9190A05FC00EB5DDB /* Mitek Hackathon-Info.plist */,
+				B891B6E919397FB200DA7C22 /* Images */,
+				939119D9190A05FC00EB5DDB /* BizCards-Info.plist */,
 				939119DA190A05FC00EB5DDB /* InfoPlist.strings */,
 				939119DD190A05FC00EB5DDB /* main.m */,
-				939119DF190A05FC00EB5DDB /* Mitek Hackathon-Prefix.pch */,
+				939119DF190A05FC00EB5DDB /* BizCards-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		939119F6190A05FC00EB5DDB /* Mitek HackathonTests */ = {
+		939119F6190A05FC00EB5DDB /* BizCardsTests */ = {
 			isa = PBXGroup;
 			children = (
 				939119FC190A05FC00EB5DDB /* Mitek_HackathonTests.m */,
 				939119F7190A05FC00EB5DDB /* Supporting Files */,
 			);
+			name = BizCardsTests;
 			path = "Mitek HackathonTests";
 			sourceTree = "<group>";
 		};
 		939119F7190A05FC00EB5DDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				939119F8190A05FC00EB5DDB /* Mitek HackathonTests-Info.plist */,
+				939119F8190A05FC00EB5DDB /* BizCardsTests-Info.plist */,
 				939119F9190A05FC00EB5DDB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		93ABC698190B94AA008FE209 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B861B6A3190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */,
-				B861B6A1190C5415003DA083 /* bigPhoto.png */,
-				93ABC838190C4A75008FE209 /* Bad.png */,
-				93ABC839190C4A75008FE209 /* Good.png */,
-				93ABC699190B94B3008FE209 /* addCard.png */,
-				93ABC69A190B94B3008FE209 /* aryaman.png */,
-				93ABC69B190B94B3008FE209 /* backButton.png */,
-				93ABC69C190B94B3008FE209 /* callIIcon.png */,
-				93ABC69D190B94B3008FE209 /* emailIcon.png */,
-				93ABC69E190B94B3008FE209 /* forgotButton.png */,
-				93ABC69F190B94B3008FE209 /* linkedInIcon.png */,
-				93ABC6A0190B94B3008FE209 /* loginBack.png */,
-				93ABC6A1190B94B3008FE209 /* loginButton.png */,
-				93ABC6A2190B94B3008FE209 /* passIcon.png */,
-				93ABC6A3190B94B3008FE209 /* profileBorder.png */,
-				93ABC6A4190B94B3008FE209 /* settingsIcon.png */,
-				93ABC6A5190B94B3008FE209 /* shareIcon.png */,
-				93ABC6A6190B94B3008FE209 /* signUpButton.png */,
-				93ABC6A7190B94B3008FE209 /* testCard.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		93ABC7B2190BEF0B008FE209 /* OAuth */ = {
@@ -456,12 +436,12 @@
 		93ABC7DD190BEF3E008FE209 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				93ABC7DE190BEF4F008FE209 /* Base64Transcoder.c */,
-				93ABC7DF190BEF4F008FE209 /* Base64Transcoder.h */,
-				93ABC7E0190BEF4F008FE209 /* hmac.c */,
-				93ABC7E1190BEF4F008FE209 /* hmac.h */,
-				93ABC7E2190BEF4F008FE209 /* sha1.c */,
-				93ABC7E3190BEF4F008FE209 /* sha1.h */,
+				B891B6DC19397BAC00DA7C22 /* Base64Transcoder.c */,
+				B891B6DD19397BAC00DA7C22 /* Base64Transcoder.h */,
+				B891B6DE19397BAC00DA7C22 /* hmac.c */,
+				B891B6DF19397BAC00DA7C22 /* hmac.h */,
+				B891B6E019397BAC00DA7C22 /* sha1.c */,
+				B891B6E119397BAC00DA7C22 /* sha1.h */,
 			);
 			name = Crypto;
 			sourceTree = "<group>";
@@ -479,12 +459,47 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		B891B6E819397DE000DA7C22 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				B891B6E519397DD800DA7C22 /* xmlreader.h */,
+				B891B6E619397DD800DA7C22 /* xmlreader.m */,
+			);
+			name = XMLReader;
+			sourceTree = "<group>";
+		};
+		B891B6E919397FB200DA7C22 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B891B6EA19397FC900DA7C22 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png */,
+				B891B6EB19397FC900DA7C22 /* addCard.png */,
+				B891B6EC19397FC900DA7C22 /* aryaman.png */,
+				B891B6ED19397FC900DA7C22 /* backButton.png */,
+				B891B6EE19397FC900DA7C22 /* Bad.png */,
+				B891B6EF19397FC900DA7C22 /* bigPhoto.png */,
+				B891B6F019397FC900DA7C22 /* callIIcon.png */,
+				B891B6F119397FC900DA7C22 /* emailIcon.png */,
+				B891B6F219397FC900DA7C22 /* forgotButton.png */,
+				B891B6F319397FC900DA7C22 /* Good.png */,
+				B891B6F419397FC900DA7C22 /* linkedInIcon.png */,
+				B891B6F519397FC900DA7C22 /* loginBack.png */,
+				B891B6F619397FC900DA7C22 /* loginButton.png */,
+				B891B6F719397FC900DA7C22 /* passIcon.png */,
+				B891B6F819397FC900DA7C22 /* profileBorder.png */,
+				B891B6F919397FC900DA7C22 /* settingsIcon.png */,
+				B891B6FA19397FC900DA7C22 /* shareIcon.png */,
+				B891B6FB19397FC900DA7C22 /* signUpButton.png */,
+				B891B6FC19397FC900DA7C22 /* testCard.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		939119CD190A05FC00EB5DDB /* Mitek Hackathon */ = {
+		939119CD190A05FC00EB5DDB /* BizCards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek Hackathon" */;
+			buildConfigurationList = 93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "BizCards" */;
 			buildPhases = (
 				939119CA190A05FC00EB5DDB /* Sources */,
 				939119CC190A05FC00EB5DDB /* Resources */,
@@ -494,14 +509,14 @@
 			);
 			dependencies = (
 			);
-			name = "Mitek Hackathon";
+			name = BizCards;
 			productName = "Mitek Hackathon";
-			productReference = 939119CE190A05FC00EB5DDB /* Mitek Hackathon.app */;
+			productReference = 939119CE190A05FC00EB5DDB /* BizCards.app */;
 			productType = "com.apple.product-type.application";
 		};
-		939119EE190A05FC00EB5DDB /* Mitek HackathonTests */ = {
+		939119EE190A05FC00EB5DDB /* BizCardsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */;
+			buildConfigurationList = 93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "BizCardsTests" */;
 			buildPhases = (
 				939119EB190A05FC00EB5DDB /* Sources */,
 				939119EC190A05FC00EB5DDB /* Frameworks */,
@@ -512,9 +527,9 @@
 			dependencies = (
 				939119F5190A05FC00EB5DDB /* PBXTargetDependency */,
 			);
-			name = "Mitek HackathonTests";
+			name = BizCardsTests;
 			productName = "Mitek HackathonTests";
-			productReference = 939119EF190A05FC00EB5DDB /* Mitek HackathonTests.xctest */;
+			productReference = 939119EF190A05FC00EB5DDB /* BizCardsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -531,7 +546,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "Mitek Hackathon" */;
+			buildConfigurationList = 939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "BizCards" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -544,8 +559,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				939119CD190A05FC00EB5DDB /* Mitek Hackathon */,
-				939119EE190A05FC00EB5DDB /* Mitek HackathonTests */,
+				939119CD190A05FC00EB5DDB /* BizCards */,
+				939119EE190A05FC00EB5DDB /* BizCardsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -555,31 +570,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93ABC6AD190B94B3008FE209 /* forgotButton.png in Resources */,
-				93ABC6B5190B94B3008FE209 /* signUpButton.png in Resources */,
+				B891B70519397FC900DA7C22 /* forgotButton.png in Resources */,
+				B891B70E19397FC900DA7C22 /* signUpButton.png in Resources */,
+				B891B6FD19397FC900DA7C22 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */,
+				B891B6FF19397FC900DA7C22 /* aryaman.png in Resources */,
+				B891B70A19397FC900DA7C22 /* passIcon.png in Resources */,
+				B891B70D19397FC900DA7C22 /* shareIcon.png in Resources */,
+				B891B70019397FC900DA7C22 /* backButton.png in Resources */,
 				93ABC828190C1D41008FE209 /* OAuthLoginView.xib in Resources */,
-				93ABC6AC190B94B3008FE209 /* emailIcon.png in Resources */,
-				93ABC834190C312D008FE209 /* settingsIcon.png in Resources */,
-				93ABC6B0190B94B3008FE209 /* loginButton.png in Resources */,
-				93ABC831190C310E008FE209 /* callIIcon.png in Resources */,
-				93ABC832190C3116008FE209 /* linkedInIcon.png in Resources */,
-				93ABC82F190C3104008FE209 /* addCard.png in Resources */,
-				93ABC830190C3106008FE209 /* backButton.png in Resources */,
+				B891B70319397FC900DA7C22 /* callIIcon.png in Resources */,
+				B891B70B19397FC900DA7C22 /* profileBorder.png in Resources */,
+				B891B70419397FC900DA7C22 /* emailIcon.png in Resources */,
+				B891B70919397FC900DA7C22 /* loginButton.png in Resources */,
 				B8711DC2190BC15C00926B41 /* Main.storyboard in Resources */,
-				93ABC6B6190B94B3008FE209 /* testCard.png in Resources */,
 				939119EA190A05FC00EB5DDB /* Images.xcassets in Resources */,
-				93ABC83A190C4A75008FE209 /* Bad.png in Resources */,
-				93ABC833190C3119008FE209 /* shareIcon.png in Resources */,
 				939119DC190A05FC00EB5DDB /* InfoPlist.strings in Resources */,
-				B861B6A4190C5B17003DA083 /* 3016588c-9e21-45f1-baaf-b935990c76cf-image.png in Resources */,
+				B891B70F19397FC900DA7C22 /* testCard.png in Resources */,
+				B891B70C19397FC900DA7C22 /* settingsIcon.png in Resources */,
+				B891B70719397FC900DA7C22 /* linkedInIcon.png in Resources */,
+				B891B70819397FC900DA7C22 /* loginBack.png in Resources */,
 				B8BD13DF190B8AAE00AEF286 /* authenticate.xml in Resources */,
 				B8BD13E1190B8AB500AEF286 /* sendImage.xml in Resources */,
-				93ABC6A9190B94B3008FE209 /* aryaman.png in Resources */,
-				B861B6A2190C5415003DA083 /* bigPhoto.png in Resources */,
+				B891B70119397FC900DA7C22 /* Bad.png in Resources */,
+				B891B6FE19397FC900DA7C22 /* addCard.png in Resources */,
+				B891B70619397FC900DA7C22 /* Good.png in Resources */,
+				B891B70219397FC900DA7C22 /* bigPhoto.png in Resources */,
 				93ABC837190C3608008FE209 /* MiSnapResources.bundle in Resources */,
-				93ABC83B190C4A75008FE209 /* Good.png in Resources */,
-				93ABC835190C3140008FE209 /* loginBack.png in Resources */,
-				93ABC6B1190B94B3008FE209 /* passIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,11 +614,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8CB431B1939B1B0007CBCEE /* cardCollectionViewController.m in Sources */,
 				B861B6A0190C2EDB003DA083 /* detailViewController.m in Sources */,
 				93ABC82B190C1F2C008FE209 /* OAuthLoginView.m in Sources */,
 				93911A27190B35F500EB5DDB /* CardViewController.m in Sources */,
 				93ABC815190BF1B5008FE209 /* OAConsumer.m in Sources */,
 				93ABC816190BF1B5008FE209 /* OACall.m in Sources */,
+				B8CB43211939BB1C007CBCEE /* businessCard.m in Sources */,
 				93ABC826190C1B8D008FE209 /* settingsViewController.m in Sources */,
 				93ABC82E190C25D5008FE209 /* linkedInViewController.m in Sources */,
 				93911A0B190A07BF00EB5DDB /* CreateAccountViewController.m in Sources */,
@@ -611,26 +629,24 @@
 				93ABC821190BFAD9008FE209 /* ProfileTabView.m in Sources */,
 				93ABC812190BF1B5008FE209 /* OAMutableURLRequest.m in Sources */,
 				93ABC813190BF1B5008FE209 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
-				93ABC81A190BF82B008FE209 /* xmlreader.m in Sources */,
 				93ABC810190BF1B5008FE209 /* OAProblem.m in Sources */,
 				93ABC80C190BF1B5008FE209 /* OATokenManager.m in Sources */,
 				93ABC80F190BF1B5008FE209 /* OARequestParameter.m in Sources */,
-				93ABC81B190BF85B008FE209 /* Base64Transcoder.c in Sources */,
+				B891B6E719397DD800DA7C22 /* xmlreader.m in Sources */,
 				93ABC7EF190BEFC0008FE209 /* NSString+URLEncoding.m in Sources */,
-				93ABC7E5190BEF4F008FE209 /* hmac.c in Sources */,
 				93ABC80E190BF1B5008FE209 /* OAServiceTicket.m in Sources */,
 				93ABC817190BF1B5008FE209 /* OAAttachment.m in Sources */,
-				93ABC7E6190BEF4F008FE209 /* sha1.c in Sources */,
+				B891B6E419397BAC00DA7C22 /* sha1.c in Sources */,
 				93ABC80D190BF1B5008FE209 /* OAToken.m in Sources */,
 				939119E2190A05FC00EB5DDB /* AppDelegate.m in Sources */,
 				93ABC7F0190BEFC0008FE209 /* NSURL+Base.m in Sources */,
-				93ABC822190BFD3D008FE209 /* cardCollectionViewController.m in Sources */,
 				939119DE190A05FC00EB5DDB /* main.m in Sources */,
 				B8711DBF190BAB5C00926B41 /* postImageView.m in Sources */,
 				B8711DC7190BE68400926B41 /* UploadToParseViewController.m in Sources */,
+				B891B6E319397BAC00DA7C22 /* hmac.c in Sources */,
 				93ABC823190BFD77008FE209 /* cardCell.m in Sources */,
 				93ABC814190BF1B5008FE209 /* OADataFetcher.m in Sources */,
-				B8BD13E7190B8AF200AEF286 /* (null) in Sources */,
+				B891B6E219397BAC00DA7C22 /* Base64Transcoder.c in Sources */,
 				93ABC811190BF1B5008FE209 /* OAPlaintextSignatureProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +664,7 @@
 /* Begin PBXTargetDependency section */
 		939119F5190A05FC00EB5DDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 939119CD190A05FC00EB5DDB /* Mitek Hackathon */;
+			target = 939119CD190A05FC00EB5DDB /* BizCards */;
 			targetProxy = 939119F4190A05FC00EB5DDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -767,8 +783,8 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
-				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				GCC_PREFIX_HEADER = "Mitek Hackathon/BizCards-Prefix.pch";
+				INFOPLIST_FILE = "Mitek Hackathon/BizCards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -777,7 +793,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCards;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
@@ -793,8 +809,8 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
-				INFOPLIST_FILE = "Mitek Hackathon/Mitek Hackathon-Info.plist";
+				GCC_PREFIX_HEADER = "Mitek Hackathon/BizCards-Prefix.pch";
+				INFOPLIST_FILE = "Mitek Hackathon/BizCards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -804,7 +820,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lstdc++";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BizCards;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
@@ -825,8 +841,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Mitek HackathonTests/Mitek HackathonTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Mitek HackathonTests/BizCardsTests-Info.plist";
+				PRODUCT_NAME = BizCardsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -843,8 +859,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mitek Hackathon/Mitek Hackathon-Prefix.pch";
-				INFOPLIST_FILE = "Mitek HackathonTests/Mitek HackathonTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Mitek HackathonTests/BizCardsTests-Info.plist";
+				PRODUCT_NAME = BizCardsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -853,7 +869,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "Mitek Hackathon" */ = {
+		939119C9190A05FC00EB5DDB /* Build configuration list for PBXProject "BizCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				939119FE190A05FC00EB5DDB /* Debug */,
@@ -862,7 +878,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek Hackathon" */ = {
+		93911A00190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "BizCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93911A01190A05FC00EB5DDB /* Debug */,
@@ -871,7 +887,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "Mitek HackathonTests" */ = {
+		93911A03190A05FC00EB5DDB /* Build configuration list for PBXNativeTarget "BizCardsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93911A04190A05FC00EB5DDB /* Debug */,

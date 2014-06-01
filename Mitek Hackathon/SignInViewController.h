@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface SignInViewController : UIViewController <UITextFieldDelegate>
 {
     IBOutlet UITextField *txtUsername;
     IBOutlet UITextField *txtPassword;
@@ -18,4 +18,5 @@
 }
 -(IBAction)signIn;
 -(IBAction)forgotPassword;
+
 @end

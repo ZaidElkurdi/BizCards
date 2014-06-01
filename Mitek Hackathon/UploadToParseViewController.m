@@ -56,10 +56,15 @@
 
     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
     
-    NSLog(@"Decoded: %@", [prefs objectForKey:@"rawImageText"]);
     [imgView setImage:[UIImage imageWithData:decodedData]];
     imageFile = [PFFile fileWithName:@"image.png" data:decodedData];
     
+    txtName.delegate = self;
+    txtEmail.delegate = self;
+    txtCompany.delegate = self;
+    txtName.delegate = self;
+    txtAddress.delegate = self;
+    txtTitle.delegate = self;
 
 }
 
@@ -78,10 +83,18 @@
     [txtAddress setText:[myArray objectAtIndex:5]];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [txtName resignFirstResponder];
+    [txtCompany resignFirstResponder];
+    [txtTitle resignFirstResponder];
+    [txtEmail resignFirstResponder];
+    [txtPhone resignFirstResponder];
+    [txtAddress resignFirstResponder];
+}
+
 -(IBAction)takeToParse
 {
-    NSLog(@"Made it here");
-    
     if(canSearch)
         [self profileApiCall];
     
@@ -92,11 +105,11 @@
     uploadCard[@"Title"] = txtTitle.text;
     uploadCard[@"Phone"] = txtPhone.text;
     uploadCard[@"Address"] = txtAddress.text;
+    uploadCard[@"Company"] = txtCompany.text;
+    uploadCard[@"Notes"] = @"";
+     
     
-    NSLog(@"UPload Card: %@", uploadCard);
     [uploadCard saveInBackground];
-    
-    NSLog(@"Made it to the photo");
 
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:[prefs objectForKey:@"rawImageText"] options:0];
@@ -137,7 +150,6 @@
 
 - (void)profileApiCall
 {
-    NSLog(@"Making call!");
     
     NSURL *url = [NSURL URLWithString:@"http://api.linkedin.com/v1/people-search:(people:(id,first-name,last-name,picture-url,headline),num-results)?first-name=aryaman&last-name=sharda"];
     
@@ -154,7 +166,7 @@
     [fetcher fetchDataWithRequest:request
                          delegate:self
                 didFinishSelector:@selector(profileApiCallResult:didFinish:)
-                  didFailSelector:@selector(profileApiCallResult:didFail:)];
+                  didFailSelector:nil];
     
 }
 
@@ -164,7 +176,6 @@
     NSError *error = nil;
     NSDictionary *profile = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     
-    NSLog(@"%@", profile);
     
     if (profile)
     {
@@ -180,32 +191,10 @@
     }
 }
 
-- (BOOL)textField:(UITextField *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-
-    if([text isEqualToString:@"\n"])
-    {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
+- (BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+    [textField resignFirstResponder];
     return YES;
 }
-
-
-- (void)profileApiCallResult:(OAServiceTicket *)ticket didFail:(NSData *)error
-{
-    NSLog(@"%@",[error description]);
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
