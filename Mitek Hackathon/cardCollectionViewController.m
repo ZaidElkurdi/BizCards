@@ -191,8 +191,6 @@
 #pragma mark - Table View Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Tapped");
-    
     NSDictionary *cardDict = [self.cardInfo objectAtIndex:indexPath.section];
     
     self.selectedCard.name = [cardDict objectForKey:@"Name"];
