@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
-               BuildableName = "Mitek Hackathon.app"
+               BuildableName = "BizCards.app"
                BlueprintName = "BizCards"
                ReferencedContainer = "container:BizCards.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "939119EE190A05FC00EB5DDB"
-               BuildableName = "Mitek HackathonTests.xctest"
+               BuildableName = "BizCardsTests.xctest"
                BlueprintName = "BizCardsTests"
                ReferencedContainer = "container:BizCards.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
-            BuildableName = "Mitek Hackathon.app"
+            BuildableName = "BizCards.app"
             BlueprintName = "BizCards"
             ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
-            BuildableName = "Mitek Hackathon.app"
+            BuildableName = "BizCards.app"
             BlueprintName = "BizCards"
             ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "939119CD190A05FC00EB5DDB"
-            BuildableName = "Mitek Hackathon.app"
+            BuildableName = "BizCards.app"
             BlueprintName = "BizCards"
             ReferencedContainer = "container:BizCards.xcodeproj">
          </BuildableReference>

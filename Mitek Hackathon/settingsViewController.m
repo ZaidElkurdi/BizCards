@@ -120,7 +120,7 @@ statusTextView, updateStatusLabel;
     
     
     // The next thing we want to do is call the network updates
-    [self networkApiCall];
+    //[self networkApiCall];
     
 }
 
